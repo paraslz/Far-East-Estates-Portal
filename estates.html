@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>All Estate Reports - Far East Holdings Bhd</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="text-2xl font-bold text-gray-900">
+                <a href="index.html" class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 inline-block text-green-800 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1zM9 9a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1zm1 4a1 1 0 100 2h.01a1 1 0 100-2H10z" clip-rule="evenodd" />
+                    </svg>
+                    FEHB Analytics
+                </a>
+            </div>
+            <a href="index.html" class="text-green-800 hover:text-green-900 transition duration-300">&larr; Back to Home</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl font-bold text-gray-900">All Estate Reports</h1>
+            <p class="text-lg text-gray-600 mt-2">Select an estate to view its detailed performance report.</p>
+        </header>
+
+        <!-- Estates Grid -->
+        <div id="estates-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Estate cards will be populated here by JavaScript -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-16">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Far East Holdings Bhd Analytics. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // This array will be expanded as more reports are processed.
+            const estates = [
+                { id: 'bukitjin', name: 'Ladang Bukit Jin', area: '2,071.50 ha' },
+                { id: 'bukitserok', name: 'Ladang Bukit Serok', area: '2,226.40 ha' },
+                { id: 'cempaka', name: 'Ladang Cempaka', area: '495.93 ha' },
+                { id: 'cenderawasih', name: 'Ladang Cenderawasih', area: '2,087.40 ha' },
+                { id: 'chengal', name: 'Ladang Chengal', area: '1,814.20 ha' },
+                { id: 'dawn', name: 'Ladang Dawn', area: '1,776.92 ha' },
+                { id: 'delima', name: 'Ladang Delima', area: '2,792.65 ha' },
+                { id: 'dsk', name: 'Ladang DSK', area: '1,320.30 ha' },
+                { id: 'kampungaur', name: 'Ladang Kampung Aur', area: '2,056.70 ha' },
+                { id: 'sgbatu', name: 'Ladang Sungai Batu', area: '886.80 ha' },
+                { id: 'sggayung', name: 'Ladang Sungai Gayung', area: '2,262.40 ha' },
+                { id: 'sgmarung', name: 'Ladang Sungai Marung', area: '2,250.23 ha' },
+                { id: 'sgrasau', name: 'Ladang Sungai Rasau', area: '111.0 ha' },
+                { id: 'sgseraya', name: 'Ladang Sungai Seraya', area: '870.90 ha' },
+            ];
+
+            const grid = document.getElementById('estates-grid');
+            
+            // Sort estates alphabetically by name
+            estates.sort((a, b) => a.name.localeCompare(b.name));
+
+            grid.innerHTML = estates.map(estate => `
+                <a href="${estate.id}.html" class="block bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <h3 class="text-xl font-bold text-gray-900">${estate.name}</h3>
+                    <p class="text-gray-500 mt-2">Total Area: ${estate.area}</p>
+                    <div class="mt-4 text-green-800 font-semibold flex items-center">
+                        View Report
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                </a>
+            `).join('');
+        });
+    </script>
+
+</body>
+</html>
