@@ -82,14 +82,20 @@
                         "note": "(PAR Pg. 10)"
                     },
                     "yield": {
-                        "title": "Yield vs Budget (YTD May)",
-                        "value": "+8%",
-                        "note": "12,019.77 MT produced (PAR Pg. 39)"
+                        "title": "Yield/Ha vs Budget (YTD May)",
+                        "lines": [
+                            "Actual: 6.77 MT/Ha",
+                            "Budget: 6.27 MT/Ha"
+                        ],
+                        "note": "+8% variance (PAR Pg. 39)"
                     },
                     "cost": {
-                        "title": "Cost vs Budget (YTD May)",
-                        "value": "-31%",
-                        "note": "FFB Cost of Production Ex-Estate (PAR Pg. 42)"
+                        "title": "Cost/Tonne vs Budget (YTD May)",
+                         "lines": [
+                            "Actual: RM 275.64",
+                            "Budget: RM 397.14"
+                        ],
+                        "note": "-31% variance (PAR Pg. 42)"
                     },
                     "pruning": {
                         "title": "Pruning Quality",
@@ -179,7 +185,7 @@
                                        metric.title.includes('Cost') ? 'bg-emerald-50 text-emerald-800' :
                                        metric.title.includes('Pruning') ? 'bg-orange-50 text-orange-800' : 'bg-red-50 text-red-800';
                     if (metric.lines) {
-                        return `<div class="p-4 rounded-lg ${colorClass}"><h3 class="font-semibold">${metric.title}</h3>${metric.lines.map(line => `<p class="text-sm">${line}</p>`).join('')}<p class="text-xs text-gray-500 mt-1">${metric.note || ''}</p></div>`;
+                        return `<div class="p-4 rounded-lg ${colorClass}"><h3 class="font-semibold">${metric.title}</h3>${metric.lines.map(line => `<p class="text-2xl font-bold">${line.split(':')[0]}:<span class="font-bold"> ${line.split(':')[1]}</span></p>`).join('')}<p class="text-xs text-gray-500 mt-1">${metric.note || ''}</p></div>`;
                     }
                     return `<div class="p-4 rounded-lg ${colorClass}"><h3 class="font-semibold">${metric.title}</h3><p class="text-2xl font-bold">${metric.value}</p><p class="text-xs text-gray-500 mt-1">${metric.note}</p></div>`;
                 }).join('');
