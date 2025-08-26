@@ -70,7 +70,7 @@
             const estateData = {
                 "id": "delima",
                 "name": "Ladang Delima",
-                "reportInfo": "Data based on Agronomy Report 1/2025 (Visit for 2/2024). PA Report not available.",
+                "reportInfo": "Data based on PA Report (Mar 2025) & Agronomy Report 1/2025. Visit Date: 26th March 2025.",
                 "summaryMetrics": {
                     "area": {
                         "title": "Estate Area",
@@ -81,70 +81,68 @@
                         ]
                     },
                     "yield": {
-                        "title": "Yield/Ha (2024 vs 2023)",
-                        "value": "11.70 / 10.14 MT",
-                        "note": "+15.4% increase"
+                        "title": "Yield/Ha (2024 vs Budget)",
+                        "value": "11.70 / 15.12 MT",
+                        "note": "23% lower than budget"
                     },
-                    "manuring": {
-                        "title": "Manuring Status",
-                        "value": "Delayed",
-                        "note": "NK2 application delayed in 2024"
+                    "cost": {
+                        "title": "FFB Cost/Tonne (2024 vs Budget)",
+                        "value": "RM 347.68 / RM 333.31",
+                        "note": "4% higher than budget"
                     },
-                    "pruning": {
+                    "labour": {
+                        "title": "Labour Status",
+                        "value": "Inadequate",
+                        "note": "1:30 ha harvester ratio"
+                    },
+                     "pruning": {
                         "title": "Pruning Quality",
                         "value": "Needs Improvement",
-                        "note": "Slight under-pruning"
-                    },
-                     "waterlogging": {
-                        "title": "Waterlogging Risk",
-                        "value": "High",
-                        "note": "79% of estate is low-lying"
+                        "note": "Under-pruning & poor stacking"
                     }
                 },
                 "keyMetrics": [
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-blue-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z' /></svg>", "label": "Palm Census", "value": "Outdated (2021)" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-blue-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z' /></svg>", "label": "Labour Ratio", "value": "1:17 ha (Inadequate)" },
                     { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-green-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z' /></svg>", "label": "P&D Status", "value": "Under Control (Rats)" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-yellow-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M13 10V3L4 14h7v7l9-11h-7z' /></svg>", "label": "Harvester Prod.", "value": "Low (1.40 MT/md)" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-red-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z' /></svg>", "label": "Crop Recovery", "value": "Improved but inconsistent" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-purple-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z' /></svg>", "label": "Harvest Interval", "value": ">15 days (Extended)" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-yellow-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M13 10V3L4 14h7v7l9-11h-7z' /></svg>", "label": "OER % (2024)", "value": "18.59%" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-red-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z' /></svg>", "label": "Harvester Prod.", "value": "1.20 MT/md (Low)" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-purple-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z' /></svg>", "label": "Harvest Interval", "value": ">20 days (Extended)" },
                     { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-teal-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17.657 18.343A8 8 0 016.343 7.029m11.314 11.314a8 8 0 01-11.314-11.314m2.121 13.435a2 2 0 01-2.828 0l-2.122-2.121a2 2 0 010-2.828l5.656-5.657a2 2 0 012.829 0l2.121 2.121a2 2 0 010 2.828l-5.657 5.657z' /></svg>", "label": "Nutrient Status", "value": "Low N & P" }
                 ],
                 "chartData": {
                     "production": {
                         "labels": ["2020", "2021", "2022", "2023", "2024"],
-                        "ffb": [16.57, 13.69, 12.43, 10.14, 11.70],
-                        "rainfall": [3551, 4221, 4565, 4918, 2453],
-                        "note": "*Annual FFB Yield (YPH) and Rainfall. Monthly data not available."
+                        "ffb": [16.47, 13.69, 12.43, 10.14, 11.70],
+                        "rainfall": [3551, 4221, 4565, 4918, 2423],
+                        "note": "*Annual FFB Yield (YPH) and Rainfall. Source: PAR 1/2025, Pg. 53, 57"
                     },
                     "ageProfile": {
-                        "labels": ["0-3 Years (Immature)", "8-19 Years (Prime)"],
-                        "data": [3, 97],
+                        "labels": ["Old Mature (19Y)", "Prime Mature (16-18Y)", "Replanting (0-1Y)"],
+                        "data": [61.9, 35.2, 2.9],
                         "title": "Ladang Delima - Palm Age Distribution",
-                        "note": "*Source: Agronomy Report 1/2025, Pg. 11."
+                        "note": "*Source: PA Report 1/2025, Pg. 5."
                     }
                 },
                 "observations": [
-                    "<b>Water Management is Critical:</b> 79% of the estate is low-lying and 81% is peat soil, making it prone to waterlogging, which stunts palm growth and limits yield potential. <span class='observation-ref'>(AR Pg. 28, 32)</span>",
-                    "<b>Underperforming Yield:</b> Despite 97% of palms being in their prime age, the yield trend is declining, which is abnormal and requires urgent attention to address limiting factors. <span class='observation-ref'>(AR Pg. 30-31)</span>",
-                    "<b>Outdated Palm Census:</b> The last census was in 2021. An updated census is crucial for accurate fertilizer calculation, especially with ongoing replanting. <span class='observation-ref'>(AR Pg. 10)</span>",
-                    "<b>Inconsistent Field Maintenance:</b> Pruning quality is inconsistent, with many areas being slightly under-pruned. Frond stacking is messy and needs to follow recommended methods. <span class='observation-ref'>(AR Pg. 4, 27)</span>",
-                    "<b>Delayed Manuring:</b> The 2024 manuring program experienced delays, particularly for NK2 fertilizer. Timely application is critical to avoid depressing yields further. <span class='observation-ref'>(AR Pg. 4, 15)</span>",
-                    "<b>Replanting Area Management:</b> The 2024 replanting area (81.17 ha) has been prepared with compacted cambered bunds to mitigate flooding. <span class='observation-ref'>(AR Pg. 63)</span>"
+                    "<b>Mediocre Performance:</b> The estate's 2024 yield was 23% below budget, and the cost of production was 4% higher, indicating significant performance issues. <span class='observation-ref'>(PAR Pg. 44)</span>",
+                    "<b>Critical Labour Shortage:</b> An inadequate harvester ratio (1:30 ha) has led to extended harvesting intervals of over 20 days, causing crop loss and affecting FFB quality. <span class='observation-ref'>(PAR Pg. 8, 30)</span>",
+                    "<b>Poor Field Maintenance:</b> Pruning quality is unsatisfactory, with widespread under-pruning and messy frond stacking. Road and drain maintenance programs are significantly behind schedule. <span class='observation-ref'>(PAR Pg. 45)</span>",
+                    "<b>Delayed Manuring:</b> The 2025 manuring program is already behind schedule, which will likely depress future yields if not rectified immediately. <span class='observation-ref'>(PAR Pg. 28, 45)</span>",
+                    "<b>Low Mechanization Productivity:</b> Both harvester (1.20 MT/day) and mini-crawler (3.85 MT/day) productivity are low, indicating inefficiencies in the current system. <span class='observation-ref'>(PAR Pg. 35)</span>",
+                    "<b>Water Management is Key:</b> With 79% of the estate being low-lying peat, poor water management remains a primary factor stunting palm growth and limiting yield. <span class='observation-ref'>(AR Pg. 28, 32)</span>"
                 ],
                 "reports": {
                     "plantation": {
-                        "Executive Summary": "Not Available (Plantation Advisory Report was not provided).",
-                        "Area Statement": "Not Available",
-                        "Labour Statement": "Not Available",
-                        "Staff Establishment": "Not Available",
-                        "General Charges": "Not Available",
-                        "Upkeep and Cultivation": "Not Available",
-                        "Harvesting and Collection": "Not Available",
-                        "Crop Production": "Not Available",
-                        "Production Cost": "Not Available",
-                        "Vehicles Running Cost": "Not Available",
-                        "Capital Expenditure": "Not Available",
-                        "Immature": "Not Available"
+                        "Executive Summary": "The estate's performance in 2024 was mediocre, with poor yield (11.70 t/ha, 23% below budget) and high cost of production (RM 347.68/t, 4% above budget). Key issues are inadequate labour leading to extended harvesting intervals, unsatisfactory pruning quality, and delays in upkeep works. (Source: PAR, Pg. 44)",
+                        "Area Statement": "Total planted area is 2,792.65 ha, with 2,711.48 ha mature and 81.17 ha being replanted in 2025. The mature area consists of 61.9% old palms and 35.2% prime palms. (Source: PAR, Pg. 5)",
+                        "Labour Statement": "The estate is short of 51 workers, with a harvester-to-area ratio of 1:30 ha, which is inadequate and affects harvesting rounds. (Source: PAR, Pg. 7-8)",
+                        "Staff Establishment": "Staffing is generally adequate, though there is a surplus of one clerk. (Source: PAR, Pg. 9-10)",
+                        "General Charges": "Expenditure in 2024 was 13% lower than budget. Overspending on items like travel allowance and bonuses was noted. (Source: PAR, Pg. 11-12)",
+                        "Upkeep and Cultivation": "Weeding is satisfactory, but over-spraying is an issue. Road grading and drain desilting are significantly behind schedule. Pruning quality is below expectation, and the 2025 manuring program is delayed. (Source: PAR, Pg. 13-29)",
+                        "Harvesting and Collection": "Harvesting intervals exceeded 20 days in Feb 2025, and 2024's average rounds were below target. FFB quality needs improvement. Cost was on par with budget. (Source: PAR, Pg. 30-32)",
+                        "Crop Production": "2024 FFB production was 31,374.78 MT, yielding 11.70 t/ha. This was 23% below budget, primarily due to heavy rainfall and flooding. (Source: PAR, Pg. 33-34)",
+                        "Production Cost": "Ex-estate cost in 2024 was RM 347.68/ton, 4% higher than budget due to the low yield. (Source: PAR, Pg. 36)",
+                        "Replanting": "Land preparation for 81.17 ha (P25J) was completed, and planting commenced on March 26, 2025. (Source: PAR, Pg. 38-42)"
                     },
                     "agronomy": {
                         "Executive Summary": "The estate's yield performance is below potential, with a concerning downward trend despite a prime palm age profile. The primary limiting factors are poor water management in the extensive peat and low-lying areas, and inconsistent upkeep standards. While crop recovery has improved and rat damage is under control, addressing drainage and pruning quality is essential. (Source: AR, Pg. 4-7)",
@@ -152,9 +150,12 @@
                         "Agronomic Observation": "Crop recovery has improved, but harvesting intervals are still extended. Pruning is mostly under-pruned with dry hanging fronds. Palm appearance is poor in peat areas due to waterlogging and smaller canopies. Rat damage is under control. (Source: AR, Pg. 18-69)",
                         "Yield Performance": "Average yield increased by 15.4% in 2024 but remains below potential. The yield trend for prime-age palms is declining, which is a major concern. High rainfall and waterlogging are key contributing factors. (Source: AR, Pg. 70-73)",
                         "Fertilizer Recommendation": "The 2025 program is detailed in Appendix 1. It is crucial to minimize delays in application. Site-specific fertilizer placement methods are recommended for mounded and terraced areas to reduce runoff. (Source: AR, Pg. 74-77)"
+                    },
+                     "pinfosys": {
+                        "summary": "Not Available."
                     }
                 },
-                "policy": " <div class='policy-item'><p class='font-semibold'>Water Management in Peat</p><p class='text-sm text-gray-600'><b>Policy Ref: PEAT-DRAIN-01:</b> In peat areas, the water table must be maintained at 75-100cm from the surface. Main drains and canals must be kept free-flowing to ensure rapid discharge during monsoon periods.</p></div> <div class='policy-item'><p class='font-semibold'>Field Upkeep</p><p class='text-sm text-gray-600'><b>Policy Ref: CENSUS-01:</b> A full palm census must be conducted every 5 years, or more frequently in areas with high casualty rates, to ensure accurate fertilizer planning.</p><p class='text-sm text-gray-600'><b>Policy Ref: PRUNE-STD-02:</b> Progressive pruning must be consistently implemented. All dry and semi-dry fronds must be removed to prevent pest harborage and obstruction of harvesting.</p></div> <div class='policy-item'><p class='font-semibold'>Fertilizer Application</p><p class='text-sm text-gray-600'><b>Policy Ref: FERT-APP-05:</b> All fertilizer applications must be completed according to schedule. Any delays beyond 15 days must be reported with a mitigation plan.</p></div>"
+                "policy": " <div class='policy-item'><p class='font-semibold'>Labour Management</p><p class='text-sm text-gray-600'><b>Policy Ref: LABOUR-RATIO-02:</b> The harvester-to-hectare ratio must be maintained at a level that ensures harvesting intervals do not exceed 15 days, especially during peak cropping seasons.</p></div> <div class='policy-item'><p class='font-semibold'>Harvesting Discipline</p><p class='text-sm text-gray-600'><b>Policy Ref: HARV-INT-01:</b> A minimum of two harvesting rounds per month must be achieved consistently. Extended intervals beyond 15 days are unacceptable and require immediate corrective action.</p></div> <div class='policy-item'><p class='font-semibold'>Field Upkeep Standards</p><p class='text-sm text-gray-600'><b>Policy Ref: PRUNE-STD-02:</b> Progressive pruning must be implemented to standard. All dry/hanging fronds must be removed, and cut fronds must be stacked neatly away from paths and drains.</p></div>"
             };
 
 
@@ -176,8 +177,8 @@
                 const summaryMetricsHTML = Object.values(estate.summaryMetrics).map(metric => {
                     const colorClass = metric.title.includes('Area') ? 'bg-blue-50 text-blue-800' : 
                                        metric.title.includes('Yield') ? 'bg-green-50 text-green-800' :
-                                       metric.title.includes('Manuring') ? 'bg-yellow-50 text-yellow-800' :
-                                       metric.title.includes('Pruning') ? 'bg-orange-50 text-orange-800' : 'bg-red-50 text-red-800';
+                                       metric.title.includes('Cost') ? 'bg-red-50 text-red-800' :
+                                       metric.title.includes('Labour') ? 'bg-purple-50 text-purple-800' : 'bg-orange-50 text-orange-800';
                     if (metric.lines) {
                         return `<div class="p-4 rounded-lg ${colorClass}"><h3 class="font-semibold">${metric.title}</h3>${metric.lines.map(line => `<p class="text-sm">${line}</p>`).join('')}</div>`;
                     }
@@ -209,6 +210,8 @@
                             <div id="${estate.id}-plantation" class="details-content bg-gray-50 p-4 rounded-md border border-gray-200"></div>
                             <button data-dropdown-id="${estate.id}-agronomy" class="dropdown-btn w-full text-left bg-gray-800 text-white p-3 rounded-md hover:bg-gray-700 transition">Agronomy Report Details</button>
                             <div id="${estate.id}-agronomy" class="details-content bg-gray-50 p-4 rounded-md border border-gray-200"></div>
+                             <button data-dropdown-id="${estate.id}-pinfosys" class="dropdown-btn w-full text-left bg-gray-800 text-white p-3 rounded-md hover:bg-gray-700 transition">Pinfosys Report Details</button>
+                            <div id="${estate.id}-pinfosys" class="details-content bg-gray-50 p-4 rounded-md border border-gray-200"></div>
                         </div>
                     </div>`;
             }
@@ -240,7 +243,7 @@
                         type: 'pie',
                         data: {
                             labels: estateData.chartData.ageProfile.labels,
-                            datasets: [{ data: estateData.chartData.ageProfile.data, backgroundColor: ['#fde047', '#eab308'], hoverOffset: 4 }]
+                            datasets: [{ data: estateData.chartData.ageProfile.data, backgroundColor: ['#ca8a04', '#eab308', '#fde047'], hoverOffset: 4 }]
                         },
                         options: { responsive: true, maintainAspectRatio: false, plugins: { title: { display: true, text: estateData.chartData.ageProfile.title, font: { size: 16 } }, legend: { position: 'right' } } }
                     });
@@ -250,11 +253,16 @@
             function populateInternalDropdowns() {
                 const agronomyDiv = document.getElementById(`${estateData.id}-agronomy`);
                 const plantationDiv = document.getElementById(`${estateData.id}-plantation`);
+                const pinfosysDiv = document.getElementById(`${estateData.id}-pinfosys`);
+
                 if (agronomyDiv && estateData.reports.agronomy) {
                     agronomyDiv.innerHTML = Object.entries(estateData.reports.agronomy).map(([section, content]) => `<h4 class="font-semibold mt-2 text-gray-800">${section.replace(/([A-Z])/g, ' $1').trim()}:</h4><p class="text-sm text-gray-600">${content}</p>`).join('');
                 }
                 if (plantationDiv && estateData.reports.plantation) {
                     plantationDiv.innerHTML = Object.entries(estateData.reports.plantation).map(([section, content]) => `<h4 class="font-semibold mt-2 text-gray-800">${section.replace(/([A-Z])/g, ' $1').trim()}:</h4><p class="text-sm text-gray-600">${content}</p>`).join('');
+                }
+                 if (pinfosysDiv && estateData.reports.pinfosys) {
+                    pinfosysDiv.innerHTML = `<p class="text-sm text-gray-600">${estateData.reports.pinfosys.summary}</p>`;
                 }
             }
 
@@ -276,7 +284,7 @@
         function openPolicyModal() {
             const modalTitle = document.getElementById('modalTitle');
             const modalContent = document.getElementById('modalContent');
-            const policyData = ` <div class='policy-item'><p class='font-semibold'>Water Management in Peat</p><p class='text-sm text-gray-600'><b>Policy Ref: PEAT-DRAIN-01:</b> In peat areas, the water table must be maintained at 75-100cm from the surface. Main drains and canals must be kept free-flowing to ensure rapid discharge during monsoon periods.</p></div> <div class='policy-item'><p class='font-semibold'>Field Upkeep</p><p class='text-sm text-gray-600'><b>Policy Ref: CENSUS-01:</b> A full palm census must be conducted every 5 years, or more frequently in areas with high casualty rates, to ensure accurate fertilizer planning.</p><p class='text-sm text-gray-600'><b>Policy Ref: PRUNE-STD-02:</b> Progressive pruning must be consistently implemented. All dry and semi-dry fronds must be removed to prevent pest harborage and obstruction of harvesting.</p></div> <div class='policy-item'><p class='font-semibold'>Fertilizer Application</p><p class='text-sm text-gray-600'><b>Policy Ref: FERT-APP-05:</b> All fertilizer applications must be completed according to schedule. Any delays beyond 15 days must be reported with a mitigation plan.</p></div>`;
+            const policyData = ` <div class='policy-item'><p class='font-semibold'>Labour Management</p><p class='text-sm text-gray-600'><b>Policy Ref: LABOUR-RATIO-02:</b> The harvester-to-hectare ratio must be maintained at a level that ensures harvesting intervals do not exceed 15 days, especially during peak cropping seasons.</p></div> <div class='policy-item'><p class='font-semibold'>Harvesting Discipline</p><p class='text-sm text-gray-600'><b>Policy Ref: HARV-INT-01:</b> A minimum of two harvesting rounds per month must be achieved consistently. Extended intervals beyond 15 days are unacceptable and require immediate corrective action.</p></div> <div class='policy-item'><p class='font-semibold'>Field Upkeep Standards</p><p class='text-sm text-gray-600'><b>Policy Ref: PRUNE-STD-02:</b> Progressive pruning must be implemented to standard. All dry/hanging fronds must be removed, and cut fronds must be stacked neatly away from paths and drains.</p></div>`;
             modalTitle.innerText = 'Agricultural Policy Cross-Reference: Ladang Delima';
             modalContent.innerHTML = policyData;
             document.getElementById('policyModal').classList.add('active');
