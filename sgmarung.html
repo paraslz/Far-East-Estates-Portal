@@ -70,67 +70,66 @@
             const estateData = {
                 "id": "sgmarung",
                 "name": "Ladang Sungai Marung",
-                "reportInfo": "Data based on PA Report (Apr 2025) & Agronomy Report (Aug 2024).",
+                "reportInfo": "Data based on PA Report (Apr 2025) & Agronomy Report (Apr 2025).",
                 "summaryMetrics": {
                     "area": {
                         "title": "Estate Area",
                         "lines": [
-                            "Total Planted: 2,250.23 ha",
-                            "Mature: 1,308.61 ha",
-                            "Immature: 563.73 ha",
-                            "Replanting: 377.89 ha"
+                            "Total Area: 2,165.23 ha",
+                            "Mature: 1,561.50 ha",
+                            "Immature: 603.73 ha"
                         ]
                     },
                     "yield": {
-                        "title": "Yield/Ha (YTD March '25 vs Budget)",
-                        "value": "3.43 / 3.36 MT",
-                        "note": "+2% vs budget"
+                        "title": "Yield/Ha (2024)",
+                        "value": "19.50 MT",
+                        "note": "+29.74% vs 2023"
                     },
                     "cost": {
                         "title": "FFB Cost/Tonne (YTD March '25 vs Budget)",
                         "value": "RM 235.42 / RM 441.57",
                         "note": "47% lower than budget"
                     },
-                    "labour": {
-                        "title": "Labour Status",
-                        "value": "Shortage",
-                        "note": "Deficit of 22 workers"
+                    "pest": {
+                        "title": "Key Pest Status",
+                        "value": "Under Control",
+                        "note": "Rat damage below threshold"
                     },
                      "upkeep": {
                         "title": "Upkeep Status",
                         "value": "Needs Improvement",
-                        "note": "Weeding & pruning issues"
+                        "note": "Harvesting & weeding issues"
                     }
                 },
                 "keyMetrics": [
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-blue-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z' /></svg>", "label": "Labour Ratio", "value": "1:17 ha (Shortage)" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-green-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z' /></svg>", "label": "P&D Status", "value": "Under Control" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-blue-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z' /></svg>", "label": "Harvester Shortage", "value": "12 workers" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-green-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z' /></svg>", "label": "Rat Damage", "value": "3.8% - 7.5% (Low)" },
                     { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-yellow-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M13 10V3L4 14h7v7l9-11h-7z' /></svg>", "label": "OER % (YTD March '25)", "value": "18.48%" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-red-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z' /></svg>", "label": "Harvester Prod.", "value": "1.79 MT/md (Needs Improvement)" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-purple-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z' /></svg>", "label": "Harvest Interval", "value": "15-17 days (Acceptable)" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-teal-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17.657 18.343A8 8 0 016.343 7.029m11.314 11.314a8 8 0 01-11.314-11.314m2.121 13.435a2 2 0 01-2.828 0l-2.122-2.121a2 2 0 010-2.828l5.656-5.657a2 2 0 012.829 0l2.121 2.121a2 2 0 010 2.828l-5.657 5.657z' /></svg>", "label": "Nutrient Status", "value": "N/A" }
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-red-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z' /></svg>", "label": "Harvester Prod.", "value": "2.69 - 3.49 MT/day" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-purple-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z' /></svg>", "label": "Harvest Interval", "value": "15-18 days (Acceptable)" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-teal-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17.657 18.343A8 8 0 016.343 7.029m11.314 11.314a8 8 0 01-11.314-11.314m2.121 13.435a2 2 0 01-2.828 0l-2.122-2.121a2 2 0 010-2.828l5.656-5.657a2 2 0 012.829 0l2.121 2.121a2 2 0 010 2.828l-5.657 5.657z' /></svg>", "label": "Manuring Delay (2025)", "value": "Delayed due to floods" }
                 ],
                 "chartData": {
                     "production": {
-                        "labels": ["2019", "2020", "2021", "2022", "2023"],
-                        "ffb": [20.18, 20.14, 17.17, 16.55, 14.56],
-                        "rainfall": [1727, 2168, 2550, 3351, 3475],
-                        "note": "*Annual FFB Yield (YPH) and Rainfall."
+                        "labels": ["2020", "2021", "2022", "2023", "2024"],
+                        "ffb": [21.38, 19.17, 14.20, 15.03, 19.50],
+                        "rainfall": [2168, 2550, 2416, 4643, 4756],
+                        "note": "*Annual FFB Yield (MT/Ha) and Rainfall (mm)."
                     },
                     "ageProfile": {
-                        "labels": ["Immature (<3Y)", "Old Mature (>33Y)"],
-                        "data": [25, 58],
-                        "title": "Ladang Sungai Marung - Palm Age Distribution",
-                        "note": "*Excludes 17% Replanting Area."
+                        "labels": ["0-3 Yrs (Immature)", "4-7 Yrs (Young)", ">26 Yrs (Old)"],
+                        "data": [28, 11, 60],
+                        "title": "Ladang Sungai Marung - Palm Age Profile (2025)",
+                        "note": "*No palms in prime (8-19 yrs) or declining (20-25 yrs) age categories."
                     }
                 },
                 "observations": [
-                    "<b>Labour Shortage:</b> The estate has a shortage of 22 workers, including 8 for upkeep and 4 for harvesting, which impacts field work timeliness. <span class='observation-ref'>(PAR Pg. 4, 15)</span>",
-                    "<b>Poor Crop Recovery:</b> Harvesting standards are subpar, with missed loose fruits and improperly stacked fronds. This indicates a need for better supervision. <span class='observation-ref'>(PAR Pg. 6, 32)</span>",
-                    "<b>Delayed Manuring:</b> The 2025 manuring program is behind schedule for several blocks, which could affect palm nutrition and yield. <span class='observation-ref'>(PAR Pg. 5, 30)</span>",
-                    "<b>Unsatisfactory Weeding:</b> Noxious weeds like VOPs and jungle creepers are still present in old mature fields, and upkeep of palm circles needs improvement. <span class='observation-ref'>(PAR Pg. 4, 21)</span>",
-                    "<b>Immature Area Upkeep:</b> The immature areas (P21A, P21B, P22D) have issues with flood damage, incomplete supplying, and need for better weeding and basal pruning. <span class='observation-ref'>(PAR Pg. 7, 39-52)</span>",
-                    "<b>Replanting in Progress:</b> Replanting for P25G (206 ha) commenced in Jan 2025. Land preparation for P24F (212 ha) is complete. <span class='observation-ref'>(PAR Pg. 55-63)</span>"
+                    "<b>Poor Crop Recovery:</b> Harvesting standards have improved but still require attention. A significant percentage of over-ripe bunches were noted (5-10%), and incomplete collection of loose fruits persists. <span class='observation-ref'>(AR Pg. 4, 27-31)</span>",
+                    "<b>Delayed 2025 Manuring:</b> The manuring program as of March 2025 is behind schedule due to heavy rainfall and flooding, which made several blocks inaccessible. <span class='observation-ref'>(AR Pg. 6, 14)</span>",
+                    "<b>Unsatisfactory Weeding:</b> Incomplete kill of undesirable weeds was sporadically noted. Grassy circles and Volunteer Oil Palms (VOPs) were observed in several blocks, requiring eradication. <span class='observation-ref'>(AR Pg. 5, 47-49)</span>",
+                    "<b>Immature Area Management:</b> Immature blocks (P21A, P21B, P22D) suffer from high palm losses due to flooding, requiring continuous supplying. Over-pruning was also noted in these areas. <span class='observation-ref'>(AR Pg. 59, 64)</span>",
+                    "<b>Unfavourable Age Profile:</b> 60% of palms are in the old age category (>26 years), with no palms in the prime yielding age (8-19 years). A systematic replanting program is crucial. <span class='observation-ref'>(AR Pg. 9, 12)</span>",
+                    "<b>Fertilizer Application Technique:</b> While semi-mechanical application is good, the current dosage-adjustable containers lead to uneven fertilizer distribution. A modified applicator is proposed to improve dispersal. <span class='observation-ref'>(AR Pg. 17-19)</span>"
                 ],
                 "reports": {
                     "plantation": {
@@ -148,11 +147,12 @@
                         "Immature": "Significant challenges in P21A, P21B, P22C, and P22D due to flooding, requiring ongoing supplying and careful upkeep. P24F planting is complete, while P25G is in progress. (Source: PAR, Pg. 39-63)"
                     },
                     "agronomy": {
-                        "Executive Summary": "Yield performance in 2024 was below potential, impacted by flooding and high water-tables in the extensive low-lying areas. Crop recovery has improved but remains a challenge. Rat damage is under control. Key focus should be on drainage improvement and managing the large replanting/immature areas. (Source: AR, Pg. 4-6, 49)",
-                        "Nutrient Inputs/Progress of Manuring": "The 2024 manuring program was completed but with delays. The 2025 program for RP is pending. EFB application is focused on replanting areas. (Source: AR, Pg. 14-19)",
-                        "Agronomic Observation": "Crop recovery needs improvement due to overripe bunches. Pruning is slightly under-pruned in some areas. Ground vegetation is acceptable, but VOPs need removal. Rat damage is under control. (Source: AR, Pg. 17-48)",
-                        "Yield Performance": "2024 yield was 18.87 mt/ha, a 30% increase from 2023. The increase is attributed to crop recovery. However, yield is still limited by the large old mature and flood-prone areas. (Source: AR, Pg. 53-55)",
-                        "Fertilizer Recommendation": "The 2025 program is formulated. Site-specific application methods are recommended, especially for mounded and terraced areas, to improve efficiency. (Source: AR, Pg. 56)"
+                        "Executive Summary": "Agronomic conditions were examined, and yield-limiting factors have been highlighted for corrective action. Key issues include harvesting quality, manuring delays due to flooding, and challenges with immature plantings in flood-prone areas. (Source: AR, Pg. 4-7)",
+                        "Nutrient Inputs/Progress of Manuring": "The 2024 manuring program was 94% complete, with some fertilizers not fully applied due to palm losses from flooding. The 2025 program is delayed as of March due to heavy rain and inaccessible blocks. The fertilizer store has wet floor conditions that need investigation. (Source: AR, Pg. 13-15)",
+                        "Agronomic Observation": "Harvesting intervals are acceptable (15-18 days), but quality needs improvement with 5-10% overripe bunches observed. Loose fruit collection is incomplete. Pruning is generally satisfactory, but some areas are slightly under-pruned. Weeding is acceptable, but undesirable weeds and VOPs persist in localized areas. Rat damage is low. (Source: AR, Pg. 25-51)",
+                        "Immature/Young Mature Plantings": "Significant supplying (36,170 palms) has been conducted in blocks P21A, P21B, P22D, and P24F due to flood damage. Growth is variable, with palms on higher ground showing better vigor. Over-pruning was noted. P24F includes a strategic watermelon intercropping project to reduce Ganoderma risk. (Source: AR, Pg. 56-70)",
+                        "Yield Performance": "FFB yield increased by 29.74% in 2024 (19.50 MT/Ha) compared to 2023 (15.03 MT/Ha), mainly due to an increase in bunches per palm. However, yield is inconsistent and heavily impacted by seasonal flooding in low-lying areas, affecting crop evacuation. (Source: AR, Pg. 74-78)",
+                        "Fertilizer Recommendation": "No changes to the 2025 fertilizer program. The estate is urged to minimize delays between scheduled and actual application. Recommendations are provided for new plantings. (Source: AR, Pg. 84)"
                     }
                 },
                 "policy": " <div class='policy-item'><p class='font-semibold'>Replanting & Immature Upkeep</p><p class='text-sm text-gray-600'><b>Policy Ref: REPLANT-FLOOD-01:</b> In flood-prone areas, supplying should be deferred until floodwaters recede. Consider raising planting platforms or constructing bunds for future plantings.</p><p class='text-sm text-gray-600'><b>Policy Ref: UPKEEP-IM-02:</b> Basal frond pruning must be completed before scout harvesting begins.</p></div> <div class='policy-item'><p class='font-semibold'>Harvesting Standards</p><p class='text-sm text-gray-600'><b>Policy Ref: HARV-STD-03:</b> Complete collection of all loose fruits is mandatory. Supervisors must conduct daily checks.</p></div> <div class='policy-item'><p class='font-semibold'>Labour Management</p><p class='text-sm text-gray-600'><b>Policy Ref: HR-PROD-02:</b> Estates must monitor harvester productivity against targets. Implement training or review mechanization if consistently below target.</p></div>"
@@ -178,7 +178,7 @@
                     const colorClass = metric.title.includes('Area') ? 'bg-blue-50 text-blue-800' : 
                                        metric.title.includes('Yield') ? 'bg-green-50 text-green-800' :
                                        metric.title.includes('Cost') ? 'bg-orange-50 text-orange-800' :
-                                       metric.title.includes('Labour') ? 'bg-red-50 text-red-800' : 'bg-yellow-50 text-yellow-800';
+                                       metric.title.includes('Pest') ? 'bg-indigo-50 text-indigo-800' : 'bg-yellow-50 text-yellow-800';
                     if (metric.lines) {
                         return `<div class="p-4 rounded-lg ${colorClass}"><h3 class="font-semibold">${metric.title}</h3>${metric.lines.map(line => `<p class="text-sm">${line}</p>`).join('')}</div>`;
                     }
@@ -241,7 +241,7 @@
                         type: 'pie',
                         data: {
                             labels: estateData.chartData.ageProfile.labels,
-                            datasets: [{ data: estateData.chartData.ageProfile.data, backgroundColor: ['#fde047', '#facc15', '#eab308', '#ca8a04'], hoverOffset: 4 }]
+                            datasets: [{ data: estateData.chartData.ageProfile.data, backgroundColor: ['#fde047', '#60a5fa', '#ef4444'], hoverOffset: 4 }]
                         },
                         options: { responsive: true, maintainAspectRatio: false, plugins: { title: { display: true, text: estateData.chartData.ageProfile.title, font: { size: 16 } }, legend: { position: 'right' } } }
                     });
