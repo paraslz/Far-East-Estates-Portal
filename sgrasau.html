@@ -79,14 +79,14 @@
                         ]
                     },
                     "yield": {
-                        "title": "Yield/Ha (YTD May)",
-                        "value": "8.70 MT/Ha",
-                        "note": "+10% vs Budget (7.92 MT/Ha)"
+                        "title": "Yield/Ha (Actual vs Budget)",
+                        "value": "8.70 / 7.92 MT",
+                        "note": "YTD May, 10% above budget"
                     },
                     "cost": {
-                        "title": "Cost/Tonne (YTD Apr)",
-                        "value": "RM 279.00",
-                        "note": "-17% vs Budget (RM 334.47)"
+                        "title": "Cost/Tonne (Actual vs Budget)",
+                        "value": "RM 279.00 / RM 334.47",
+                        "note": "YTD April, 17% below budget"
                     },
                     "weeding": {
                         "title": "Weeding Status",
@@ -151,7 +151,8 @@
                         "Agronomic Observation": "Harvesting standards are acceptable with minimal crop loss. Pruning is up-to-date, though some supertall palms were missed. Weed control is good, but some noxious weeds require monitoring. Rat damage is low, but bagworm signs were noted. (Source: AR, Pg. 13-29)",
                         "Yield Performance": "Yield increased by 26.3% in 2024. The positive trend continued in early 2025 with a 1.3% year-on-year increase as of April. Crop recovery is satisfactory. (Source: AR, Pg. 30-32)",
                         "Fertilizer Recommendation": "The 2025 fertilizer program is maintained. A new foliar analysis is recommended for 2025 to formulate the 2026 program. (Source: AR, Pg. 34)"
-                    }
+                    },
+                    "pinfosys": "Not Available"
                 },
                 "policy": " <div class='policy-item'><p class='font-semibold'>Pest Management</p><p class='text-sm text-gray-600'><b>Policy Ref: P&D-CENSUS-01:</b> Pest censuses for rats and leaf-eating pests must be conducted quarterly to enable early detection and timely intervention.</p></div> <div class='policy-item'><p class='font-semibold'>Infrastructure</p><p class='text-sm text-gray-600'><b>Policy Ref: MAINT-INFRA-02:</b> Critical infrastructure such as bridges and main outlet drains must be repaired immediately to prevent disruption to field operations and mitigate flooding.</p></div> <div class='policy-item'><p class='font-semibold'>Canopy Management</p><p class='text-sm text-gray-600'><b>Policy Ref: PRUNE-TALL-01:</b> Supertall palms that cannot be safely harvested or pruned should be identified and scheduled for removal/replanting to eliminate safety risks and prevent crop loss.</p></div> <div class='policy-item'><p class='font-semibold'>Weed Management</p><p class='text-sm text-gray-600'><b>Policy Ref: WEED-NOXIOUS-01:</b> Areas with persistent noxious weeds (VOPs, Stenochlaena, etc.) must have a targeted eradication plan to prevent spread and impact on palm health.</p></div>"
             };
@@ -175,8 +176,8 @@
                 const summaryMetricsHTML = Object.values(estate.summaryMetrics).map(metric => {
                     const colorClass = metric.title.includes('Area') ? 'bg-blue-50 text-blue-800' : 
                                        metric.title.includes('Yield') ? 'bg-green-50 text-green-800' :
-                                       metric.title.includes('Cost') ? 'bg-emerald-50 text-emerald-800' :
-                                       metric.title.includes('Weeding') ? 'bg-yellow-50 text-yellow-800' : 'bg-red-50 text-red-800';
+                                       metric.title.includes('Cost') ? 'bg-orange-50 text-orange-800' :
+                                       metric.title.includes('Weeding') ? 'bg-red-50 text-red-800' : 'bg-yellow-50 text-yellow-800';
                     if (metric.lines) {
                         return `<div class="p-4 rounded-lg ${colorClass}"><h3 class="font-semibold">${metric.title}</h3>${metric.lines.map(line => `<p class="text-sm">${line}</p>`).join('')}</div>`;
                     }
@@ -208,6 +209,8 @@
                             <div id="${estate.id}-plantation" class="details-content bg-gray-50 p-4 rounded-md border border-gray-200"></div>
                             <button data-dropdown-id="${estate.id}-agronomy" class="dropdown-btn w-full text-left bg-gray-800 text-white p-3 rounded-md hover:bg-gray-700 transition">Agronomy Report Details</button>
                             <div id="${estate.id}-agronomy" class="details-content bg-gray-50 p-4 rounded-md border border-gray-200"></div>
+                            <button data-dropdown-id="${estate.id}-pinfosys" class="dropdown-btn w-full text-left bg-gray-800 text-white p-3 rounded-md hover:bg-gray-700 transition">Pinfosys Report Details</button>
+                            <div id="${estate.id}-pinfosys" class="details-content bg-gray-50 p-4 rounded-md border border-gray-200"></div>
                         </div>
                     </div>`;
             }
@@ -249,11 +252,24 @@
             function populateInternalDropdowns() {
                 const agronomyDiv = document.getElementById(`${estateData.id}-agronomy`);
                 const plantationDiv = document.getElementById(`${estateData.id}-plantation`);
+                const pinfosysDiv = document.getElementById(`${estateData.id}-pinfosys`);
+                
                 if (agronomyDiv && estateData.reports.agronomy) {
                     agronomyDiv.innerHTML = Object.entries(estateData.reports.agronomy).map(([section, content]) => `<h4 class="font-semibold mt-2 text-gray-800">${section.replace(/([A-Z])/g, ' $1').trim()}:</h4><p class="text-sm text-gray-600">${content}</p>`).join('');
+                } else if (agronomyDiv) {
+                    agronomyDiv.innerHTML = `<p class="text-sm text-gray-600">Not Available</p>`;
                 }
+
                 if (plantationDiv && estateData.reports.plantation) {
                     plantationDiv.innerHTML = Object.entries(estateData.reports.plantation).map(([section, content]) => `<h4 class="font-semibold mt-2 text-gray-800">${section.replace(/([A-Z])/g, ' $1').trim()}:</h4><p class="text-sm text-gray-600">${content}</p>`).join('');
+                } else if (plantationDiv) {
+                    plantationDiv.innerHTML = `<p class="text-sm text-gray-600">Not Available</p>`;
+                }
+
+                if (pinfosysDiv && estateData.reports.pinfosys === "Not Available") {
+                    pinfosysDiv.innerHTML = `<p class="text-sm text-gray-600">Not Available</p>`;
+                } else if (pinfosysDiv) {
+                    pinfosysDiv.innerHTML = `<p class="text-sm text-gray-600">Not Available</p>`;
                 }
             }
 
