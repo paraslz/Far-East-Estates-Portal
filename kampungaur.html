@@ -70,25 +70,25 @@
             const estateData = {
                 "id": "kampungaur",
                 "name": "Ladang Kampung Aur",
-                "reportInfo": "Data based on PA Report (August 2025) & Agronomy Report (Mar 2025).",
+                "reportInfo": "Data based on PA Report (August 2025) & Agronomy Report (September 2025).",
                 "summaryMetrics": {
                     "area": {
                         "title": "Estate Area",
                         "lines": [
-                            "Total Planted: 1,998.30 ha",
-                            "Mature: 1,918.20 ha",
+                            "Total Planted: 2,056.76 ha",
+                            "Mature: 1,976.66 ha",
                             "Immature: 80.10 ha"
                         ]
                     },
                     "yield": {
                         "title": "Yield/Ha (YTD Jul '25 vs Budget)",
                         "value": "13.20 / 11.96 MT",
-                        "note": "+10% ahead of budget"
+                        "note": "+10% ahead of budget (PAR)"
                     },
                     "cost": {
                         "title": "FFB Cost/Tonne (YTD Jul '25 vs Budget)",
                         "value": "RM 232.76 / RM 291.86",
-                        "note": "20% lower than budget"
+                        "note": "20% lower than budget (PAR)"
                     },
                     "labour": {
                         "title": "Labour Status",
@@ -98,7 +98,7 @@
                      "pruning": {
                         "title": "Pruning Status",
                         "value": "Unsatisfactory",
-                        "note": "Behind schedule in old areas"
+                        "note": "Behind schedule in old blocks"
                     }
                 },
                 "keyMetrics": [
@@ -106,8 +106,8 @@
                     { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-green-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z' /></svg>", "label": "P&D Status", "value": "Under Control" },
                     { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-yellow-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M13 10V3L4 14h7v7l9-11h-7z' /></svg>", "label": "OER % (YTD Jul '25)", "value": "19.02%" },
                     { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-blue-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z' /></svg>", "label": "Harvester Prod.", "value": "2.70 MT/md" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-purple-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z' /></svg>", "label": "Harvest Interval", "value": "~15 days (Acceptable)" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-red-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17.657 18.343A8 8 0 016.343 7.029m11.314 11.314a8 8 0 01-11.314-11.314m2.121 13.435a2 2 0 01-2.828 0l-2.122-2.121a2 2 0 010-2.828l5.656-5.657a2 2 0 012.829 0l2.121 2.121a2 2 0 010 2.828l-5.657 5.657z' /></svg>", "label": "Manuring Status", "value": "Delayed" }
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-purple-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z' /></svg>", "label": "Harvest Interval", "value": "15-20+ days (Extended)" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-red-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17.657 18.343A8 8 0 016.343 7.029m11.314 11.314a8 8 0 01-11.314-11.314m2.121 13.435a2 2 0 01-2.828 0l-2.122-2.121a2 2 0 010-2.828l5.656-5.657a2 2 0 012.829 0l2.121 2.121a2 2 0 010 2.828l-5.657 5.657z' /></svg>", "label": "Manuring Status", "value": "Delayed (76% complete)" }
                 ],
                 "chartData": {
                     "production": {
@@ -118,19 +118,19 @@
                     },
                     "ageProfile": {
                         "labels": ["Immature (0-3Y)", "Young Mature (4-7Y)", "Prime Mature (8-18Y)", "Old Mature (>19Y)"],
-                        "data": [4.01, 13.44, 43.74, 38.81],
+                        "data": [4.0, 13.4, 43.7, 38.8], // Simplified from 4.01, etc.
                         "title": "Ladang Kampung Aur - Palm Age Distribution",
                         "note": "*Source: PA Report 02/2025, Pg. 10."
                     }
                 },
-                "observations": [
-                    "<b>Harvester Shortage:</b> A deficit of 18 harvesters (ratio 1:27 ha) is inadequate and risks impacting harvesting timeliness and pruning quality. <span class='observation-ref'>(PAR Pg. 13, 59)</span>",
-                    "<b>Unsatisfactory Pruning:</b> The pruning regime is not satisfactory, particularly in old mature areas where dried, hanging fronds are common. This is a recurring issue from previous reports. <span class='observation-ref'>(PAR Pg. 60; AR Pg. 19-54)</span>",
-                    "<b>Delayed Manuring:</b> The manuring program for July (Mixture A & B) is behind schedule and needs to be completed urgently. This continues a trend of delays noted in previous agronomy visits. <span class='observation-ref'>(PAR Pg. 39, 60; AR Pg. 4-7)</span>",
-                    "<b>Weeding Quality Deteriorating:</b> Noxious weeds (jungle creepers, bamboo grass) are prevalent in low-lying and open areas, indicating a need for improved supervision and follow-up. <span class='observation-ref'>(PAR Pg. 22, 59)</span>",
-                    "<b>Road Maintenance Pending:</b> While road grading is complete, the surfacing of soggy and slippery sections with crusher run has not started and is urgently required for efficient transport. <span class='observation-ref'>(PAR Pg. 26, 60)</span>",
-                    "<b>Immature Area (P21S) Upkeep:</b> Supplying in the immature block is still in progress and must be expedited. The area also requires attention for noxious weeds and rat control. <span class='observation-ref'>(PAR Pg. 51-54, 61)</span>",
-                    "<b>Strong YTD Performance:</b> Despite operational challenges, FFB production is 10% above budget and ex-estate cost is 20% below budget as of July 2025, which is commendable. <span class='observation-ref'>(PAR Pg. 45, 49)</span>"
+                 "observations": [
+                    "<b>Harvester Shortage & Extended Intervals:</b> A critical deficit of harvesters (ratio 1:27 ha) has led to extended harvesting intervals, exceeding 20 days in some blocks, impacting crop recovery. <span class='observation-ref'>(PAR Pg. 13, 59; AR Pg. 19)</span>",
+                    "<b>Unsatisfactory Pruning:</b> The pruning regime is unsatisfactory, particularly in old mature areas (B1, B2, B3) where dry, hanging fronds are common. This recurring issue hinders harvesting efficiency. <span class='observation-ref'>(PAR Pg. 60; AR Pg. 5, 23)</span>",
+                    "<b>Delayed & Sub-Optimal Manuring:</b> The 2025 manuring program is behind schedule (76% complete as of Aug '25). Foliar analysis indicates low Nitrogen and Magnesium in several blocks, requiring attention. <span class='observation-ref'>(PAR Pg. 39, 60; AR Pg. 13, 31)</span>",
+                    "<b>Poor EFB Application:</b> While EFB application is ongoing, quality is unsatisfactory due to inefficient distribution and inadequate levelling. Broader, rotational application across more blocks is recommended. <span class='observation-ref'>(AR Pg. 17)</span>",
+                    "<b>Deteriorating Weeding & Upkeep:</b> Noxious weeds are prevalent in some areas. Road surfacing is still pending, and drain desilting is behind schedule, which is critical as flooding remains a challenge. <span class='observation-ref'>(PAR Pg. 22, 26, 60; AR Pg. 6)</span>",
+                    "<b>Immature Area (P21S) Concerns:</b> Palms in the immature block show uneven growth due to flooding and a prolonged planting period. Supplying must be expedited. <span class='observation-ref'>(PAR Pg. 51-54, 61; AR Pg. 61)</span>",
+                    "<b>Mixed Yield Performance:</b> While YTD July performance was ahead of budget, the cumulative yield as of August 2025 (15.72 Mt/ha) marks a 13.17% decline compared to the previous year, mainly due to flooding affecting key blocks. <span class='observation-ref'>(PAR Pg. 45; AR Pg. 67)</span>"
                 ],
                 "reports": {
                     "plantation": {
@@ -143,20 +143,19 @@
                         "Harvesting and Collection": "The harvesting interval of ~15 days is acceptable. However, standards require improvement to ensure complete loose fruit collection and to prevent over-pruning in young mature areas. (Source: PAR, Pg. 41-44)",
                         "Crop Production": "FFB production as of July is 25,323.68 MT, which is 10% higher than budget. The yield per hectare is 13.20 MT. (Source: PAR, Pg. 45)",
                         "Production Cost": "The ex-estate cost per tonne as of July is RM 232.76, which is 20% lower than the seasonal budget, primarily due to higher crop production. (Source: PAR, Pg. 49-50)",
-                        "Vehicles Running Cost": "Vehicle running costs are generally acceptable. (Source: PAR, Pg. 58)",
-                        "Capital Expenditure": "A new playground was purchased for RM 25,150. (Source: PAR, Pg. 57)",
                         "Immature P21S (80.1 ha)": "Palm supplying is still ongoing and needs to be completed before the area is classified as mature in 2026. Noxious weeds and rat damage require control measures. The manuring program is delayed. Scout harvesting has been successful, yielding 102% more than budgeted. (Source: PAR, Pg. 51-56)"
                     },
                     "agronomy": {
-                        "Executive Summary": "Yield in 2024 was satisfactory, with most fields exceeding 25 mt/ha. Manuring was completed in 2024 but with delays. The 2025 program is slightly behind schedule. Pruning in old plantings is incomplete. Rat and bagworm populations need to be monitored. (Source: AR, Pg. 4-7, 57)",
-                        "Nutrient Inputs/Progress of Manuring": "2024 program was 100% complete, but with delays over 2 months for some applications. 2025 program is slightly behind schedule due to weather. Quality of application needs improvement. (Source: AR, Pg. 12-16)",
-                        "Agronomic Observation": "Harvesting is satisfactory. Pruning is behind schedule in old plantings (P00B, P02A, P03C). Palm appearance is generally good, but some K deficiency was noted. Weeding is well-managed. Rat census is needed. (Source: AR, Pg. 19-54)",
-                        "Yield Performance": "Yield increased by 28% in 2024 to 26.13 mt/ha. Most fields yielded over 25 mt/ha. Crop recovery was satisfactory. (Source: AR, Pg. 55-57)",
-                        "Fertilizer Recommendation": "No amendments to the 2025 fertilizer program are recommended. (Source: AR, Pg. 58)"
+                        "Executive Summary": "Yield as of August 2025 is 15.72 Mt/ha, a 13.17% decline from 2024, largely due to flooding. The 2025 manuring program is 76% complete but delayed. Pruning in old plantings remains incomplete and is hindering harvesting. Pest and disease status is generally under control, but monitoring is required. The immature block (P21S) shows uneven growth. (Source: AR, Pg. 4-7, 67, 69-70)",
+                        "Nutrient Inputs/Progress of Manuring": "As of August 2025, 76% of the annual program was completed. Mixture B and C applications are outstanding, with some applications delayed by over 2 months. A wet floor in the fertilizer store requires corrective action to prevent spoilage. (Source: AR, Pg. 13-14)",
+                        "Agronomic Observation": "Harvesting intervals are extended, exceeding 20 days in some blocks (e.g., P12H), due to a harvester deficit. Under-pruning with dry hanging fronds persists in old blocks (B1, B2, B3). Foliar analysis revealed Magnesium and Nitrogen deficiencies in several blocks. Weeding is generally acceptable but requires follow-up on jungle woodies. Rat damage has decreased significantly post-baiting. (Source: AR, Pg. 19, 23, 31, 34, 47)",
+                        "By-Product/Biowaste Applications": "A total of 16,906 Mt of EFB was applied in 2025, mainly in blocks P02A and P03C. It is recommended to expand EFB application to other blocks on a rotational basis to improve soil health more broadly and avoid over-application. Application quality was unsatisfactory with poor distribution in the field. (Source: AR, Pg. 16-17)",
+                        "Yield Performance": "YTD August 2025 yield was 15.72 Mt/ha, a 13.17% decline from the same period last year. The shortfall is largely attributed to seasonal factors and significant flooding in block P12H, which saw a 33% yield drop and completed only 14 harvesting rounds instead of the targeted 16. In contrast, the young mature block P20F showed a 49% yield increase due to age factor. (Source: AR, Pg. 67-68)",
+                        "Fertilizer Recommendation (2026)": "The 2026 program will utilize a combination of mixture and straight fertilizers. Fertilizer application will be withdrawn from blocks P00/B1 and B2 in preparation for their replanting in 2027. (Source: AR, Pg. 71-72)"
                     },
                      "pinfosys": "Not Available"
                 },
-                "policy": " <div class='policy-item'><p class='font-semibold'>Labour Management</p><p class='text-sm text-gray-600'><b>Policy Ref: HR-MANPOWER-01:</b> Estate managers must maintain the budgeted worker-to-land ratio. A harvester-to-hectare ratio of 1:27 is considered inadequate and requires an immediate recruitment plan.</p></div> <div class='policy-item'><p class='font-semibold'>Pruning in Old Mature Areas</p><p class='text-sm text-gray-600'><b>Policy Ref: PRUNE-OLD-01:</b> In palms older than 19 years, pruning must be prioritized to remove all dry and hanging fronds to prevent obstruction, improve harvesting efficiency, and reduce pest habitats.</p></div> <div class='policy-item'><p class='font-semibold'>Manuring & Fertilizing</p><p class='text-sm text-gray-600'><b>Policy Ref: FERT-APP-05:</b> All fertilizer applications must be completed according to the schedule. Any delays beyond 15 days must be reported with a mitigation plan.</p></div> <div class='policy-item'><p class='font-semibold'>Upkeep of Immature Areas</p><p class='text-sm text-gray-600'><b>Policy Ref: UPKEEP-IM-03:</b> Supplying of vacant points must be completed at least 6 months before an immature area is scheduled to be declared mature.</p></div>"
+                 "policy": " <div class='policy-item'><p class='font-semibold'>Labour Management</p><p class='text-sm text-gray-600'><b>Policy Ref: HR-MANPOWER-01:</b> Estate managers must maintain the budgeted worker-to-land ratio. A harvester-to-hectare ratio of 1:27 is considered inadequate and requires an immediate recruitment plan.</p></div> <div class='policy-item'><p class='font-semibold'>Pruning in Old Mature Areas</p><p class='text-sm text-gray-600'><b>Policy Ref: PRUNE-OLD-01:</b> In palms older than 19 years, pruning must be prioritized to remove all dry and hanging fronds to prevent obstruction, improve harvesting efficiency, and reduce pest habitats.</p></div> <div class='policy-item'><p class='font-semibold'>Manuring & Fertilizing</p><p class='text-sm text-gray-600'><b>Policy Ref: FERT-APP-05:</b> All fertilizer applications must be completed according to the schedule. Any delays beyond 15 days must be reported with a mitigation plan.</p></div><div class='policy-item'><p class='font-semibold'>EFB Application</p><p class='text-sm text-gray-600'><b>Policy Ref: FERT-EFB-02:</b> EFB application should be planned on a rotational basis across multiple blocks to maximize agronomic benefits and avoid potential issues from over-application in a single area.</p></div> <div class='policy-item'><p class='font-semibold'>Upkeep of Immature Areas</p><p class='text-sm text-gray-600'><b>Policy Ref: UPKEEP-IM-03:</b> Supplying of vacant points must be completed at least 6 months before an immature area is scheduled to be declared mature.</p></div>"
             };
 
 
@@ -291,8 +290,8 @@
         function openPolicyModal() {
             const modalTitle = document.getElementById('modalTitle');
             const modalContent = document.getElementById('modalContent');
-            const policyData = ` <div class='policy-item'><p class='font-semibold'>Labour Management</p><p class='text-sm text-gray-600'><b>Policy Ref: HR-MANPOWER-01:</b> Estate managers must maintain the budgeted worker-to-land ratio. A harvester-to-hectare ratio of 1:27 is considered inadequate and requires an immediate recruitment plan.</p></div> <div class='policy-item'><p class='font-semibold'>Pruning in Old Mature Areas</p><p class='text-sm text-gray-600'><b>Policy Ref: PRUNE-OLD-01:</b> In palms older than 19 years, pruning must be prioritized to remove all dry and hanging fronds to prevent obstruction, improve harvesting efficiency, and reduce pest habitats.</p></div> <div class='policy-item'><p class='font-semibold'>Manuring & Fertilizing</p><p class='text-sm text-gray-600'><b>Policy Ref: FERT-APP-05:</b> All fertilizer applications must be completed according to the schedule. Any delays beyond 15 days must be reported with a mitigation plan.</p></div> <div class='policy-item'><p class='font-semibold'>Upkeep of Immature Areas</p><p class='text-sm text-gray-600'><b>Policy Ref: UPKEEP-IM-03:</b> Supplying of vacant points must be completed at least 6 months before an immature area is scheduled to be declared mature.</p></div>`;
-            modalTitle.innerText = 'Agricultural Policy Cross-Reference: Ladang Kampung Aur';
+            const policyData = estateData.policy;
+            modalTitle.innerText = 'Agricultural Policy Cross-Reference: ' + estateData.name;
             modalContent.innerHTML = policyData;
             document.getElementById('policyModal').classList.add('active');
         }
