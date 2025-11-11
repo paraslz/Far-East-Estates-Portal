@@ -70,8 +70,7 @@
             const estateData = {
                 "id": "dsk",
                 "name": "Ladang DSK",
-                "visitDate": "9th July 2025",
-                "reportInfo": "Data based on Plantation Advisory Report (July 2025) & Agronomy Report (Q1 2025).",
+                "reportInfo": "Data based on Plantation Advisory Report (July 2025) & Agronomy Report (October 2025).",
                 "summaryMetrics": {
                     "area": {
                         "title": "Estate Area",
@@ -84,52 +83,52 @@
                     "yield": {
                         "title": "Yield/Ha (YTD June '25 vs Budget)",
                         "value": "9.55 / 9.39 MT",
-                        "note": "+1.7% vs budget"
+                        "note": "+1.7% vs budget (Source: PAR)"
                     },
                     "cost": {
                         "title": "FFB Cost/Tonne (YTD June '25 vs Budget)",
                         "value": "RM 274.43 / RM 344.00",
-                        "note": "20% lower than budget"
+                        "note": "20% lower than budget (Source: PAR)"
                     },
                     "labour": {
                         "title": "Labour Status",
                         "value": "Adequate",
-                        "note": "1:15 ha ratio"
+                        "note": "1:15 ha ratio (Source: PAR)"
                     },
                      "pests": {
                         "title": "Pest Status",
-                        "value": "Moderate",
-                        "note": "Rat & Elephant damage controlled"
+                        "value": "High (Rats)",
+                        "note": "Rat damage at 22% (Sep '25)"
                     }
                 },
                 "keyMetrics": [
                     { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-blue-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M15 21a6 6 0 00-9-5.197m0 0A5.975 5.975 0 0112 13a5.975 5.975 0 01-3 5.197z' /></svg>", "label": "Labour Ratio", "value": "1:15 ha (Adequate)" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-yellow-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z' /></svg>", "label": "P&D Status", "value": "Moderate (Rats, Elephants)" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-red-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z' /></svg>", "label": "P&D Status", "value": "High (Rats, Elephants)" },
                     { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-green-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M13 10V3L4 14h7v7l9-11h-7z' /></svg>", "label": "OER % (YTD June '25)", "value": "19.19%" },
                     { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-green-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z' /></svg>", "label": "Harvester Prod.", "value": "~2.4 MT/md (Good)" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-purple-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z' /></svg>", "label": "Harvest Interval", "value": "12-15 days" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-purple-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z' /></svg>", "label": "Harvest Interval", "value": "10-20 days" },
                     { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-red-500' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636' /></svg>", "label": "Manuring Status", "value": "Delayed" }
                 ],
                 "chartData": {
                     "production": {
                         "labels": ["2021", "2022", "2023", "2024", "YTD Jun '25"],
-                        "ffb": [15.83, 18.74, 15.24, 22.76, 9.55],
+                        "ffb": [15.35, 18.70, 15.23, 22.76, 9.55],
                         "rainfall": [1916.0, 2266.5, 2802.5, 2548.0, 1488.0]
                     },
                     "ageProfile": {
-                        "labels": ["Prime Mature Palms (9-13 years)"],
+                        "labels": ["Prime Mature Palms (8-19 years)"],
                         "data": [100],
                         "title": "Ladang DSK - Palm Age Distribution",
-                        "note": "Source: PAR 2/2025, Pg. 10"
+                        "note": "Source: Agronomy Report 2/2025, Pg. 8"
                     }
                 },
                 "observations": [
-                    "<b>Weed Management:</b> While general weeding is satisfactory, noxious weeds like woodies and ferns persist in many fields and require targeted eradication. <span class='observation-ref'>(PAR Pg. 5, 20)</span>",
-                    "<b>Road & Infrastructure:</b> Severe erosion on roads in hilly areas is still a major concern. Road grading and raising are in progress, but a systematic approach to water diversion is needed. <span class='observation-ref'>(PAR Pg. 5, 26-27, 43)</span>",
-                    "<b>Delayed Manuring:</b> Fertiliser application programs are delayed due to incomplete delivery. The estate must accelerate applications once supply resumes to avoid impacting palm health. <span class='observation-ref'>(PAR Pg. 5, 21, 42)</span>",
-                    "<b>Pest Control:</b> Although fresh rat damage is below the threshold post-baiting, symptoms of old damage are widespread. Elephant intrusion also requires ongoing vigilance and boundary maintenance. <span class='observation-ref'>(PAR Pg. 6, 23, 43)</span>",
-                    "<b>Harvesting & Pruning Standards:</b> Over-pruning was observed in most fields, which can cause palm stress. The estate must retrain harvesters on correct pruning standards. <span class='observation-ref'>(PAR Pg. 6, 30, 44)</span>",
-                    "<b>Mechanisation & Productivity:</b> Harvester productivity could be significantly improved by widening planting terraces to allow better machine access for in-field FFB collection. <span class='observation-ref'>(PAR Pg. 7, 35, 44)</span>"
+                    "<b>Rat Infestation:</b> Rat damage is a major concern, spiking to `22%` fresh damage in September 2025, well above the threshold. Immediate baiting is required. <span class='observation-ref'>(AR Pg. 5, 36; PAR Pg. 6, 23)</span>",
+                    "<b>Delayed Manuring:</b> The 2025 fertilizer program is delayed due to supplier issues. The 2024 program also experienced significant delays. Accelerating application once supply resumes is critical. <span class='observation-ref'>(AR Pg. 11; PAR Pg. 5, 21)</span>",
+                    "<b>Weed Management:</b> Ground vegetation is `unsatisfactory`. While general weeding is acceptable, noxious weeds, ferns, and VOPs persist and require targeted eradication. <span class='observation-ref'>(AR Pg. 5, 28, 32; PAR Pg. 5, 20)</span>",
+                    "<b>Harvesting & Pruning Standards:</b> Over-pruning was noted in most fields, which can stress palms. This requires staff re-training. <span class='observation-ref'>(PAR Pg. 6, 30, 44)</span>",
+                    "<b>Infrastructure & Drainage:</b> Severe road erosion in hilly areas remains a key issue. In low-lying and peat areas (18% of estate), scheduled drain de-silting is required to improve drainage and palm vigour. <span class='observation-ref'>(AR Pg. 9, 41; PAR Pg. 5, 26)</span>",
+                    "<b>Mechanisation & Productivity:</b> Harvester productivity could be improved by widening planting terraces to allow better machine access for in-field FFB collection. <span class='observation-ref'>(PAR Pg. 7, 35, 44)</span>"
                 ],
                 "reports": {
                     "plantation": {
@@ -147,17 +146,17 @@
                         "Immature": "Not Applicable."
                     },
                     "agronomy": {
-                        "Executive Summary": "The estate's agronomic condition is acceptable, but key challenges remain. Rat infestation is still above the threshold despite baiting. Ground vegetation is unsatisfactory with bare patches and undesirable weeds. Palms in flood-prone areas show poor health. (Source: AR, Pg. 4-5)",
-                        "Nutrient Inputs/Progress of Manuring": "The 2024 manuring program was completed, though with delays up to 5 months for RP. The fertilizer store has wet floor conditions needing repair. (Source: AR, Pg. 11-12)",
-                        "Agronomic Observation": "Harvesting standards are acceptable. Pruning is acceptable. Palm appearance varies, with poor vigour in flood-prone and lateritic soil areas. Rat damage is high. Elephant damage was noted in P16F. (Source: AR, Pg. 25-49)",
-                        "Yield Performance": "Yield increased by 49% in 2024 to 22.76 mt/ha. The average bunch weight and number of bunches per palm increased. (Source: AR, Pg. 50-52)",
-                        "Fertilizer Recommendation": "The 2025 program is detailed. Site-specific fertilizer placement is recommended for terraced and low-lying areas to minimize nutrient loss. (Source: AR, Pg. 14-15, 53)"
+                        "Executive Summary": "Rat damage is now a major concern, increasing to 22% in September 2025 and requiring immediate baiting. Ground vegetation has improved but remains below the desired level, with patches of undesirable weeds. Palm census and thinning of runt palms are yet to be carried out. The 2025 manuring program is delayed. <span class='observation-ref'>(AR Pg. 4-5, 11, 36)</span>",
+                        "Nutrient Inputs/Progress of Manuring": "The 2024 program was completed, but with delays up to 5 months for RP. The 2025 program is 80% complete as of Sep 2025, with a 28% delay in Mixture B due to supplier issues. EFB application is limited to 3 ha due to high transport costs. Inconsistent fertilizer placement on terraces and in mounded areas risks nutrient loss. <span class='observation-ref'>(AR Pg. 11-17)</span>",
+                        "Agronomic Observation": "Harvesting interval is 10-20 days with satisfactory standards and minimal crop loss. Pruning is 100% complete and satisfactory. Palm nutrient status is generally balanced. Ground vegetation has improved but is unsatisfactory, with patches of noxious weeds (Clidemia, ferns, VOPs) requiring targeted control. Rat damage spiked to 22% in Sep 2025. Elephant intrusion was noted in P1512. <span class='observation-ref'>(AR Pg. 19-38)</span>",
+                        "Yield Performance": "2024 yield was 22.76 MT/ha, a 49.4% increase from 2023. YTD Sep 2025 yield is 17.24 MT/ha, a 2.55% increase from the same period in 2024, attributed to higher bunch weight. Lower yields in blocks P14E, P16F, and P151 are linked to flooding and elephant intrusion. <span class='observation-ref'>(AR Pg. 39-41)</span>",
+                        "Fertilizer Recommendation (2026)": "The 2026 program is outlined. The estate must minimize the gap between scheduled and actual application. <span class='observation-ref'>(AR Pg. 44)</span>"
                     },
                      "pinfosys": {
                         "summary": "Not Available."
                     }
                 },
-                "policy": " <div class='policy-item'><p class='font-semibold'>Pest Control (Rats)</p><p class='text-sm text-gray-600'><b>Policy Ref: P&D-Rat-02b:</b> If post-baiting census shows damage still exceeds 10%, review bait palatability and re-implement the baiting campaign following a systematic, single-direction approach.</p></div> <div class='policy-item'><p class='font-semibold'>Ground Vegetation & Weeding</p><p class='text-sm text-gray-600'><b>Policy Ref: WEED-04:</b> In areas with bare ground, encourage the establishment of soft grasses and minimize herbicide use to prevent further soil degradation and erosion.</p></div> <div class='policy-item'><p class='font-semibold'>Infrastructure Maintenance</p><p class='text-sm text-gray-600'><b>Policy Ref: MAINT-ROAD-03:</b> On hilly terrain, construct and maintain adequate roadside sumps and run-off drains to prevent erosion of the road surface.</p></div>"
+                "policy": " <div class='policy-item'><p class='font-semibold'>Pest Control (Rats)</p><p class='text-sm text-gray-600'><b>Policy Ref: P&D-Rat-01:</b> Initiate baiting activities promptly to control the rat population when fresh damage exceeds the threshold. <span class='observation-ref'>(AR Pg. 36)</span></p><p class='text-sm text-gray-600'><b>Policy Ref: P&D-Rat-02b:</b> If post-baiting census shows damage still exceeds 10%, review bait palatability and re-implement the baiting campaign following a systematic, single-direction approach. <span class='observation-ref'>(PAR Pg. 43)</span></p></div> <div class='policy-item'><p class='font-semibold'>Ground Vegetation & Weeding</p><p class='text-sm text-gray-600'><b>Policy Ref: WEED-05:</b> Targeted eradication must be conducted for noxious weeds, VOPs, and ferns to prevent further spread. <span class='observation-ref'>(AR Pg. 30-32; PAR Pg. 20)</span></p></div> <div class='policy-item'><p class='font-semibold'>Infrastructure Maintenance</p><p class='text-sm text-gray-600'><b>Policy Ref: MAINT-ROAD-03:</b> On hilly terrain, construct and maintain adequate roadside sumps and run-off drains to prevent erosion of the road surface. <span class='observation-ref'>(PAR Pg. 26-27)</span></p></div>"
             };
 
 
@@ -198,20 +197,20 @@
                 return `
                     <div class="bg-white p-6 rounded-lg shadow-lg animate-fade-in">
                         <h2 class="text-3xl font-bold mb-1 text-gray-900">${estate.name}</h2>
-                        <p class="text-md text-gray-600 mb-2">Plantation Advisory Visit: ${estate.visitDate}</p>
+                        <p class="text-md text-gray-600 mb-2">Based on PA Visit (July 2025) & Agronomy Visit (October 2025)</p>
                         <p class="text-sm text-gray-500 mb-6 italic">${estate.reportInfo}</p>
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 mb-8">${summaryMetricsHTML}</div>
                         <div class="mb-8"><h3 class="text-xl font-semibold mb-4 border-b pb-2">Key Metrics & Agronomic Status</h3><div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4">${keyMetricsHTML}</div></div>
                         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-                            <div><h3 class="text-xl font-semibold mb-2">FFB Production vs Rainfall</h3><div class="chart-container"><canvas id="prodChart-${estate.id}"></canvas></div><p class="text-xs text-center text-gray-500 mt-2">Source: PAR 2/2025, Pg. 50, 51</p></div>
+                            <div><h3 class="text-xl font-semibold mb-2">FFB Production vs Rainfall</h3><div class="chart-container"><canvas id="prodChart-${estate.id}"></canvas></div><p class="text-xs text-center text-gray-500 mt-2">Source: PAR 2/2025, AR 2/2025</p></div>
                             <div><h3 class="text-xl font-semibold mb-2">Palm Age Profile</h3><div class="pie-chart-container"><canvas id="ageChart-${estate.id}"></canvas></div><p class="text-xs text-center text-gray-500 mt-2">${estate.chartData.ageProfile.note}</p></div>
                         </div>
                         <div class="mb-8"><h3 class="text-xl font-semibold mb-2 border-b pb-2">Key Observations & Issues</h3><ul class="list-disc list-inside space-y-2 text-gray-700 mt-4">${observationsHTML}</ul></div>
                         <div class="mb-8 text-center"><button class="policy-modal-btn bg-green-800 text-white px-6 py-3 rounded-lg hover:bg-green-900 transition shadow-md">View Agricultural Policy Cross-Reference</button></div>
                         <div class="space-y-2">
-                            <button data-dropdown-id="${estate.id}-plantation" class="dropdown-btn w-full text-left bg-gray-800 text-white p-3 rounded-md hover:bg-gray-700 transition">Plantation Advisory Report Details</button>
+                            <button data-dropdown-id="${estate.id}-plantation" class="dropdown-btn w-full text-left bg-gray-800 text-white p-3 rounded-md hover:bg-gray-700 transition">Plantation Advisory Report Details (July 2025)</button>
                             <div id="${estate.id}-plantation" class="details-content bg-gray-50 p-4 rounded-md border border-gray-200"></div>
-                            <button data-dropdown-id="${estate.id}-agronomy" class="dropdown-btn w-full text-left bg-gray-800 text-white p-3 rounded-md hover:bg-gray-700 transition">Agronomy Report Details</button>
+                            <button data-dropdown-id="${estate.id}-agronomy" class="dropdown-btn w-full text-left bg-gray-800 text-white p-3 rounded-md hover:bg-gray-700 transition">Agronomy Report Details (October 2025)</button>
                             <div id="${estate.id}-agronomy" class="details-content bg-gray-50 p-4 rounded-md border border-gray-200"></div>
                             <button data-dropdown-id="${estate.id}-pinfosys" class="dropdown-btn w-full text-left bg-gray-800 text-white p-3 rounded-md hover:bg-gray-700 transition">Pinfosys Report Details</button>
                             <div id="${estate.id}-pinfosys" class="details-content bg-gray-50 p-4 rounded-md border border-gray-200"></div>
