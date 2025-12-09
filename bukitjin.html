@@ -34,11 +34,11 @@
     <header class="bg-white shadow-md">
         <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
             <div class="text-xl font-bold text-gray-900">
-                <a href="index.html" class="flex items-center">
+                <a href="../index.html" class="flex items-center">
                     Ladang Bukit Jin Report
                 </a>
             </div>
-            <a href="estates.html" class="text-green-800 hover:text-green-900 transition duration-300">&larr; Back to Estates List</a>
+            <a href="../estates.html" class="text-green-800 hover:text-green-900 transition duration-300">&larr; Back to Estates List</a>
         </nav>
     </header>
 
@@ -67,12 +67,12 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // --- DATA STORE ---
-            // Data updated based on PA Report 02/2025 (Visit Date: 14th Oct 2025)
-            // Agronomy and Pinfosys data are from the previous report (Feb 2025)
+            // PA Report: Oct 2025 (Preserved)
+            // Agronomy Report: Nov 2025 (Updated from Report 2/2025)
             const estateData = {
                 "id": "bukitjin",
                 "name": "Ladang Bukit Jin",
-                "reportInfo": "Data based on PA Report (October 2025) & Agronomy Report (February 2025).",
+                "reportInfo": "Data based on PA Report (October 2025) & Agronomy Report (November 2025).",
                 "summaryMetrics": {
                     "area": {
                         "title": "Estate Area",
@@ -95,45 +95,45 @@
                     },
                     "ganoderma": {
                         "title": "Ganoderma Status",
-                        "value": "High (36.37%)",
-                        "note": "Infection rate in census areas (PAR Pg. 23)"
+                        "value": "33.0% (Critical)",
+                        "note": "Census 2024 (AR Pg. 31)"
                     },
                      "pests": {
                         "title": "Key Pests",
-                        "value": "Rats & Bagworms",
-                        "note": "Under control, treatments applied (PAR Pg. 22)"
+                        "value": "Bagworms & Rats",
+                        "note": "Aerial Spray Planned (AR Pg. 29)"
                     }
                 },
                 "keyMetrics": [
                     { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-blue-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z' /></svg>", "label": "Labour Ratio", "value": "1:17.56 ha (Shortfall)" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-red-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z' /></svg>", "label": "P&D Status", "value": "High (Ganoderma)" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-red-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z' /></svg>", "label": "P&D Status", "value": "Critical (Gano/Bagworm)" },
                     { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-yellow-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M13 10V3L4 14h7v7l9-11h-7z' /></svg>", "label": "OER % (YTD Sep 2025)", "value": "18.46%" },
                     { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-green-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z' /></svg>", "label": "Harvester Prod.", "value": ">2.0 MT/md (Acceptable)" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-purple-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z' /></svg>", "label": "Harvest Interval", "value": "14 days (Acceptable)" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-teal-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17.657 18.343A8 8 0 016.343 7.029m11.314 11.314a8 8 0 01-11.314-11.314m2.121 13.435a2 2 0 01-2.828 0l-2.122-2.121a2 2 0 010-2.828l5.656-5.657a2 2 0 012.829 0l2.121 2.121a2 2 0 010 2.828l-5.657 5.657z' /></svg>", "label": "Nutrient Status", "value": "Manuring Delayed" }
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-purple-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z' /></svg>", "label": "Harvest Interval", "value": "14-16 days (Acceptable)" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-teal-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17.657 18.343A8 8 0 016.343 7.029m11.314 11.314a8 8 0 01-11.314-11.314m2.121 13.435a2 2 0 01-2.828 0l-2.122-2.121a2 2 0 010-2.828l5.656-5.657a2 2 0 012.829 0l2.121 2.121a2 2 0 010 2.828l-5.657 5.657z' /></svg>", "label": "Nutrient Status", "value": "2025 Delayed (Supplier)" }
                 ],
                 "chartData": {
                     "production": {
                         "labels": ["Jan-24", "Feb-24", "Mar-24", "Apr-24", "May-24", "Jun-24", "Jul-24", "Aug-24", "Sep-24", "Oct-24", "Nov-24", "Dec-24"],
                         "ffb": [2463, 2528, 3202, 3277, 4399, 4160, 4338, 4155, 3890, 4123, 4567, 4321],
                         "rainfall": [304, 57, 81, 116, 254, 257, 37, 158, 222, 252, 376, 303],
-                        "note": "*FFB production and rainfall data for 2024 (from previous report)."
+                        "note": "*FFB production and rainfall data for 2024 (Source: PAR)"
                     },
                     "ageProfile": {
-                        "labels": ["< 3 Years (Immature)", "4-8 Years (Young Mature)", "9-18 Years (Prime)", "> 19 Years (Old Mature)"],
-                        "data": [20.42, 7.33, 42.35, 29.90],
-                        "title": "Ladang Bukit Jin - Palm Age Distribution (Oct 2025)",
-                        "note": "*Source: PA Report 02/2025, Pg. 12."
+                        "labels": ["Immature (20%)", "Young Mature (7.3%)", "Prime (42.3%)", "Old Mature (29.9%)"],
+                        "data": [20.0, 7.3, 42.3, 29.9],
+                        "title": "Ladang Bukit Jin - Palm Age Distribution (Nov 2025)",
+                        "note": "*Source: Agronomy Report 2/2025, Pg. 9."
                     }
                 },
                 "observations": [
-                    "<b>Ganoderma Infestation:</b> Remains the main risk, with an infestation rate of 36.37% in census areas. Cultural practices like deboling and mounding are in progress to manage spread and prolong palm life. <span class='observation-ref'>(PAR Pg. 6, 23)</span>",
-                    "<b>FFB Production & Cost:</b> Strong performance, 26.94% above budget (17.57 MT/Ha YTD). Ex-estate cost is 31.57% below budget at RM 205.74/mt. Full year yield expected to exceed 22.00 MT/Ha. <span class='observation-ref'>(PAR Pg. 7, 32, 36)</span>",
-                    "<b>Manuring Program:</b> Slightly delayed due to late fertiliser delivery. Semi-mechanised application has been introduced to expedite the work before the monsoon season. <span class='observation-ref'>(PAR Pg. 6, 21)</span>",
-                    "<b>Labour Shortfall:</b> The estate has a shortfall of 17 workers (1:17.56 ha ratio), though upkeep is managed with assistance from contractors. <span class='observation-ref'>(PAR Pg. 4, 15)</span>",
-                    "<b>Pruning Standards:</b> Progressive pruning is satisfactory, but care is needed to prevent over-pruning in young mature and Ganoderma-infested fields to maintain Leaf Area Index. <span class='observation-ref'>(PAR Pg. 5, 29)</span>",
-                    "<b>Immature & Replanting:</b> Good progress. P22L (54ha) supplying completed after bund raising. P23M scout harvesting started. P25E land preparation is complete and ready for planting. <span class='observation-ref'>(PAR Pg. 7-8, 38-44)</span>",
-                    "<b>Pest Control:</b> Rat and Bagworm attacks are generally under control, with baiting (519 ha) and treatment (504 ha) applied where necessary. <span class='observation-ref'>(PAR Pg. 22)</span>"
+                    "<b>Ganoderma Crisis:</b> Infection rate has escalated to 33.0% in census areas (up from previous years). Upper Stem Rot (USR) symptoms observed, which kills palms faster than Basal Stem Rot. <span class='observation-ref'>(AR Pg. 31-32)</span>",
+                    "<b>Bagworm Outbreak:</b> Localized infestation of Metisa plana (~180 ha) in blocks P02C, P08K. Aerial spraying via drone scheduled for late Nov 2025. <span class='observation-ref'>(AR Pg. 29)</span>",
+                    "<b>High Rat Damage:</b> Fresh damage >10% recorded in blocks P10A, P09B, P20H. Second round of baiting required. <span class='observation-ref'>(AR Pg. 30)</span>",
+                    "<b>Strong FFB Yield:</b> Despite issues, YTD Sep 2025 yield is 17.57 MT/Ha (27% above budget). Oct 2025 YTD maintained at ~19.8 MT/Ha. <span class='observation-ref'>(PAR Pg. 32; AR Pg. 49)</span>",
+                    "<b>Manuring Delays:</b> 2025 program for Mix-B and GML delayed due to supplier stock shortages. NK2 consignment rejected due to caking. <span class='observation-ref'>(AR Pg. 11)</span>",
+                    "<b>Flooding Issues:</b> P23M has ~2 ha vacant land due to flooding mortality. Requires raising cambered bunds before supplying. <span class='observation-ref'>(AR Pg. 39)</span>",
+                    "<b>Cost Efficiency:</b> Ex-estate cost (Sep 2025) is RM 205.74/mt, significantly below the budget of RM 300.65/mt. <span class='observation-ref'>(PAR Pg. 36)</span>"
                 ],
                 "reports": {
                     "plantation": {
@@ -153,11 +153,12 @@
                         "Replanting P25E (116.4 ha)": "Land preparation (felling, shredding, chambered bunds) is complete. 100 ha ploughed/harrowed by watermelon grower. Planting is planned for November 2025. (Source: PAR, Pg. 44)"
                     },
                     "agronomy": {
-                        "Executive Summary": "The primary limiting factors are the alarming Ganoderma infection rate (33% in 2024), high rat infestation, and a new localized bagworm issue. Crop recovery and harvesting standards show improvement but require more attention. The 2024 manuring program was delayed. Yield performance in 2024 was acceptable at 23.07 MT/Ha. (Source: AR, Pg. 4-7, 77-81)",
-                        "Nutrient Inputs/Progress of Manuring": "The 2024 program was 100% completed, but with minor delays for Mix A and Mix B due to supplier issues. EFB application was limited to palm mulching in the new replant area (PR24N) and is only 2% complete. (Source: AR, Pg. 13-15)",
-                        "Agronomic Observation": "Harvesting standards have improved but over-pruning was noted in young mature areas (P20H). Pruning is generally satisfactory. Ganoderma is widespread and increasing rapidly. Rat damage remains high post-baiting. Bagworm infestation is localized near estate boundaries. Ground vegetation control has improved. (Source: AR, Pg. 16-72)",
-                        "Yield Performance": "2024 yield was 23.07 MT/ha, a 41.7% increase from 2023, which is considered acceptable. Crop recovery improved to 104% of the target based on harvesting rounds. (Source: AR, Pg. 77-80)",
-                        "Fertilizer Recommendation (2025)": "The 2025 program is detailed in Appendix 1a-c. GML is recommended for most blocks to manage soil pH due to Ganoderma. For new plantings, 600g of CRF and 500g of RP per hole is recommended. (Source: AR, Pg. 82-85)"
+                        "Executive Summary": "Visit Date: 17 Nov 2025. 2024 Yield was acceptable at 23.07 MT/Ha. Manuring for 2024 was completed, but 2025 program faces delays (Mix B, GML). Ganoderma (33%) and Bagworms (180 ha) are major concerns. (Source: AR 2/2025, Pg. 4-6)",
+                        "Nutrient Inputs": "2024 program completed. 2025 delays: Mix-B (83% applied), GML (41% applied) due to supplier shortage. NK2 rejected due to caking. EFB application limited to 290.8 ha (P24N, P25E). (Source: AR 2/2025, Pg. 11-13)",
+                        "Agronomic Observation": "Pruning: Satisfactory generally, though P00F limited to twice/year due to frond snapping. Weed Control: Good, soft grasses dominate. Pests: Bagworm aerial spray planned for late Nov 2025. Rat damage >10% in multiple blocks. Ganoderma: Upper Stem Rot (USR) signs detected, killing palms faster than BSR. (Source: AR 2/2025, Pg. 19-32)",
+                        "Yield Performance": "2024 Yield: 23.07 MT/Ha. YTD Oct 2025 Yield: ~19.8 MT/Ha. Yield fluctuation observed but recovery is acceptable. Block P20H showing strong yield improvement. (Source: AR 2/2025, Pg. 48-49)",
+                        "Replanting & Supply": "P25E (116.4 ha): Land prep ongoing, planting started 10 Nov 2025. P23M: 2 ha vacant due to flooding; requires bund raising. P24N: Stunted palms replaced; soil structure improved with organic matter. (Source: AR 2/2025, Pg. 39-44)",
+                        "Fertilizer Recommendation (2026)": "Program detailed in Appendix 1. Focus on catching up with delayed 2025 applications first. (Source: AR 2/2025, Pg. 54)"
                     },
                     "pinfosys": "Not Available"
                 },
@@ -214,7 +215,7 @@
                         <div class="space-y-2">
                             <button data-dropdown-id="${estate.id}-plantation" class="dropdown-btn w-full text-left bg-gray-800 text-white p-3 rounded-md hover:bg-gray-700 transition">Plantation Advisory Report Details (Oct 2025)</button>
                             <div id="${estate.id}-plantation" class="details-content bg-gray-50 p-4 rounded-md border border-gray-200"></div>
-                            <button data-dropdown-id="${estate.id}-agronomy" class="dropdown-btn w-full text-left bg-gray-800 text-white p-3 rounded-md hover:bg-gray-700 transition">Agronomy Report Details (Feb 2025)</button>
+                            <button data-dropdown-id="${estate.id}-agronomy" class="dropdown-btn w-full text-left bg-gray-800 text-white p-3 rounded-md hover:bg-gray-700 transition">Agronomy Report Details (Nov 2025)</button>
                             <div id="${estate.id}-agronomy" class="details-content bg-gray-50 p-4 rounded-md border border-gray-200"></div>
                             <button data-dropdown-id="${estate.id}-pinfosys" class="dropdown-btn w-full text-left bg-gray-800 text-white p-3 rounded-md hover:bg-gray-700 transition">Pinfosys Report Details</button>
                             <div id="${estate.id}-pinfosys" class="details-content bg-gray-50 p-4 rounded-md border border-gray-200"></div>
