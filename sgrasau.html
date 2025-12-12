@@ -34,11 +34,11 @@
     <header class="bg-white shadow-md">
         <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
             <div class="text-xl font-bold text-gray-900">
-                <a href="index.html" class="flex items-center">
+                <a href="../index.html" class="flex items-center">
                     Ladang Sungai Rasau Report
                 </a>
             </div>
-            <a href="estates.html" class="text-green-800 hover:text-green-900 transition duration-300">&larr; Back to Estates List</a>
+            <a href="../estates.html" class="text-green-800 hover:text-green-900 transition duration-300">&larr; Back to Estates List</a>
         </nav>
     </header>
 
@@ -70,43 +70,43 @@
             const estateData = {
                 "id": "sgrasau",
                 "name": "Ladang Sungai Rasau",
-                "reportInfo": "Data based on PA Report 1/2025 (Visit: 28th May 2025) & Agronomy Report 2/2025 (Visit: 27th Nov 2025).",
+                "reportInfo": "Data based on PA Report 2/2025 (Visit: 20th Nov 2025) & Agronomy Report 2/2025 (Visit: 27th Nov 2025).",
                 "summaryMetrics": {
                     "area": {
                         "title": "Estate Area",
                         "lines": [
-                            "Total Planted: 111.0 ha",
-                            "Mature: 111.0 ha",
+                            "Total Planted: 111.00 ha",
+                            "Mature: 111.00 ha",
                             "Immature: 0 ha"
                         ]
                     },
                     "yield": {
-                        "title": "Yield/Ha (Actual)",
-                        "value": "21.39 MT/Ha",
-                        "note": "YTD Oct 2025"
+                        "title": "Yield/Ha (Actual vs Budget)",
+                        "value": "18.40 / 18.26 MT",
+                        "note": "YTD Oct 2025 (Source: PAR)"
                     },
                     "cost": {
                         "title": "Cost/Tonne (Actual vs Budget)",
-                        "value": "RM 279.00 / RM 334.47",
-                        "note": "YTD April 2025 (Source: PAR)"
+                        "value": "RM 253.84 / RM 299.27",
+                        "note": "YTD Oct 2025 (Source: PAR)"
                     },
                     "manuring": {
                         "title": "Manuring Status",
                         "value": "Delayed (Mix B)",
-                        "note": "80% Total Completion"
+                        "note": "P10C, P05F, P06G Pending"
                     },
                      "pests": {
                         "title": "Pest Status",
                         "value": "Controlled",
-                        "note": "Rats <5%, Bagworm Treated"
+                        "note": "Bagworm recovered, Rats <5%"
                     }
                 },
                 "keyMetrics": [
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-blue-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z' /></svg>", "label": "Labour Ratio", "value": "1:19 ha (Harvester)" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-red-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z' /></svg>", "label": "P&D Status", "value": "Monitoring (Ganoderma)" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-yellow-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M13 10V3L4 14h7v7l9-11h-7z' /></svg>", "label": "OER % (YTD Apr)", "value": "19.00%" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-red-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z' /></svg>", "label": "Harvester Prod.", "value": "2.25 MT/md (Acceptable)" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-purple-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z' /></svg>", "label": "Harvest Interval", "value": ">20 days (P10C)" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-blue-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z' /></svg>", "label": "Labour Ratio", "value": "1:22 ha (Harvester)" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-green-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z' /></svg>", "label": "P&D Status", "value": "Controlled" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-yellow-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M13 10V3L4 14h7v7l9-11h-7z' /></svg>", "label": "OER % (YTD Oct)", "value": "19.00%" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-red-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z' /></svg>", "label": "Harvester Prod.", "value": "2.25 MT/md" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-purple-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z' /></svg>", "label": "Harvest Interval", "value": "15 days" },
                     { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-teal-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17.657 18.343A8 8 0 016.343 7.029m11.314 11.314a8 8 0 01-11.314-11.314m2.121 13.435a2 2 0 01-2.828 0l-2.122-2.121a2 2 0 010-2.828l5.656-5.657a2 2 0 012.829 0l2.121 2.121a2 2 0 010 2.828l-5.657 5.657z' /></svg>", "label": "Nutrient Status", "value": "Low N, Mg, B" }
                 ],
                 "chartData": {
@@ -114,32 +114,33 @@
                         "labels": ["Jan-25", "Feb-25", "Mar-25", "Apr-25", "May-25", "Jun-25", "Jul-25", "Aug-25", "Sep-25", "Oct-25"],
                         "ffb": [193.01, 176.22, 204.11, 211.35, 181.32, 181.50, 184.30, 203.26, 204.31, 303.35],
                         "rainfall": [235, 42, 82, 189, 397, 19, 195, 141, 155, 184],
-                        "note": "*2025 Monthly FFB Production vs Rainfall. (Source: AR 2/2025, Pg. 35-36)"
+                        "note": "*2025 Monthly FFB Production vs Rainfall. (Source: PAR 2/2025, Pg. 31, 47)"
                     },
                     "ageProfile": {
                         "labels": ["Prime Mature (11-18Y)", "Old Mature (>19Y)"],
                         "data": [4.1, 95.9],
                         "title": "Ladang Sungai Rasau - Palm Age Distribution",
-                        "note": "*Majority of estate (>19Y) planned for replanting starting 2027. (Source: AR 2/2025)"
+                        "note": "*Majority of estate (>19Y) planned for replanting starting 2027. (Source: PAR 2/2025 Pg. 9)"
                     }
                 },
                 "observations": [
-                    "<b>Future Replanting Plan:</b> Replanting is scheduled for 2027 covering 58.30 ha (52.52% of estate) in blocks P96A, P98D, and P02E. Fertilizer programs for these blocks will be withdrawn. <span class='observation-ref'>(AR 2/2025 Pg. 8, 31)</span>",
-                    "<b>Manuring Delays:</b> While NK1 and RP applications are 100% complete, Mixture B application is only 59% complete due to supply shortages and peak crop season. Completion expected by mid-Dec. <span class='observation-ref'>(AR 2/2025 Pg. 10)</span>",
-                    "<b>Harvesting Challenges in Tall Palms:</b> Harvesting intervals exceeded 20 days in Field P10C. In older blocks (P98, P96, P02E), 'supertall' palms (>50ft) remain unharvested due to height constraints and hanging fronds. <span class='observation-ref'>(AR 2/2025 Pg. 4, 12, 13)</span>",
-                    "<b>Pruning Backlog:</b> Pruning is delayed in older plantings (P96A, P98D, P02E) due to harvester shortages and palm height. Under-pruning is affecting harvesting efficiency. <span class='observation-ref'>(AR 2/2025 Pg. 14)</span>",
-                    "<b>Weeding Issues:</b> Agronomy report notes generally acceptable weeding, but PA report highlighted regenerations of noxious weeds (Clidemia, VOPs) at boundaries requiring targeted eradication. <span class='observation-ref'>(PAR 1/2025 Pg. 15; AR 2/2025 Pg. 19)</span>",
-                    "<b>Infrastructure Maintenance:</b> A damaged bridge in P02A2 and a blocked outlet drain in P09C require urgent attention to ensure field accessibility and water management. <span class='observation-ref'>(PAR 1/2025 Pg. 35)</span>",
-                    "<b>Pest Control:</b> Rat damage is controlled (<5%) with 100% barn owl box occupancy. Bagworms were treated via trunk injection (Impact-75). Ganoderma monitoring and deboling are required. <span class='observation-ref'>(AR 2/2025 Pg. 24-26)</span>"
+                    "<b>Future Replanting Plan:</b> Replanting is scheduled for 2027 covering 58.30 ha in blocks P96A, P98D, and P02E. <span class='observation-ref'>(PAR 2/2025 Pg. 9; AR 2/2025 Pg. 8)</span>",
+                    "<b>Manuring Delays:</b> Mixture B application is delayed in P10C, P05F, and P06G. Completion targeted for Nov 2025. <span class='observation-ref'>(PAR 2/2025 Pg. 26; AR 2/2025 Pg. 10)</span>",
+                    "<b>Pruning Backlog:</b> Pruning is behind schedule in older plantings (P96A, P98D, P02E). Messy field conditions with hanging dried fronds observed in tall palm areas. <span class='observation-ref'>(PAR 2/2025 Pg. 22)</span>",
+                    "<b>Infrastructure Issues:</b> Road grading has not been carried out this year. Soggy stretches require surfacing with crusher run. <span class='observation-ref'>(PAR 2/2025 Pg. 21)</span>",
+                    "<b>Weeding Standards:</b> Noxious weeds (wild palms, stenochlaena, brackens) found in open areas, ponds, and boundary fringes require eradication. <span class='observation-ref'>(PAR 2/2025 Pg. 19)</span>",
+                    "<b>Nutrient Status:</b> Foliar analysis indicates low Nitrogen (N) and Magnesium (Mg) levels, particularly in P10C, P02E, and P06G. <span class='observation-ref'>(AR 2/2025 Pg. 17)</span>",
+                    "<b>Pest Control:</b> Bagworm infestation is controlled with no fresh damage. Rat damage is negligible (<5%). <span class='observation-ref'>(PAR 2/2025 Pg. 25; AR 2/2025 Pg. 24)</span>"
                 ],
                 "reports": {
                     "plantation": {
-                        "Executive Summary": "The estate's performance is satisfactory. FFB production is higher than budget, and the cost of production is lower. The labour force is adequate with multi-tasking practiced. Key areas for improvement are the quality of weeding, harvester productivity, and catching up on the delayed manuring program. Security remains a top priority. (Source: PAR 1/2025, Pg. 34-36)",
-                        "Area Statement": "Total mature planted area is 111.00 ha. The age profile consists of 95.9% old mature palms (>19 years) and 4.1% prime mature palms (11-18 years). Replanting of old mature areas is recommended for consideration in 2027. (Source: PAR 1/2025, Pg. 9)",
-                        "Labour Statement": "The workforce of 10 is adequate. Harvester strength is sufficient with a ratio of 1 harvester to 19 ha. Harvester productivity as of April was 2.22 tons/man-day. Multi-tasking is practiced. (Source: PAR 1/2025, Pg. 10-11)",
-                        "Upkeep and Cultivation": "Weeding quality needs improvement, with various noxious weeds present. Road grading is not required this year. One round of progressive pruning is complete but some super-tall palms have hanging fronds. Pest (bagworm) control is ongoing. (Source: PAR 1/2025, Pg. 15-25)",
-                        "Crop Production": "As of May 2025, FFB production was 966.01 tons, 10% higher than budget. As of April, yield per hectare was 7.07 tons, 12% higher than budget. (Source: PAR 1/2025, Pg. 28-29)",
-                        "Production Cost": "FFB cost of production ex-estate as of April was RM 279.00/tonne, which is 17% lower than budget. General charges were 46% lower. (Source: PAR 1/2025, Pg. 31-32)"
+                        "Executive Summary": "Performance is acceptable. FFB production is 1% higher than budget, and costs are 16% lower. The labour ratio is adequate at 1:22 ha with multi-tasking practiced. Key issues are delayed pruning in tall palms, delayed manuring (Mix B), and lack of road grading. (Source: PAR 2/2025, Pg. 36-37)",
+                        "Area Statement": "Total mature planted area is 111.00 ha. Age profile: 95.9% Old Mature (>19 years) and 4.1% Prime Mature. Replanting of 58.3 ha (P96A, P98D, P02E) is proposed for 2027. (Source: PAR 2/2025, Pg. 9)",
+                        "Labour Statement": "Total workforce is 9 workers (Req: 10). Harvester strength is adequate (1:22 ha). Productivity is 2.25 tons/man-day. Multi-tasking is implemented to cover upkeep shortages. (Source: PAR 2/2025, Pg. 11)",
+                        "Upkeep and Cultivation": "Weeding cost is 27% lower than budget, but noxious weeds persist in open areas. Road grading was not done this year. Pruning is behind schedule in P96A, P98D, and P02E. Manuring (Mix B) is delayed. (Source: PAR 2/2025, Pg. 16-26)",
+                        "Crop Production": "YTD Oct FFB production is 2,042.73 MT (1% above budget). Yield per ha is 18.40 MT. Highest yield in P10C (26.60 MT/ha), lowest in P96A (15.45 MT/ha). (Source: PAR 2/2025, Pg. 31-32)",
+                        "Cost of Production": "Ex-estate cost is RM 253.84/MT (15% lower than budget). Upkeep cost is 14% higher than budget due to bagworm treatment. Harvesting cost is 4% lower than budget. (Source: PAR 2/2025, Pg. 34)",
+                        "Vehicles & Machinery": "Tractor and Timac running costs are within or below budget. Timac productivity is 10.83 tons/day. (Source: PAR 2/2025, Pg. 35)"
                     },
                     "agronomy": {
                         "Executive Summary": "Agronomy visit conducted on 27th Nov 2025. Overall agronomic conditions are satisfactory. Key focuses are the 2027 replanting plan for old mature areas and resolving fertilizer supply delays. (Source: AR 2/2025, Pg. 7)",
