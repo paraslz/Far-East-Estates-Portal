@@ -70,65 +70,66 @@
             const estateData = {
                 "id": "rangkaian",
                 "name": "Ladang Rangkaian",
-                "reportInfo": "Data based on PA Report (Jun 2025) & Agronomy Report (Jun 2025). Visit Dates: 17th & 20th June 2025.",
+                "reportInfo": "Data based on PA Report (Jun 2025) & Agronomy Report (Nov 2025). Visit Date: 18th November 2025.",
                 "summaryMetrics": {
                     "area": {
                         "title": "Estate Area",
                         "lines": [
                             "Total Planted: 1,392.50 ha",
-                            "Mature: 1,392.50 ha"
+                            "Mature: 1,392.50 ha",
+                            "Peat Area: 165 ha (11.8%)"
                         ]
                     },
                     "yield": {
-                        "title": "Yield/Ha (YTD May '25 vs Budget)",
+                        "title": "Yield/Ha (Actual vs Budget)",
                         "value": "6.41 / 6.68 MT",
-                        "note": "-4% vs budget"
+                        "note": "YTD May '25 (-4% Variance)"
                     },
                     "cost": {
-                        "title": "FFB Cost/Tonne (YTD May '25 vs Budget)",
-                        "value": "RM 288.73 / RM 344.79",
-                        "note": "16% lower than budget"
+                        "title": "FFB Cost/Tonne (Actual vs Budget)",
+                        "value": "RM 288.73 / RM 343.73",
+                        "note": "YTD May '25 (16% Below Budget)"
                     },
-                    "labour": {
-                        "title": "Labour Status",
-                        "value": "Shortage",
-                        "note": "Deficit of 8 harvesters"
+                    "pest": {
+                        "title": "Pest Status",
+                        "value": "High Threat",
+                        "note": "Elephants (Toppling) & Rats (>10%)"
                     },
                      "upkeep": {
                         "title": "Upkeep Status",
-                        "value": "Needs Improvement",
-                        "note": "Weeding & manuring delayed"
+                        "value": "Mixed",
+                        "note": "Low ground weeding unacceptable"
                     }
                 },
                 "keyMetrics": [
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-blue-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z' /></svg>", "label": "Labour Ratio", "value": "1:14 ha (Adequate)" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-green-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z' /></svg>", "label": "P&D Status", "value": "Under Control (Rats)" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-blue-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z' /></svg>", "label": "Labour Ratio", "value": "1:14 ha (Shortage of 8)" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-red-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z' /></svg>", "label": "Elephants", "value": "Severe (Toppling Palms)" },
                     { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-yellow-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M13 10V3L4 14h7v7l9-11h-7z' /></svg>", "label": "OER % (YTD May '25)", "value": "18.66%" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-red-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z' /></svg>", "label": "Harvester Prod.", "value": "1.73 - 2.34 MT/md" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-purple-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z' /></svg>", "label": "Harvest Interval", "value": "~15 days (Acceptable)" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-teal-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17.657 18.343A8 8 0 016.343 7.029m11.314 11.314a8 8 0 01-11.314-11.314m2.121 13.435a2 2 0 01-2.828 0l-2.122-2.121a2 2 0 010-2.828l5.656-5.657a2 2 0 012.829 0l2.121 2.121a2 2 0 010 2.828l-5.657 5.657z' /></svg>", "label": "Nutrient Status", "value": "Low N & P" }
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-orange-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z' /></svg>", "label": "Flooding Impact", "value": "31% Area Affected" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-purple-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z' /></svg>", "label": "Harvest Interval", "value": "15-21 Days" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-teal-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17.657 18.343A8 8 0 016.343 7.029m11.314 11.314a8 8 0 01-11.314-11.314m2.121 13.435a2 2 0 01-2.828 0l-2.122-2.121a2 2 0 010-2.828l5.656-5.657a2 2 0 012.829 0l2.121 2.121a2 2 0 010 2.828l-5.657 5.657z' /></svg>", "label": "Nutrient Status", "value": "Low N, P, Mg" }
                 ],
                 "chartData": {
                     "production": {
-                        "labels": ["2020", "2021", "2022", "2023", "2024"],
-                        "ffb": [18.80, 19.64, 19.49, 17.87, 18.67],
-                        "rainfall": [3782, 4513, 5041, 6279, 4137],
-                        "note": "*Annual FFB Yield (YPH) and Rainfall. Source: AR 1/2025, Pg. 9, 64"
+                        "labels": ["2021", "2022", "2023", "2024", "Oct 2025"],
+                        "ffb": [19.64, 19.49, 17.87, 18.67, 14.76],
+                        "rainfall": [4513, 5041, 6279, 4137, 2549],
+                        "note": "*2025 data is YTD October. Source: AR 2/2025, Pg. 40"
                     },
                     "ageProfile": {
-                        "labels": ["Prime Mature (8-19Y)"],
+                        "labels": ["Prime Mature (11-13Y)"],
                         "data": [100],
                         "title": "Ladang Rangkaian - Palm Age Distribution",
                         "note": "*Source: PA Report 1/2025, Pg. 10."
                     }
                 },
                 "observations": [
-                    "<b>Prime Age Profile, Underperforming Yield:</b> Despite 100% of palms being in their prime age, FFB yield is below potential, showing a decline since its 2021 peak. <span class='observation-ref'>(AR Pg. 9)</span>",
-                    "<b>Delayed Manuring & Weeding:</b> Both manuring and selective weeding programs are behind schedule due to fertilizer delivery delays and rain, impacting palm nutrition and field upkeep. <span class='observation-ref'>(PAR Pg. 33, 16)</span>",
-                    "<b>Inconsistent Upkeep Quality:</b> Messy palm circles, presence of noxious weeds, and over-pruning in some areas indicate a need for improved supervision and work quality. <span class='observation-ref'>(PAR Pg. 17, 29; AR Pg. 36)</span>",
-                    "<b>Flooding & Drainage Issues:</b> 31% of the estate is low-lying and flood-prone, which hinders operations and can lead to fertilizer loss. Unsystematic soil excavation for mounding has worsened waterlogging in some areas. <span class='observation-ref'>(AR Pg. 10, 12)</span>",
-                    "<b>Harvester Shortage & Inconsistent Quality:</b> A shortage of 8 harvesters and extended harvesting intervals in some fields impact crop recovery. Excessive removal of fronds was also noted. <span class='observation-ref'>(PAR Pg. 11, 41)</span>",
-                    "<b>Low Nutrient Status:</b> Foliar analysis reveals low to moderately low levels of Nitrogen, Phosphorus, and Magnesium, which has been addressed in the 2025 fertilizer program. <span class='observation-ref'>(AR Pg. 38)</span>"
+                    "<b>Significant Yield Gap:</b> A major performance gap exists between undulating areas (17.20 MT/ha) and flooded/low-lying areas (12.91 MT/ha). Waterlogging is the primary yield-limiting factor. <span class='observation-ref'>(AR Pg. 41)</span>",
+                    "<b>Severe Elephant Intrusion:</b> Unlike previous reports of just defoliation, elephants are now toppling palms. Logging in adjacent areas is driving migration into the estate. <span class='observation-ref'>(AR Pg. 35)</span>",
+                    "<b>High Rat Damage:</b> Rat damage exceeds 10% in multiple blocks. Current sporadic baiting is ineffective; a systematic single-direction baiting strategy is required. <span class='observation-ref'>(AR Pg. 38)</span>",
+                    "<b>Weeding Standards:</b> Vegetation control on lower ground is unacceptable with overgrown interrows. Peat areas require maintenance of <i>Nephrolepis</i> while eradicating Bracken Ferns. <span class='observation-ref'>(AR Pg. 29, 31)</span>",
+                    "<b>Manuring Status:</b> 96% of the 2025 program is complete. However, Mixture B application was delayed due to late delivery. <span class='observation-ref'>(AR Pg. 10)</span>",
+                    "<b>Harvester Shortage (PA Finding):</b> A shortage of 8 harvesters was noted in the June PA report, which continues to impact harvesting intervals in some fields. <span class='observation-ref'>(PAR Pg. 11)</span>"
                 ],
                 "reports": {
                     "plantation": {
@@ -143,17 +144,18 @@
                         "Production Cost": "Ex-estate cost as of May 2025 is RM 288.73/ton, 16% below budget. (Source: PAR, Pg. 46)"
                     },
                     "agronomy": {
-                        "Executive Summary": "Despite a 100% prime age profile, FFB yield is below potential. Yield-limiting factors include flooding in low-lying areas, inconsistent crop recovery, and suboptimal nutrient status (N, P, Mg). Improvements are needed in EFB distribution and weeding quality. (Source: AR, Pg. 4-7)",
-                        "Nutrient Inputs/Progress of Manuring": "The 2025 manuring program is delayed due to late fertilizer delivery. The fertilizer store floor remains wet. The estate is encouraged to adopt better frond stacking methods to improve nutrient retention. (Source: AR, Pg. 18-23)",
-                        "Agronomic Observation": "Crop recovery has improved but still requires attention. Pruning quality is inconsistent with some over-pruning. Ground vegetation is acceptable, but undesirable weeds persist. Rat damage is under control. Elephant damage is noted but not critical. (Source: AR, Pg. 28-51)",
-                        "Yield Performance": "FFB yield peaked in 2021 at 19.64 t/ha and has been below potential since. The 2024 yield was 18.67 t/ha. High rainfall and flooding are major constraints. (Source: AR, Pg. 52-56)",
-                        "Fertilizer Recommendation": "The 2025 fertilizer program is maintained to address low N, P, and Mg levels. No changes are recommended at this time. (Source: AR, Pg. 57)"
+                        "Executive Summary": "Yield performance remains below expectations (14.76 MT/ha YTD Oct) despite prime palm age. Major limiting factors are extensive flooding in 31% of the estate, peat soil management issues (11.8%), and severe pest intrusions. The 2025 manuring program is nearing completion despite delays. (Source: AR 2/2025, Pg. 4-6)",
+                        "Nutrient Inputs/Progress of Manuring": "Fertilizer application is 96% complete as of October 2025. Mixture B was delayed due to supplier issues in H1 2025 but has reached 94% completion. Kieserite and RP are 100% applied. EFB application is 48% complete; estate is advised to avoid EFB in flood-prone areas to prevent root waterlogging. (Source: AR 2/2025, Pg. 10-13)",
+                        "Agronomic Observation": "<b>Harvesting:</b> Standard is generally acceptable, though some overripe bunches (5-8%) were noted. Loose fruit collection has improved. <br><b>Pruning:</b> Satisfactory on high ground but poor in low-lying areas. Over-pruning has reduced significantly. <br><b>Weeding:</b> Vegetation control is unacceptable in lower ground areas (overgrown interrows). Peat areas are dominated by Bracken Ferns; estate must promote <i>Nephrolepis</i> cover. (Source: AR 2/2025, Pg. 14, 25, 29, 31)",
+                        "Pest & Disease Control": "<b>Elephants:</b> Damage has escalated from defoliation to palm toppling, particularly in hotspots (P14E, P13C, P13D). Logging in adjacent areas is a key driver. <br><b>Rats:</b> Damage >10% in multiple blocks (e.g., P14F, P13C). Current sporadic baiting is ineffective; a systematic single-direction strategy is required. <br><b>Barn Owls:</b> Box occupancy is excellent at 90%, but annual maintenance is lacking. (Source: AR 2/2025, Pg. 35-39)",
+                        "Yield Performance & Constraints": "Yield depression is significant in flood-prone areas (12.91 MT/ha) compared to undulating areas (17.20 MT/ha). Waterlogging causes stunted palms and poor nutrient uptake. 2025 yield is trending lower than 2024. (Source: AR 2/2025, Pg. 40-41)",
+                        "Fertilizer Recommendation (2026)": "The 2026 fertilizer program has been issued (Appendix 1a-1c). Key recommendations: <br>1. For new plantings/supply: 600g CRF + 500g RP in planting hole. <br>2. No manuring for blocks scheduled for replanting in 2026/2027. <br>3. Correct nutrient gaps (Low N, P, Mg) identified in foliar analysis. (Source: AR 2/2025, Pg. 28, 44)"
                     },
                     "pinfosys": {
                         "summary": "Not Available."
                     }
                 },
-                "policy": " <div class='policy-item'><p class='font-semibold'>Upkeep and Weeding</p><p class='text-sm text-gray-600'><b>Policy Ref: WEED-CTRL-02:</b> Incomplete eradication of noxious weeds is unacceptable. Post-spraying checks and touch-up applications are mandatory to ensure quality. (Ref: AR, Pg. 5)</p></div> <div class='policy-item'><p class='font-semibold'>Pruning Standards</p><p class='text-sm text-gray-600'><b>Policy Ref: PRUNE-STD-01:</b> For palms under 15 years, two subtending fronds must be retained below the lowest bunch. Consistent training for staff and harvesters is required to prevent over-pruning. (Ref: AR, Pg. 36)</p></div> <div class='policy-item'><p class='font-semibold'>Drainage Management</p><p class='text-sm text-gray-600'><b>Policy Ref: DRAIN-MAINT-01:</b> Annual cleaning and de-silting of all drains are essential, with priority for low-lying areas, to ensure free-flowing water and mitigate flooding. (Ref: AR, Pg. 11)</p></div>"
+                "policy": " <div class='policy-item'><p class='font-semibold'>Rat Control Strategy</p><p class='text-sm text-gray-600'><b>Policy Ref: P&D-Rat-02:</b> Sporadic baiting is ineffective. A systematic, single-direction baiting strategy (South-to-North or West-to-East) must be implemented when damage >10%. (Ref: AR 2/2025, Pg. 38)</p></div> <div class='policy-item'><p class='font-semibold'>Elephant Control</p><p class='text-sm text-gray-600'><b>Policy Ref: P&D-Elephant-01:</b> Integrated control required: Electric fencing voltage must be maintained, cables kept above floodwater, and night patrols equipped with noise deterrents implemented. (Ref: AR 2/2025, Pg. 36)</p></div> <div class='policy-item'><p class='font-semibold'>Weeding in Peat</p><p class='text-sm text-gray-600'><b>Policy Ref: WEED-PEAT-01:</b> Encourage soft ground cover like <i>Nephrolepis</i>. Selective spraying must target Bracken Ferns and woody growth only. (Ref: AR 2/2025, Pg. 31)</p></div>"
             };
 
 
@@ -176,7 +178,7 @@
                     const colorClass = metric.title.includes('Area') ? 'bg-blue-50 text-blue-800' : 
                                        metric.title.includes('Yield') ? 'bg-green-50 text-green-800' :
                                        metric.title.includes('Cost') ? 'bg-orange-50 text-orange-800' :
-                                       metric.title.includes('Labour') ? 'bg-red-50 text-red-800' : 'bg-yellow-50 text-yellow-800';
+                                       metric.title.includes('Pest') ? 'bg-red-50 text-red-800' : 'bg-yellow-50 text-yellow-800';
                     if (metric.lines) {
                         return `<div class="p-4 rounded-lg ${colorClass}"><h3 class="font-semibold">${metric.title}</h3>${metric.lines.map(line => `<p class="text-sm">${line}</p>`).join('')}</div>`;
                     }
