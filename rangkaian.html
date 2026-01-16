@@ -34,11 +34,11 @@
     <header class="bg-white shadow-md">
         <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
             <div class="text-xl font-bold text-gray-900">
-                <a href="index.html" class="flex items-center">
+                <a href="../index.html" class="flex items-center">
                     Ladang Rangkaian Report
                 </a>
             </div>
-            <a href="estates.html" class="text-green-800 hover:text-green-900 transition duration-300">&larr; Back to Estates List</a>
+            <a href="../estates.html" class="text-green-800 hover:text-green-900 transition duration-300">&larr; Back to Estates List</a>
         </nav>
     </header>
 
@@ -70,78 +70,79 @@
             const estateData = {
                 "id": "rangkaian",
                 "name": "Ladang Rangkaian",
-                "reportInfo": "Data based on PA Report (Jun 2025) & Agronomy Report (Nov 2025). Visit Date: 18th November 2025.",
+                "reportInfo": "Data based on PA Report (Dec 2025) & Agronomy Report (Nov 2025). Visit Date: 10th December 2025.",
                 "summaryMetrics": {
                     "area": {
                         "title": "Estate Area",
                         "lines": [
                             "Total Planted: 1,392.50 ha",
                             "Mature: 1,392.50 ha",
-                            "Peat Area: 165 ha (11.8%)"
+                            "Peat Soil: 60% (Approx 835 ha)"
                         ]
                     },
                     "yield": {
                         "title": "Yield/Ha (Actual vs Budget)",
-                        "value": "6.41 / 6.68 MT",
-                        "note": "YTD May '25 (-4% Variance)"
+                        "value": "16.71 / 19.50 MT",
+                        "note": "YTD Nov '25 (-14% Variance)"
                     },
                     "cost": {
                         "title": "FFB Cost/Tonne (Actual vs Budget)",
-                        "value": "RM 288.73 / RM 343.73",
-                        "note": "YTD May '25 (16% Below Budget)"
+                        "value": "RM 303.02 / RM 277.66",
+                        "note": "YTD Nov '25 (9% Above Budget)"
                     },
                     "pest": {
                         "title": "Pest Status",
-                        "value": "High Threat",
-                        "note": "Elephants (Toppling) & Rats (>10%)"
+                        "value": "Severe Threat",
+                        "note": "Elephants (Toppling) & Rats"
                     },
                      "upkeep": {
                         "title": "Upkeep Status",
                         "value": "Mixed",
-                        "note": "Low ground weeding unacceptable"
+                        "note": "Manuring done; Weeding on budget"
                     }
                 },
                 "keyMetrics": [
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-blue-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z' /></svg>", "label": "Labour Ratio", "value": "1:14 ha (Shortage of 8)" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-red-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z' /></svg>", "label": "Elephants", "value": "Severe (Toppling Palms)" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-yellow-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M13 10V3L4 14h7v7l9-11h-7z' /></svg>", "label": "OER % (YTD May '25)", "value": "18.66%" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-orange-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z' /></svg>", "label": "Flooding Impact", "value": "31% Area Affected" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-purple-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z' /></svg>", "label": "Harvest Interval", "value": "15-21 Days" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-teal-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17.657 18.343A8 8 0 016.343 7.029m11.314 11.314a8 8 0 01-11.314-11.314m2.121 13.435a2 2 0 01-2.828 0l-2.122-2.121a2 2 0 010-2.828l5.656-5.657a2 2 0 012.829 0l2.121 2.121a2 2 0 010 2.828l-5.657 5.657z' /></svg>", "label": "Nutrient Status", "value": "Low N, P, Mg" }
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-blue-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z' /></svg>", "label": "Labour Ratio", "value": "1:13 ha (Adequate)" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-red-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z' /></svg>", "label": "Elephants", "value": "Severe (133 Palms Lost)" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-yellow-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M13 10V3L4 14h7v7l9-11h-7z' /></svg>", "label": "OER % (YTD Nov '25)", "value": "18.72%" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-red-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z' /></svg>", "label": "Harvester Shortage", "value": "-7 Workers" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-purple-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z' /></svg>", "label": "Harvest Interval", "value": "15 Days" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-teal-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17.657 18.343A8 8 0 016.343 7.029m11.314 11.314a8 8 0 01-11.314-11.314m2.121 13.435a2 2 0 01-2.828 0l-2.122-2.121a2 2 0 010-2.828l5.656-5.657a2 2 0 010 2.828l-5.657 5.657z' /></svg>", "label": "Nutrient Status", "value": "Low N, P, Mg" }
                 ],
                 "chartData": {
                     "production": {
-                        "labels": ["2021", "2022", "2023", "2024", "Oct 2025"],
-                        "ffb": [19.64, 19.49, 17.87, 18.67, 14.76],
-                        "rainfall": [4513, 5041, 6279, 4137, 2549],
-                        "note": "*2025 data is YTD October. Source: AR 2/2025, Pg. 40"
+                        "labels": ["2021", "2022", "2023", "2024", "Nov 2025"],
+                        "ffb": [19.64, 19.49, 17.87, 18.67, 16.71],
+                        "rainfall": [4513, 5041, 6279, 4137, 2875],
+                        "note": "*2025 data is YTD Nov. Source: PAR 2/2025, Pg. 30, 50"
                     },
                     "ageProfile": {
                         "labels": ["Prime Mature (11-13Y)"],
                         "data": [100],
                         "title": "Ladang Rangkaian - Palm Age Distribution",
-                        "note": "*Source: PA Report 1/2025, Pg. 10."
+                        "note": "*Source: PA Report 2/2025, Pg. 10."
                     }
                 },
                 "observations": [
-                    "<b>Significant Yield Gap:</b> A major performance gap exists between undulating areas (17.20 MT/ha) and flooded/low-lying areas (12.91 MT/ha). Waterlogging is the primary yield-limiting factor. <span class='observation-ref'>(AR Pg. 41)</span>",
-                    "<b>Severe Elephant Intrusion:</b> Unlike previous reports of just defoliation, elephants are now toppling palms. Logging in adjacent areas is driving migration into the estate. <span class='observation-ref'>(AR Pg. 35)</span>",
-                    "<b>High Rat Damage:</b> Rat damage exceeds 10% in multiple blocks. Current sporadic baiting is ineffective; a systematic single-direction baiting strategy is required. <span class='observation-ref'>(AR Pg. 38)</span>",
-                    "<b>Weeding Standards:</b> Vegetation control on lower ground is unacceptable with overgrown interrows. Peat areas require maintenance of <i>Nephrolepis</i> while eradicating Bracken Ferns. <span class='observation-ref'>(AR Pg. 29, 31)</span>",
-                    "<b>Manuring Status:</b> 96% of the 2025 program is complete. However, Mixture B application was delayed due to late delivery. <span class='observation-ref'>(AR Pg. 10)</span>",
-                    "<b>Harvester Shortage (PA Finding):</b> A shortage of 8 harvesters was noted in the June PA report, which continues to impact harvesting intervals in some fields. <span class='observation-ref'>(PAR Pg. 11)</span>"
+                    "<b>Severe Elephant Intrusion:</b> Elephants have escalated from defoliation to toppling 133 palms, particularly in P13D, P14E, and P14F. Electric fencing (4km) has been approved for 2026. <span class='observation-ref'>(PAR Pg. 20, 38; AR Pg. 35)</span>",
+                    "<b>High Rat Damage:</b> Rat damage exceeds 10% in multiple blocks. Current baiting (2 rounds) is ineffective; strategic single-direction baiting is required. <span class='observation-ref'>(PAR Pg. 20; AR Pg. 38)</span>",
+                    "<b>Harvester Shortage:</b> A shortage of 7 harvesters (Ratio 1:26) is noted. Productivity of Mini Crawler gang needs improvement by adding harvesters. <span class='observation-ref'>(PAR Pg. 12, 32)</span>",
+                    "<b>Yield Constraints:</b> Significant yield gaps in P14E (13.06 MT/ha due to elephants) and P14G (9.70 MT/ha due to smallholder intrusion). <span class='observation-ref'>(PAR Pg. 31)</span>",
+                    "<b>Weeding Strategy:</b> Estate advised to switch from strip spraying to circle spraying (2m radius) to preserve soft grasses and prevent surface runoff. <span class='observation-ref'>(PAR Pg. 18, 38)</span>",
+                    "<b>Manuring Cost:</b> Program 100% completed, but costs are 23% over budget due to higher fertilizer prices (Mixture B). <span class='observation-ref'>(PAR Pg. 19)</span>"
                 ],
                 "reports": {
                     "plantation": {
-                        "Executive Summary": "The estate's performance is acceptable, with production costs 16% below budget. However, FFB production is 4% below target. Key issues include a harvester shortage, delays in upkeep (weeding, manuring), and inconsistent work quality (pruning, harvesting). (Source: PAR, Pg. 49-51)",
-                        "Area Statement": "Total planted area is 1,392.5 ha, all of which are in the prime mature age category (11-13 years old). (Source: PAR, Pg. 10)",
-                        "Labour Statement": "The workforce of 103 is slightly below the requirement of 107, with a notable shortage of 8 harvesters. (Source: PAR, Pg. 11)",
-                        "Staff Establishment": "The staff complement is adequate. (Source: PAR, Pg. 13)",
-                        "General Charges": "Expenditure as of May 2025 is 35% lower than budget. (Source: PAR, Pg. 14)",
-                        "Upkeep and Cultivation": "Weeding and manuring programs are behind schedule. Road conditions are generally bad and require grading and surfacing. Pruning is 94% complete but quality is inconsistent. (Source: PAR, Pg. 16-38)",
-                        "Harvesting and Collection": "Harvesting intervals are mostly acceptable (~15 days), but some fields are extended. Quality needs improvement regarding loose fruit collection and avoiding over-pruning. (Source: PAR, Pg. 39-42)",
-                        "Crop Production": "YTD May 2025 FFB production is 8,932 MT (6.41 t/ha), which is 4% below budget but 3% higher than the same period last year. (Source: PAR, Pg. 43)",
-                        "Production Cost": "Ex-estate cost as of May 2025 is RM 288.73/ton, 16% below budget. (Source: PAR, Pg. 46)"
+                        "Executive Summary": "Overall performance is acceptable. FFB production (Jan-Nov) was 23,275.22 MT, 14% below the budget of 27,150 MT. Yield per hectare stood at 16.71 MT, below the budgeted 19.50 MT. The Ex-Estate Production Cost was RM 303.02/MT, 9% higher than the budget of RM 277.66/MT, driven by lower yields and fertilizer price variances. Key challenges remain the severe elephant attacks causing palm toppling and a shortage of harvesters (7 vacancies). (Source: PAR 2/2025, Pg. 4, 30, 33, 37)",
+                        "Area Statement": "Total planted area is 1,392.50 ha, all of which is mature (11-13 years old). The terrain is 40% mineral soil and 60% peat soil. No immature areas. (Source: PAR 2/2025, Pg. 10)",
+                        "Labour Statement": "Total workforce is 109 (Ratio 1:13 ha). Harvester strength is 54 against a requirement of 61 (Shortage of 7). High turnover recorded: 25 recruited, 19 returned, 13 absconded. 20 new Indonesian workers arrived in Nov 2025. (Source: PAR 2/2025, Pg. 12-13)",
+                        "Staff Establishment": "Staffing is adequate. Manager: En. Mohd Khairul Nizam. The estate also oversees Ladang Sungai Sawak effective April. (Source: PAR 2/2025, Pg. 11)",
+                        "General Charges": "RM 1,353.43/ha (10% below budget). Significant overspending noted in: Medical (78% due to sick pay/hospital charges), Recruitment (80% due to new intake), Fire Insurance (92%), and MSPO Audit fees (37%). (Source: PAR 2/2025, Pg. 14-16)",
+                        "Upkeep and Cultivation": "Total cost RM 2,493.99/ha (4% above budget). Weeding (RM 221/ha) is on budget; circle spraying 80% complete. Manuring (RM 1,712/ha) is 23% over budget due to fertilizer prices; application 100% complete. Pest & Disease (RM 72/ha) is 47% under budget. Drains upkeep (RM 93/ha) is 9% over budget with 2,873 chains desilted. (Source: PAR 2/2025, Pg. 17)",
+                        "Harvesting and Collection": "Cost RM 72.84/MT (6% below budget). Harvesting interval is ~15 days. Standards are satisfactory, but frond stacking needs improvement. Direct transport to mill implemented to save costs. (Source: PAR 2/2025, Pg. 28)",
+                        "Crop Production": "YTD FFB: 23,275.22 MT (14% below budget). Yield: 16.71 MT/ha. Low yields in P14E (13.06 MT/ha) due to elephant attacks and P14G (9.70 MT/ha) due to boundary intrusion. (Source: PAR 2/2025, Pg. 30)",
+                        "Production Cost": "Ex-estate cost: RM 303.02/MT (+9% variance). Upkeep & Cultivation: RM 149.21/MT (+21% variance). General Charges: RM 80.97/MT (+5% variance). (Source: PAR 2/2025, Pg. 33)",
+                        "Vehicles & Capex": "Toyota Hilux and Van costs are high due to major engine repairs. New Holland tractor written off. Capital Expenditure: RM 69,000 spent (vs RM 285,000 budget). Multi-court constructed (RM 69k). Road surfacing deferred. (Source: PAR 2/2025, Pg. 35-36)"
                     },
                     "agronomy": {
                         "Executive Summary": "Yield performance remains below expectations (14.76 MT/ha YTD Oct) despite prime palm age. Major limiting factors are extensive flooding in 31% of the estate, peat soil management issues (11.8%), and severe pest intrusions. The 2025 manuring program is nearing completion despite delays. (Source: AR 2/2025, Pg. 4-6)",
