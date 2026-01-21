@@ -70,7 +70,7 @@
             const estateData = {
                 "id": "chengal",
                 "name": "Ladang Chengal",
-                "reportInfo": "Data based on Agronomy Report (Visit: 18th September 2025) & Plantation Advisory Report (Visit: 23 June 2025, Reviewed: Jan-May 2025).",
+                "reportInfo": "Data based on Agronomy Report (Visit: 18th Sept 2025) & Plantation Advisory Report 2/2025 (Visit: 11th Dec 2025, Reviewed: Jan-Nov 2025).",
                 "summaryMetrics": {
                     "area": {
                         "title": "Estate Area",
@@ -81,73 +81,71 @@
                         ]
                     },
                     "yield": {
-                        "title": "Yield/Ha (YTD Aug '25 vs '24)",
-                        "value": "13.43 / 14.23 MT",
-                        "note": "-6% vs 2024 (Source: AR)",
-                        "valueColor": "text-red-700"
+                        "title": "Yield/Ha (YTD Nov '25 vs '24)",
+                        "value": "20.06 / 19.42 MT",
+                        "note": "+3.3% vs 2024 (Source: PAR 2/2025 Pg. 30)",
+                        "valueColor": "text-green-700"
                     },
                     "cost": {
-                        "title": "FFB Cost/Tonne (YTD May '25 vs Budget)",
-                        "value": "RM 260.86 / RM 289.84",
-                        "note": "10% lower than budget (Source: PAR)",
+                        "title": "FFB Cost/Tonne (YTD Nov '25 vs Budget)",
+                        "value": "RM 271.49 / RM 269.97",
+                        "note": "In line with budget (Source: PAR 2/2025 Pg. 34)",
                         "valueColor": "text-green-700"
                     },
                     "manuring": {
                         "title": "Manuring Progress",
-                        "value": "Delayed",
-                        "note": "Mix A (64%), Mix B (70%) behind schedule.",
-                        "valueColor": "text-yellow-700"
+                        "value": "Completed",
+                        "note": "100% completed (2,557.80 MT applied). Source: PAR Pg. 18",
+                        "valueColor": "text-green-700"
                     },
                      "pruning": {
                         "title": "Pruning Progress",
-                        "value": "On Schedule",
-                        "note": "2/3 rounds complete. Frond stacking needs improvement.",
-                        "valueColor": "text-orange-700"
+                        "value": "Satisfactory",
+                        "note": "Progressive & Corrective pruning done. Source: PAR Pg. 26",
+                        "valueColor": "text-green-700"
                     }
                 },
                 "keyMetrics": [
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-blue-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z' /></svg>", "label": "Labour Ratio", "value": "1:13 ha (Adequate)" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-red-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z' /></svg>", "label": "P&D Status", "value": "High (Rats >10%)" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-green-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M13 10V3L4 14h7v7l9-11h-7z' /></svg>", "label": "OER % (YTD)", "value": "19.03%" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-red-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z' /></svg>", "label": "Harvester Prod.", "value": "1.79 MT/day (Moderate)" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-purple-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z' /></svg>", "label": "Harvest Interval", "value": "Inconsistent (>15 days)" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-teal-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17.657 18.343A8 8 0 016.343 7.029m11.314 11.314a8 8 0 01-11.314-11.314m2.121 13.435a2 2 0 01-2.828 0l-2.122-2.121a2 2 0 010-2.828l5.656-5.657a2 2 0 012.829 0l2.121 2.121a2 2 0 010 2.828l-5.657 5.657z' /></svg>", "label": "Nutrient Status", "value": "N & Mg Suboptimal" }
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-orange-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z' /></svg>", "label": "Labour Ratio", "value": "1:10 ha (Surplus)" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-green-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z' /></svg>", "label": "P&D Status", "value": "Controlled (<10%)" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-green-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M13 10V3L4 14h7v7l9-11h-7z' /></svg>", "label": "OER % (YTD)", "value": "19.40%" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-blue-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z' /></svg>", "label": "Harvester Prod.", "value": "2.04 MT/day (Crawler)" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-green-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z' /></svg>", "label": "Harvest Interval", "value": "15 days (Standard)" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-teal-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17.657 18.343A8 8 0 016.343 7.029m11.314 11.314a8 8 0 01-11.314-11.314m2.121 13.435a2 2 0 01-2.828 0l-2.122-2.121a2 2 0 010-2.828l5.656-5.657a2 2 0 012.829 0l2.121 2.121a2 2 0 010 2.828l-5.657 5.657z' /></svg>", "label": "Nutrient Status", "value": "Manuring Completed" }
                 ],
                 "chartData": {
                     "production": {
-                        "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
-                        "rainfall": [159.5, 90.0, 143.0, 470.5, 125.5, 128.5, 26.0, 153.5],
-                        "ffb": [2378, 1883, 2576, 3136, 3399, 3185, 3626, 4185],
-                        "note": "Rainfall & FFB Production data YTD August 2025. (AR Pg. 47, 56)"
+                        "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov"],
+                        "rainfall": [159.5, 90.0, 143.0, 470.5, 125.5, 128.5, 26.0, 153.5, 161.0, 126.5, 173.0],
+                        "ffb": [2378, 1883, 2576, 3136, 3399, 3185, 3626, 4185, null, null, null],
+                        "note": "Rainfall data YTD Nov 2025. FFB monthly breakdown displayed up to Aug 2025; Total YTD Nov FFB is 36,392.65 MT. (PAR 2/2025 Pg. 48)"
                     },
                     "ageProfile": {
                         "labels": ["Prime Mature (8-19 yrs)", "Old Mature (>19 yrs)"],
                         "data": [65.18, 34.82],
                         "title": "Ladang Chengal - Palm Age Distribution",
-                        "note": "*Source: Plantation Advisory Report 1/2025, Pg. 9."
+                        "note": "*Source: Plantation Advisory Report 2/2025, Pg. 9."
                     }
                 },
                 "observations": [
-                    "<b>Yield Performance:</b> Yield as of August 2025 is 6% lower than last year, averaging 13.43 MT/ha. This is linked to inconsistent harvesting intervals and upkeep delays. <span class='observation-ref'>(AR Pg. 46, PAR Pg. 37)</span>",
-                    "<b>Critical Manuring & Upkeep Delays:</b> Manuring is significantly behind schedule, especially for sub-soil applications (Mix A 64%, Mix B 70%). The fertilizer store floor remains wet, an unresolved issue. This compounds PAR's findings of delayed weeding. <span class='observation-ref'>(AR Pg. 13, 15; PAR Pg. 17, 30)</span>",
-                    "<b>Harvesting Standards & Productivity:</b> Harvesting intervals are inconsistent, frequently exceeding 15 days (up to 19 days). Harvester productivity is moderate at 1.79 MT/day. While loose fruit collection is now 'minimal', frond stacking quality is 'not fully satisfactory'. <span class='observation-ref'>(AR Pg. 18, 32, 48; PAR Pg. 33)</span>",
-                    "<b>Pest Status (Rats):</b> Rat damage remains a concern, with several blocks exceeding the 10% threshold. The estate's baiting practices are not aligned with standard procedure (baiting in low-damage blocks). <span class='observation-ref'>(AR Pg. 41-43, PAR Pg. 28)</span>",
-                    "<b>Field & Canopy Condition:</b> Pruning is on schedule (2/3 rounds complete), but frond stacking is messy and needs improvement. Mounding for leaning palms in low-lying areas is in progress. Mg deficiency symptoms are visible in some hilly areas. <span class='observation-ref'>(AR Pg. 22-24, 28, 32)</span>"
+                    "<b>Strong Yield Performance:</b> YTD November yield is 20.06 MT/ha, exceeding the same period last year (19.42 MT/ha) and aligning with the budget. <span class='observation-ref'>(PAR 2/2025 Pg. 30, 38)</span>",
+                    "<b>Manuring Completed:</b> The full year's manuring program (2,557.80 MT) was completed in November. EFB application is recommended as a supplementary nutrient. <span class='observation-ref'>(PAR 2/2025 Pg. 18)</span>",
+                    "<b>Labour Surplus:</b> The estate has 177 workers (1:10 ha), which is a surplus of 47 workers against the requirement. Management is advised to redistribute excess labour. <span class='observation-ref'>(PAR 2/2025 Pg. 13)</span>",
+                    "<b>Pest Control Effective:</b> Rat damage is below the 10% threshold. Bagworm treatment is ongoing in 106 ha, with no severe infestation observed. <span class='observation-ref'>(PAR 2/2025 Pg. 19)</span>",
+                    "<b>Harvesting Standards:</b> Intervals are stable at 15 days. FFB quality is satisfactory with no unripe bunches observed. <span class='observation-ref'>(PAR 2/2025 Pg. 28)</span>"
                 ],
                 "reports": {
                     "plantation": {
-                        "Executive Summary": "Performance is acceptable with lower production costs, but FFB production is below budget. Key issues include low harvester productivity, delayed weeding and manuring, and the need to improve upkeep quality. (PAR Pg. 44-46)",
-                        "Area Statement": "Total planted area is 1,814.20 ha, comprising 65.18% prime mature palms and 34.82% old mature palms. Unplantable and vacant areas total 374.80 ha. (PAR Pg. 9)",
-                        "Labour Statement": "The workforce is adequate with a ratio of 1 worker to 13 ha. However, there is a shortage of 6 workers for manuring. Harvester productivity is low at 1.61 tons/man-day. (PAR Pg. 11-12)",
-                        "Staff Establishment": "Staff complement is satisfactory with a supervisor ratio of 1:363 ha. Several transfers, a resignation, a retirement, and a new appointment occurred in the period. (PAR Pg. 13-14)",
-                        "General Charges": "Expenditure is 23% lower than budget. Overspending occurred in Executive Travel, Manager's Bungalow Upkeep, SOCSO contributions, Labour Recruitment, Permit Renewals, and Assessment Tax, with justifications provided. (PAR Pg. 15-16)",
-                        "Upkeep and Cultivation": "Expenditure is 23% below budget. Weeding, manuring, and pruning are behind schedule. Road maintenance is slow. (PAR Pg. 17, 44)",
-                        "Harvesting and Collection": "Harvesting intervals are too long (up to 21 days). Harvesting standards need improvement regarding loose fruit collection and avoiding over-pruning. FFB quality is affected by unripe bunches and debris. (PAR Pg. 33-36)",
-                        "Crop Production": "YTD May FFB production is 13,372.35 MT, which is 12% below budget and 14% below last year. Estate yield is 7.37 MT/ha. (PAR Pg. 37)",
-                        "Production Cost": "FFB cost of production ex-estate (RM 260.86/tonne) is 10% lower than budget, mainly due to lower upkeep and cultivation costs. (PAR Pg. 41)",
-                        "Vehicles Running Cost": "Cost for Tractor John Deere was 41% higher than the budget due to low running hours and repairs. Van cost was 20% higher due to repairs. (PAR Pg. 43)",
-                        "Capital Expenditure": "No capital expenditure was incurred during the review period. (PAR Pg. 42)",
-                        "Mechanization": "Mechanized infield collection covers 85% of the harvesting area. Productivity using Timac (2.05 tons/day) and Mini Crawler (2.15 tons/day) needs improvement. (PAR Pg. 39-40, 45)"
+                        "Executive Summary": "The estate was visited on 11th December 2025 by Tn Haji Mohd Sufian Bin Yusoff. The review covers January to November 2025. Overall performance is strong, achieving an FFB yield of 20.06 MT/ha and a production cost of RM 271.49/MT, both aligned with the budget. (PAR 2/2025 Pg. 2, 38)",
+                        "Area Statement & Development": "Total planted area remains at 1,814.20 hectares (Mature). There is no change in the area statement. Unplantable/Vacant areas total 374.80 hectares. <br><br><b>Developments:</b> Chambering has been carried out in low-lying areas (Field P10G) to improve water flow and reclaim approximately 20 hectares for planting. Rehabilitation is ongoing in P08D and P10F to improve access and recover neglected palms. (PAR 2/2025 Pg. 9)",
+                        "Labour & Staff Establishment": "<b>Labour:</b> The estate employs 177 workers against a requirement of 130, resulting in a <b>surplus of 47 workers</b> (Ratio 1:10 ha). Recruitment has been active (80 new workers), but abscondment remains an issue (41 workers). Management is advised to redistribute excess labour. <br><b>Staff:</b> The establishment is adequate with no recent changes. En. Mohd Zaeh Bin Mat Zin remains the Manager. (PAR 2/2025 Pg. 12-13)",
+                        "General Charges & Financials": "Expenditure for the first 11 months is <b>RM 1,502.52 per hectare</b>, which is <b>24% below the budget</b> of RM 1,710.31. <br><br><b>Variances:</b> Significant overspending occurred in Recruitment (33% over due to 80 new recruits), Group Personal Insurance (32% over), and Staff Medical expenses (10% over). These were offset by savings in other areas. (PAR 2/2025 Pg. 14)",
+                        "Upkeep - Weeding & Manuring": "<b>Weeding:</b> Cost is RM 257.26/ha (Budget RM 253.48). Progress is satisfactory (4th round circle/selective), though stagnant water in low-lying areas hinders operations.<br><br><b>Manuring:</b> Cost is RM 1,556.68/ha (21% over budget due to price/quantity variance). The program is <b>100% completed</b> (2,557.80 MT applied) as of November. 6,472 tons of EFB were applied in P05A, P06B, and P07C. (PAR 2/2025 Pg. 16-18)",
+                        "Upkeep - P&D, Roads, Drains": "<b>Pest & Disease:</b> Cost RM 97.56/ha. Rat baiting (flocoumafen) covered 260 ha; damage is <10%. Bagworm control active on 106 ha. Barn owl box occupancy is 87%.<br><b>Roads:</b> Cost RM 235.51/ha (9% over budget). Grading completed for 7,813 chains. 1,225 tons of crusher run used for resurfacing.<br><b>Drains:</b> Cost RM 30.80/ha. New drains constructed in P10G (10 chains). Desilting completed in P08E. (PAR 2/2025 Pg. 19-23)",
+                        "Harvesting & Crop Production": "<b>Production:</b> YTD November FFB production is <b>36,392.65 MT</b> (20.06 MT/ha), exceeding the budget of 36,100 MT and last year's 19.42 MT/ha.<br><b>Operations:</b> Harvesting interval is stable at <b>15 days</b> (21.46 rounds). Quality is satisfactory.<br><b>Issues:</b> Lower yields in P08E due to flooding and P10F due to poor access. (PAR 2/2025 Pg. 28, 30)",
+                        "Mechanization Status": "The estate utilizes <b>14 Crawlers</b> (54 harvesters) and <b>2 Timac units</b> (12 harvesters). <br><br><b>Productivity:</b> Crawler productivity is 2.04 tons/man-day (8.88 tons/machine). Timac productivity is 1.87 tons/man-day (16.44 tons/machine). The report recommends optimizing the machine-to-harvester ratio to 1:5. (PAR 2/2025 Pg. 32)",
+                        "Cost of Production Breakdown": "The ex-estate cost of production is <b>RM 271.49/MT</b>, in line with the budget (RM 269.97/MT). <br><br><b>Breakdown:</b> Upkeep (RM 118.10/MT), Harvesting (RM 78.50/MT), General Charges (RM 74.90/MT). Total cost including processing and tax is RM 390.91/MT. (PAR 2/2025 Pg. 34)",
+                        "Vehicles & Capital Expenditure": "<b>Vehicles:</b> Toyota Hilux (RM 0.47/km), Van (RM 0.68/km). John Deere tractor costs are high (RM 22.40/hr) due to low usage.<br><b>Capex:</b> Actual expenditure of RM 49,096 incurred for IT equipment, a back pusher, and a mounted grader. (PAR 2/2025 Pg. 36-37)"
                     },
                     "agronomy": {
                         "Executive Summary": "Yield as of Aug 2025 is 6% lower than last year. Key issues are delays in sub-soil manuring, unresolved wet fertilizer store, inconsistent harvesting intervals, and rat damage requiring effective control. Pruning progress is acceptable, but frond stacking needs improvement. (Source: AR, Pg. 4-6, 46)",
@@ -157,19 +155,19 @@
                         "Fertilizer Recommendation": "The 2026 program is established, retaining the same blocks for subsoil application. GML is added to address Magnesium deficiency and low soil pH. (Source: AR, Pg. 52)"
                     },
                     "pinfosys": {
-                        "summary": "Key Metrics (YTD May 2025): Total Income (N/A), Operating Profit (N/A), Cost of Production (RM 260.86/Tonne), Manuring Cost (RM 403.99/Ha), General Charges (RM 598.46/Ha). (PAR Pg. 15, 17, 41)",
+                        "summary": "Key Metrics (YTD Nov 2025): Cost of Production (RM 271.49/Tonne), Manuring Cost (RM 1,556.68/Ha), Weeding Cost (RM 257.26/Ha). Financial performance is generally in line with budget. (PAR 2/2025 Pg. 16, 34)",
                         "expenditure": [
-                            { "category": "Upkeep & Cultivation", "item": "Weeding", "rm_ha": "115.12", "rm_tonne": "-" },
-                            { "category": "Upkeep & Cultivation", "item": "Manuring", "rm_ha": "403.99", "rm_tonne": "-" },
-                            { "category": "Upkeep & Cultivation", "item": "P&D", "rm_ha": "27.17", "rm_tonne": "-" },
-                            { "category": "Upkeep & Cultivation", "item": "Road & Bridges", "rm_ha": "92.66", "rm_tonne": "-" },
-                            { "category": "Upkeep & Cultivation", "item": "Pruning", "rm_ha": "63.98", "rm_tonne": "-" },
-                            { "category": "Harvesting & Collection", "item": "Harvesting", "rm_ha": "-", "rm_tonne": "49.78" },
-                            { "category": "Harvesting & Collection", "item": "Internal Transport", "rm_ha": "-", "rm_tonne": "29.83" }
+                            { "category": "Upkeep & Cultivation", "item": "Weeding", "rm_ha": "257.26", "rm_tonne": "-" },
+                            { "category": "Upkeep & Cultivation", "item": "Manuring", "rm_ha": "1,556.68", "rm_tonne": "-" },
+                            { "category": "Upkeep & Cultivation", "item": "P&D", "rm_ha": "97.56", "rm_tonne": "-" },
+                            { "category": "Upkeep & Cultivation", "item": "Road & Bridges", "rm_ha": "223.51", "rm_tonne": "-" },
+                            { "category": "Upkeep & Cultivation", "item": "Pruning", "rm_ha": "133.73", "rm_tonne": "-" },
+                            { "category": "Harvesting & Collection", "item": "Harvesting", "rm_ha": "-", "rm_tonne": "47.83" },
+                            { "category": "Harvesting & Collection", "item": "Internal Transport", "rm_ha": "-", "rm_tonne": "30.66" }
                         ]
                     }
                 },
-                "policy": "<div class='policy-item'><p class='font-semibold'>Pest Control</p><p class='text-sm text-gray-600'><b>Policy Ref: P&D-Rat-01/02:</b> Rat damage in several blocks exceeds the 10% threshold, triggering baiting policy. However, the estate is not following procedure (e.g., baiting low-infestation areas), which is inefficient. (AR Pg. 41-43)</p></div><div class='policy-item'><p class='font-semibold'>Field Upkeep</p><p class='text-sm text-gray-600'><b>Policy Ref: FERT-APP-05:</b> The 2025 manuring program is significantly delayed, especially for sub-soil application, contravening policy. (AR Pg. 13)</p><p class='text-sm text-gray-600'><b>Policy Ref: WEED-STD-01:</b> Circle weeding is delayed, hindering operations. (PAR Pg. 17, 30)</p></div><div class='policy-item'><p class='font-semibold'>Harvesting Standards</p><p class='text-sm text-gray-600'><b>Policy Ref: HARV-INT-01:</b> Harvesting intervals consistently exceed 15 days, violating policy. (AR Pg. 18)</p></div>"
+                "policy": "<div class='policy-item'><p class='font-semibold'>Pest Control</p><p class='text-sm text-gray-600'><b>Policy Ref: P&D-Rat-01/02:</b> Rat damage is currently below the 10% threshold, indicating effective control. (PAR 2/2025 Pg. 19)</p></div><div class='policy-item'><p class='font-semibold'>Field Upkeep</p><p class='text-sm text-gray-600'><b>Policy Ref: FERT-APP-05:</b> Manuring program (2,557.80 MT) is 100% completed as of November, compliant with annual targets. (PAR 2/2025 Pg. 18)</p><p class='text-sm text-gray-600'><b>Policy Ref: WEED-STD-01:</b> Weeding rounds are on schedule (4th round completed). (PAR 2/2025 Pg. 16)</p></div><div class='policy-item'><p class='font-semibold'>Harvesting Standards</p><p class='text-sm text-gray-600'><b>Policy Ref: HARV-INT-01:</b> Harvesting intervals are maintained at 15 days, compliant with policy. (PAR 2/2025 Pg. 28)</p></div>"
             };
 
 
@@ -290,7 +288,8 @@
                                     borderColor: '#ca8a04', 
                                     backgroundColor: 'transparent', 
                                     yAxisID: 'y-ffb', 
-                                    tension: 0.4 
+                                    tension: 0.4,
+                                    spanGaps: false
                                 },
                                 { 
                                     label: 'Rainfall (mm)', 
@@ -343,7 +342,7 @@
                     agronomyDiv.innerHTML = Object.entries(estateData.reports.agronomy).map(([section, content]) => `<h4 class="font-semibold mt-2 text-gray-800">${section.replace(/([A-Z])/g, ' $1').trim()}:</h4><p class="text-sm text-gray-600">${content}</p>`).join('');
                 }
                 if (plantationDiv && estateData.reports.plantation) {
-                    plantationDiv.innerHTML = Object.entries(estateData.reports.plantation).map(([section, content]) => `<h4 class="font-semibold mt-2 text-gray-800">${section.replace(/([A-Z])/g, ' $1').trim()}:</h4><p class="text-sm text-gray-600">${content}</p>D`).join('');
+                    plantationDiv.innerHTML = Object.entries(estateData.reports.plantation).map(([section, content]) => `<h4 class="font-semibold mt-2 text-gray-800">${section.replace(/([A-Z])/g, ' $1').trim()}:</h4><p class="text-sm text-gray-600">${content}</p>`).join('');
                 }
                 if (pinfosysDiv && estateData.reports.pinfosys) {
                     const expenditureTable = `
@@ -401,4 +400,3 @@
     </script>
 </body>
 </html>
-
