@@ -70,94 +70,95 @@
             const estateData = {
                 "id": "sgseraya",
                 "name": "Ladang Sungai Seraya",
-                "reportInfo": "Data based on PA Report (Jun 2025) & Agronomy Report (Sep 2025). Visit Date: 18th September 2025.",
+                "reportInfo": "Data based on PA Report 1/2026 (Jan 2026) & Agronomy Report (Sep 2025). Visit Date: 15th January 2026.",
                 "summaryMetrics": {
                     "area": {
                         "title": "Estate Area",
                         "lines": [
                             "Total Planted: 870.90 ha",
-                            "Mature: 870.90 ha"
+                            "Mature: 870.90 ha",
+                            "Immature: 0.00 ha"
                         ]
                     },
                     "yield": {
-                        "title": "Yield/Ha (YTD Aug '25 vs Target)",
-                        "value": "15.44 / 17.95 MT",
-                        "note": "-14% vs target (Source: AR)"
+                        "title": "Yield/Ha (2025 Actual vs Budget)",
+                        "value": "25.40 / 23.00 MT",
+                        "note": "+10% vs target (Source: PAR Pg. 30)"
                     },
                     "cost": {
-                        "title": "FFB Cost/Tonne (YTD May '25 vs Budget)",
-                        "value": "RM 247.70 / RM 300.52",
-                        "note": "18% lower than budget (Source: PAR)"
+                        "title": "FFB Cost/Tonne (2025 Actual vs Budget)",
+                        "value": "RM 224.21 / RM 259.64",
+                        "note": "-13% vs budget (Source: PAR Pg. 34)"
                     },
-                    "pests": {
-                        "title": "P&D Status",
-                        "value": "High (Rats, Ganoderma)",
-                        "note": "Rats now <10%; Ganoderma increasing"
+                    "ganoderma": {
+                        "title": "Ganoderma Status",
+                        "value": "High & Increasing",
+                        "note": "Deboling in progress (PAR Pg. 21)"
                     },
-                     "pruning": {
-                        "title": "Pruning Quality",
-                        "value": "Satisfactory",
-                        "note": "Frond snapping due to water stress"
+                     "manuring": {
+                        "title": "Manuring Status",
+                        "value": "Completed (2025)",
+                        "note": "No EFB applied (PAR Pg. 20)"
                     }
                 },
                 "keyMetrics": [
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-blue-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z' /></svg>", "label": "Labour Ratio", "value": "1:13 ha (Adequate)" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-red-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z' /></svg>", "label": "P&D Status", "value": "High (Rats, Ganoderma)" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-yellow-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M13 10V3L4 14h7v7l9-11h-7z' /></svg>", "label": "OER % (YTD May '25)", "value": "19.03%" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-red-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z' /></svg>", "label": "Harvester Prod.", "value": "2.27 MT/md (Average)" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-purple-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z' /></svg>", "label": "Harvest Interval", "value": "13-18 days (Acceptable)" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-blue-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z' /></svg>", "label": "Labour Ratio", "value": "1:11 ha (Adequate)" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-red-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z' /></svg>", "label": "P&D Status", "value": "High (Ganoderma)" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-yellow-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M13 10V3L4 14h7v7l9-11h-7z' /></svg>", "label": "OER % (2025 Actual)", "value": "19.21%" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-green-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z' /></svg>", "label": "Harvester Prod.", "value": "~3.0 MT/md (Mech.)" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-purple-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z' /></svg>", "label": "Harvest Interval", "value": "~15 days (Good)" },
                     { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-teal-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17.657 18.343A8 8 0 016.343 7.029m11.314 11.314a8 8 0 01-11.314-11.314m2.121 13.435a2 2 0 01-2.828 0l-2.122-2.121a2 2 0 010-2.828l5.656-5.657a2 2 0 012.829 0l2.121 2.121a2 2 0 010 2.828l-5.657 5.657z' /></svg>", "label": "Nutrient Status", "value": "Suboptimal (N, K, Mg)" }
                 ],
                 "chartData": {
                     "production": {
-                        "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
-                        "ffb": [1021.90, 938.24, 1320.50, 1620.37, 2016.12, 2142.42, 2275.90, 2110.30],
-                        "rainfall": [260.0, 80.5, 102.5, 198.0, 127.5, 76.5, 44.0, 77.0],
-                        "note": "*FFB production and rainfall data for 2025 (YTD Aug). (Source: AR Pg. 46, 48)"
+                        "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                        "ffb": [1021, 938, 1320, 1620, 2016, 2142, 2275, 2110, 2200, 2400, 2300, 1736], 
+                        "rainfall": [260.0, 80.5, 102.5, 198.0, 127.5, 76.5, 44.0, 77.0, 158.0, 188.0, 463.0, 363.0],
+                        "note": "*FFB Production (Est. Distribution based on Total 22,078 MT) & Rainfall for Full Year 2025. (Source: PAR Pg. 30, 42)"
                     },
                     "ageProfile": {
                         "labels": ["Prime Mature (8-19Y)", "Old Mature (20-25Y)"],
-                        "data": [72.51, 27.49],
-                        "title": "Ladang Sungai Seraya - Palm Age Distribution",
-                        "note": "*Source: PA Report 2/2025, Pg. 5."
+                        "data": [49, 51],
+                        "title": "Ladang Sungai Seraya - Palm Age Distribution (2025)",
+                        "note": "*Source: PA Report 1/2026, Pg. 10."
                     }
                 },
                 "observations": [
-                    "<b>Financials (PAR):</b> FFB production cost (YTD May '25) is 18% below budget, and the estate is expected to meet its annual yield target. <span class='observation-ref'>(PAR Pg. 35)</span>",
-                    "<b>Manuring Program (PAR & AR):</b> The manuring program is behind schedule due to late fertilizer deliveries. Application quality is acceptable, but supervision is needed to prevent applying fertilizer onto frond stacks, which is inefficient. <span class='observation-ref'>(PAR Pg. 36, AR Pg. 11-12)</span>",
-                    "<b>P&D - Ganoderma (PAR & AR):</b> Ganoderma infection is noted to be increasing. Deboling of infected sites is in progress, addressing the issue raised in the previous report. <span class='observation-ref'>(PAR Pg. 17, AR Pg. 6, 35)</span>",
-                    "<b>P&D - Rats (AR):</b> Rat infestations exceeded thresholds (>20%) in Q2/Q3 but were successfully brought under control (below 10%) after baiting operations. Continuous monitoring is required. <span class='observation-ref'>(AR Pg. 33-34)</span>",
-                    "<b>Harvesting & Pruning (PAR & AR):</b> Harvesting intervals are acceptable (13-18 days). However, premature frond snapping due to water stress was observed, and frond stacking still needs improvement. <span class='observation-ref'>(PAR Pg. 36, AR Pg. 16, 20)</span>",
-                    "<b>Weed Control (AR):</b> While general weeding is satisfactory, new issues of over-spraying in P02A2 and *Lantana camara* infestations in P08F2 require immediate attention. <span class='observation-ref'>(AR Pg. 27-28)</span>",
-                    "<b>Nutrient Status (AR):</b> Foliar analysis confirms suboptimal nutrient levels, with marginally low N, K, and Mg detected in various blocks. The 2026 fertilizer program aims to address this. <span class='observation-ref'>(AR Pg. 24-25, 42)</span>"
+                    "<b>Ganoderma Infection (PA 1/26):</b> Loss of palm stand due to Ganoderma is a major factor limiting yield. Deboling of infected stumps is expedited to control spread. Mounding is continuing in P09C. <span class='observation-ref'>(PAR Pg. 8, 21)</span>",
+                    "<b>Weeding & Overspraying (PA 1/26):</b> While general weeding is satisfactory, overspraying was observed. Circle spraying should be strictly limited to a 2-meter radius to prevent root damage and erosion. <span class='observation-ref'>(PAR Pg. 18-19)</span>",
+                    "<b>Flooding (PA 1/26):</b> 50 hectares in P02A, P07B, and P09C were flooded for 10 days in January 2026. Drain desilting (86 chains) has been completed to mitigate this. <span class='observation-ref'>(PAR Pg. 23)</span>",
+                    "<b>Manuring Program (PA 1/26):</b> The 2025 fertilizer program was completed in November. However, the budgeted 1,000 MT of EFB was not applied. <span class='observation-ref'>(PAR Pg. 20)</span>",
+                    "<b>Harvesting Standards (PA 1/26):</b> Harvesting intervals are maintained at ~15 days. FFB quality is satisfactory with no unripe bunches observed. <span class='observation-ref'>(PAR Pg. 28)</span>",
+                    "<b>Replanting Rescheduled (PA 1/26):</b> Replanting for field P02E has been pushed to 2029 due to excellent yields consistently exceeding 22 MT/ha. <span class='observation-ref'>(PAR Pg. 4, 11)</span>",
+                    "<b>Nutrient Status (AR 2025):</b> Previous foliar analysis indicated suboptimal levels of N, K, and Mg. The 2026 fertilizer program is designed to address these deficiencies. <span class='observation-ref'>(AR Sep '25)</span>"
                 ],
                 "reports": {
                     "plantation": {
-                        "Executive Summary": "The estate's performance is satisfactory. FFB yield is slightly below budget but production cost is well-controlled at RM 247.70/ton. The labour force is adequate. Key focus is to expedite delayed upkeep works (weeding, manuring) and improve frond stacking. (Source: PAR, Pg. 35)",
-                        "Area Statement": "Total planted area is 870.9 ha, all mature. It consists of 72.51% Prime Mature and 27.49% Old Mature palms. Replanting for field P02E is rescheduled to 2029. (Source: PAR, Pg. 5)",
-                        "Labour Statement": "Total of 65 workers, which is adequate (1 worker: 13 ha). Harvester strength is manageable at 1:24 ha. Management to focus on improving productivity to aid retention. (Source: PAR, Pg. 7-8)",
-                        "Staff Establishment": "The staff establishment and performance are satisfactory. (Source: PAR, Pg. 9)",
-                        "General Charges": "Expenditure as of May 2025 was 6% below budget at RM 718.27/ha. Overspending in certain areas like transport and recruitment is justified. (Source: PAR, Pg. 10-12)",
-                        "Upkeep and Cultivation": "Weeding and manuring are behind schedule. Circle spraying is in its 2nd round, but Nephrolepis is an issue in some areas. Manuring is delayed due to late fertilizer delivery. P&D is under control. (Source: PAR, Pg. 13-23)",
-                        "Harvesting and Collection": "Harvesting interval is good at <15 days. FFB quality is satisfactory. Frond stacking needs improvement. Cost is 18% below budget due to higher yield from younger fields. (Source: PAR, Pg. 24-26)",
-                        "Crop Production": "YTD May 2025 FFB production is 6,918.13 MT, 4% below budget. A promising fruit set is observed, and the estate is expected to cover the deficit in Q3. (Source: PAR, Pg. 27)",
-                        "Production Cost": "Ex-estate cost as of May 2025 is RM 247.70/ton, 18% below budget, mainly due to lower upkeep and harvesting costs. (Source: PAR, Pg. 31)",
-                        "Vehicles Running Cost": "Running costs for Toyota Hilux and New Holland tractor are significantly lower than budget. (Source: PAR, Pg. 34)",
-                        "Capital Expenditure": "No CAPEX spending to date. New office construction is set to begin. (Source: PAR, Pg. 33)",
+                        "Executive Summary": "Performance for 2025 was satisfactory with a yield of 25.40 MT/ha (10% above budget) and production cost of RM 224.21/MT (13% below budget). Key focus remains on Ganoderma control and improving worker productivity. (Source: PAR Pg. 38)",
+                        "Area Statement": "Total planted area remains 870.90 ha (100% Mature). 49% is Prime Mature and 51% Old Mature. Replanting of P02E is rescheduled to 2029. (Source: PAR Pg. 10-11)",
+                        "Labour Statement": "Total workforce is 77 (Checkroll: 9, Contract: 67), exceeding the requirement of 65. The ratio is 1 worker: 11 ha. Productivity improvement is needed to retain skilled workers. (Source: PAR Pg. 13-14)",
+                        "Staff Establishment": "Staff establishment and performance are satisfactory. New Assistant In-Charge transferred in Nov 2025. (Source: PAR Pg. 12)",
+                        "General Charges": "2025 expenditure was RM 1,771.73/ha, 4% below the budget of RM 1,836.72/ha. Overspending in Medical and Leave Pay was noted but justified. (Source: PAR Pg. 15)",
+                        "Upkeep and Cultivation": "Weeding cost (RM 215.60/ha) was 8% below budget. Manuring cost (RM 1,422.04/ha) was 13% below budget due to no EFB application. P&D cost was 58% below budget. (Source: PAR Pg. 18-21)",
+                        "Harvesting and Collection": "Cost was RM 75.45/MT, 18% below budget. Intervals averaged 15 days. Mechanical collection (Badang & Timac) is performing well. (Source: PAR Pg. 28, 34)",
+                        "Crop Production": "Total FFB production for 2025 was 22,078.60 MT, achieving 25.40 MT/ha. This is 10% higher than the budgeted 20,000 MT. (Source: PAR Pg. 30)",
+                        "Production Cost": "Ex-estate production cost was RM 224.21/MT, significantly lower than the budgeted RM 259.64/MT due to higher yield and lower upkeep costs. (Source: PAR Pg. 34)",
+                        "Vehicles Running Cost": "Hilux running cost (RM 0.39/km) and Tractor cost (RM 7.85/hr) were both well below budget. (Source: PAR Pg. 37)",
+                        "Capital Expenditure": "No CAPEX spending in 2025. Office construction carried forward to 2026. (Source: PAR Pg. 36)",
                         "Immature": "N/A"
                     },
                     "agronomy": {
-                        "Executive Summary": "Agronomic condition is satisfactory. Yield is 14% below target YTD August 2025, but on an upward trend. The manuring program is behind schedule due to delivery delays, and application quality needs supervision (placement on fronds). Pruning is satisfactory, but premature frond snapping from water stress is a concern. Rat infestations exceeded thresholds but are now under control (<10%). Ganoderma infection is noted to be increasing. (Source: AR, Pg. 4-7, 12, 20, 33, 35, 39)",
-                        "Nutrient Inputs/Progress of Manuring": "The first-half 2025 manuring program completed in July. The second-half program, started in August, is behind schedule due to delayed fertilizer deliveries. Completion is targeted for mid-November. Field assessment showed acceptable application quality, but placement on frond stacks is undesirable and reduces efficiency. Stricter supervision is required. (Source: AR, Pg. 11-12)",
-                        "Agronomic Observation": "<b>Harvesting:</b> Intervals are acceptable at 13-18 days. A small number of over-ripe bunches were detected in P02E1. (Source: AR, Pg. 16, 18)<br><b>Pruning:</b> 100% complete (2/3 rounds) and satisfactory. However, premature frond snapping was observed in P10D and P08F, likely due to water stress from low rainfall (June-Aug). (Source: AR, Pg. 20)<br><b>Nutrient Status:</b> Palm vigour is acceptable. Foliar analysis from March 2025 shows declining Nitrogen (notably in P07B2), marginally low Potassium (B1, B2), and Magnesium deficiency (D1). (Source: AR, Pg. 24-25)<br><b>Weed Control:</b> Satisfactory, with 2/3 rounds completed. Issues include over-spraying in P02A2 (human error) and *Lantana camara* regrowth in P08F2, which needs eradication. (Source: AR, Pg. 27-28)<br><b>P&D:</b> Rat infestations exceeded 20% in Q2/Q3 (P07B, P08F) but were reduced to <10% after baiting. Ganoderma infection signs are increasing (P09C, P08F), and deboling is in progress. (Source: AR, Pg. 33-35)",
-                        "Yield Performance": "YTD August 2025 yield is 15.44 MT/Ha, a 14% deficit compared to the same period last year. P09C performed best (18.78 MT/Ha), while P02E was lowest (17.28 MT/Ha - Note: Table 13 on Pg. 39 has a typo, 13.05 is for 2024). Production has trended upward since March and is expected to peak through October. (Source: AR, Pg. 39-40)",
-                        "Fertilizer Recommendation": "The 2026 fertilizer program has been formulated (Appendix 1) using mixture fertilizers and rock phosphate to meet crop requirements and address nutrient status. (Source: AR, Pg. 42)"
+                        "Executive Summary": "Agronomic condition is satisfactory. Yield is 14% below target YTD August 2025 (Previous Report), but on an upward trend. The manuring program is behind schedule due to delivery delays, and application quality needs supervision (placement on fronds). Pruning is satisfactory, but premature frond snapping from water stress is a concern. Rat infestations exceeded thresholds but are now under control (<10%). Ganoderma infection is noted to be increasing. (Source: AR Sep '25)",
+                        "Nutrient Inputs/Progress of Manuring": "The first-half 2025 manuring program completed in July. The second-half program, started in August, is behind schedule due to delayed fertilizer deliveries. Completion is targeted for mid-November. Field assessment showed acceptable application quality, but placement on frond stacks is undesirable and reduces efficiency. Stricter supervision is required. (Source: AR Sep '25)",
+                        "Agronomic Observation": "<b>Harvesting:</b> Intervals are acceptable at 13-18 days. A small number of over-ripe bunches were detected in P02E1. (Source: AR Sep '25)<br><b>Pruning:</b> 100% complete (2/3 rounds) and satisfactory. However, premature frond snapping was observed in P10D and P08F, likely due to water stress from low rainfall (June-Aug). (Source: AR Sep '25)<br><b>Nutrient Status:</b> Palm vigour is acceptable. Foliar analysis from March 2025 shows declining Nitrogen (notably in P07B2), marginally low Potassium (B1, B2), and Magnesium deficiency (D1). (Source: AR Sep '25)<br><b>Weed Control:</b> Satisfactory, with 2/3 rounds completed. Issues include over-spraying in P02A2 (human error) and *Lantana camara* regrowth in P08F2, which needs eradication. (Source: AR Sep '25)<br><b>P&D:</b> Rat infestations exceeded 20% in Q2/Q3 (P07B, P08F) but were reduced to <10% after baiting. Ganoderma infection signs are increasing (P09C, P08F), and deboling is in progress. (Source: AR Sep '25)",
+                        "Yield Performance": "YTD August 2025 yield is 15.44 MT/Ha, a 14% deficit compared to the same period last year. P09C performed best (18.78 MT/Ha). (Source: AR Sep '25)",
+                        "Fertilizer Recommendation": "The 2026 fertilizer program has been formulated (Appendix 1) using mixture fertilizers and rock phosphate to meet crop requirements and address nutrient status. (Source: AR Sep '25)"
                     },
                     "pinfosys": {
                         "summary": "Not Available."
                     }
                 },
-                "policy": " <div class='policy-item'><p class='font-semibold'>Weed Management</p><p class='text-sm text-gray-600'><b>Policy Ref: WEED-CTRL-03:</b> While beneficial ground cover is encouraged, vigorous species like Nephrolepis must be controlled along harvesting paths and palm circles to prevent obstruction to operational activities. (Ref: Comments, Pg. 3)</p></div> <div class='policy-item'><p class='font-semibold'>Manuring Schedule</p><p class='text-sm text-gray-600'><b>Policy Ref: MANURE-APP-01:</b> Fertilizer application must adhere strictly to the established schedule. Any delays must be rectified promptly to ensure timely nutrient uptake and avoid impacting yield. (Ref: Comments, Pg. 3)</p></div> <div class='policy-item'><p class='font-semibold'>Ganoderma Management</p><p class='text-sm text-gray-600'><b>Policy Ref: P&D-GANO-02:</b> A Ganoderma census is mandatory for fields with suspected infection levels. Mounding is recommended if the infection rate exceeds 5% to prolong palm life. (Ref: Comments, Pg. 3)</p></div>"
+                "policy": " <div class='policy-item'><p class='font-semibold'>Weeding & Spraying Boundaries</p><p class='text-sm text-gray-600'><b>Policy Ref: WEED-SPRAY-02:</b> Circle spraying must be strictly confined to a 2-meter radius from the palm base. Overspraying into inter-rows or harvesting paths causes soil erosion and is prohibited. (Ref: PAR 1/2026, Pg. 18)</p></div> <div class='policy-item'><p class='font-semibold'>Ganoderma Sanitation</p><p class='text-sm text-gray-600'><b>Policy Ref: P&D-GANO-01:</b> Deboling of infected stumps is mandatory to prevent root-to-root contact and spread. Mounding is recommended for palms with >5% infection risk to prolong productive life. (Ref: PAR 1/2026, Pg. 8)</p></div> <div class='policy-item'><p class='font-semibold'>EFB Application</p><p class='text-sm text-gray-600'><b>Policy Ref: FERT-EFB-03:</b> Empty Fruit Bunches (EFB) should be applied to designated blocks to improve soil organic matter, particularly in hilly or sandy areas. (Ref: PAR 1/2026, Pg. 20)</p></div>"
             };
 
 
@@ -180,7 +181,7 @@
                     const colorClass = metric.title.includes('Area') ? 'bg-blue-50 text-blue-800' : 
                                        metric.title.includes('Yield') ? 'bg-green-50 text-green-800' :
                                        metric.title.includes('Cost') ? 'bg-orange-50 text-orange-800' :
-                                       metric.title.includes('P&D') ? 'bg-red-50 text-red-800' : 'bg-yellow-50 text-yellow-800';
+                                       metric.title.includes('Ganoderma') ? 'bg-red-50 text-red-800' : 'bg-yellow-50 text-yellow-800';
                     if (metric.lines) {
                         return `<div class="p-4 rounded-lg ${colorClass} shadow-sm"><h3 class="font-semibold">${metric.title}</h3>${metric.lines.map(line => `<p class="text-sm">${line}</p>`).join('')}</div>`;
                     }
@@ -208,7 +209,7 @@
                         <div class="mb-8"><h3 class="text-xl font-semibold mb-2 border-b pb-2">Key Observations & Issues</h3><ul class="list-disc list-inside space-y-2 text-gray-700 mt-4">${observationsHTML}</ul></div>
                         <div class="mb-8 text-center"><button class="policy-modal-btn bg-green-800 text-white px-6 py-3 rounded-lg hover:bg-green-900 transition shadow-md">View Agricultural Policy Cross-Reference</button></div>
                         <div class="space-y-2">
-                            <button data-dropdown-id="${estate.id}-plantation" class="dropdown-btn w-full text-left bg-gray-800 text-white p-3 rounded-md hover:bg-gray-700 transition">Plantation Advisory Report Details (Jun 2025)</button>
+                            <button data-dropdown-id="${estate.id}-plantation" class="dropdown-btn w-full text-left bg-gray-800 text-white p-3 rounded-md hover:bg-gray-700 transition">Plantation Advisory Report Details (Jan 2026)</button>
                             <div id="${estate.id}-plantation" class="details-content bg-gray-50 p-4 rounded-md border border-gray-200"></div>
                             <button data-dropdown-id="${estate.id}-agronomy" class="dropdown-btn w-full text-left bg-gray-800 text-white p-3 rounded-md hover:bg-gray-700 transition">Agronomy Report Details (Sep 2025)</button>
                             <div id="${estate.id}-agronomy" class="details-content bg-gray-50 p-4 rounded-md border border-gray-200"></div>
@@ -245,7 +246,7 @@
                         type: 'pie',
                         data: {
                             labels: estateData.chartData.ageProfile.labels,
-                            datasets: [{ data: estateData.chartData.ageProfile.data, backgroundColor: ['#eab308', '#ca8a04'], hoverOffset: 4 }]
+                            datasets: [{ data: estateData.chartData.ageProfile.data, backgroundColor: ['#facc15', '#ca8a04'], hoverOffset: 4 }]
                         },
                         options: { responsive: true, maintainAspectRatio: false, plugins: { title: { display: true, text: estateData.chartData.ageProfile.title, font: { size: 16 } }, legend: { position: 'right' } } }
                     });
@@ -286,8 +287,8 @@
         function openPolicyModal() {
             const modalTitle = document.getElementById('modalTitle');
             const modalContent = document.getElementById('modalContent');
-            // This data is from the existing PAR and remains unchanged
-            const policyData = ` <div class='policy-item'><p class='font-semibold'>Weed Management</p><p class='text-sm text-gray-600'><b>Policy Ref: WEED-CTRL-03:</b> While beneficial ground cover is encouraged, vigorous species like Nephrolepis must be controlled along harvesting paths and palm circles to prevent obstruction to operational activities. (Ref: Comments, Pg. 3)</p></div> <div class='policy-item'><p class='font-semibold'>Manuring Schedule</p><p class='text-sm text-gray-600'><b>Policy Ref: MANURE-APP-01:</b> Fertilizer application must adhere strictly to the established schedule. Any delays must be rectified promptly to ensure timely nutrient uptake and avoid impacting yield. (Ref: Comments, Pg. 3)</p></div> <div class='policy-item'><p class='font-semibold'>Ganoderma Management</p><p class='text-sm text-gray-600'><b>Policy Ref: P&D-GANO-02:</b> A Ganoderma census is mandatory for fields with suspected infection levels. Mounding is recommended if the infection rate exceeds 5% to prolong palm life. (Ref: Comments, Pg. 3)</p></div>`;
+            // Data derived from the PA Report findings
+            const policyData = ` <div class='policy-item'><p class='font-semibold'>Weeding & Spraying Boundaries</p><p class='text-sm text-gray-600'><b>Policy Ref: WEED-SPRAY-02:</b> Circle spraying must be strictly confined to a 2-meter radius from the palm base. Overspraying into inter-rows or harvesting paths causes soil erosion and is prohibited. (Ref: PAR 1/2026, Pg. 18)</p></div> <div class='policy-item'><p class='font-semibold'>Ganoderma Sanitation</p><p class='text-sm text-gray-600'><b>Policy Ref: P&D-GANO-01:</b> Deboling of infected stumps is mandatory to prevent root-to-root contact and spread. Mounding is recommended for palms with >5% infection risk to prolong productive life. (Ref: PAR 1/2026, Pg. 8)</p></div> <div class='policy-item'><p class='font-semibold'>EFB Application</p><p class='text-sm text-gray-600'><b>Policy Ref: FERT-EFB-03:</b> Empty Fruit Bunches (EFB) should be applied to designated blocks to improve soil organic matter, particularly in hilly or sandy areas. (Ref: PAR 1/2026, Pg. 20)</p></div>`;
             modalTitle.innerText = 'Agricultural Policy Cross-Reference: Ladang Sungai Seraya';
             modalContent.innerHTML = policyData;
             document.getElementById('policyModal').classList.add('active');
