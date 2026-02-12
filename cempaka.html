@@ -70,21 +70,21 @@
             const estateData = {
                 "id": "cempaka",
                 "name": "Ladang Cempaka",
-                "reportInfo": "Data based on PA Report 2/2025 (Visit: 28th Oct 2025) & Agronomy Report (July 2025).",
+                "reportInfo": "Data based on PA Report 2/2025 (Visit: 28th Oct 2025) & Agronomy Report 1/2026 (Visit: 19th Jan 2026).",
                 "summaryMetrics": {
                     "area": {
                         "title": "Estate Area",
                         "lines": [
-                            "Total Area: 495.93 ha",
-                            "Mature: 167.64 ha",
-                            "Immature: 283.36 ha",
-                            "Others: 44.93 ha"
+                            "Total Area: 494.33 ha",
+                            "Mature (P18C): 167.64 ha",
+                            "Young Mature (P22B/D): 147.41 ha",
+                            "Immature (P23A): 179.28 ha"
                         ]
                     },
                     "yield": {
-                        "title": "Yield/Ha (Actual vs Budget)",
-                        "value": "19.87 / 15.39 MT",
-                        "note": "YTD Sep 2025 (Strong Performance)"
+                        "title": "Mature Yield/Ha (2025)",
+                        "value": "27.75 MT/Ha",
+                        "note": "P18C Mature Area (+33.9% vs 2024)"
                     },
                     "cost": {
                         "title": "FFB Cost/Tonne (Actual vs Budget)",
@@ -93,8 +93,8 @@
                     },
                     "upkeep": {
                         "title": "Upkeep Status",
-                        "value": "Mediocre",
-                        "note": "Weeding delayed, VOPs prevalent"
+                        "value": "Improving",
+                        "note": "New roads added; VOPs still an issue"
                     },
                      "labour": {
                         "title": "Labour Status",
@@ -103,61 +103,62 @@
                     }
                 },
                 "keyMetrics": [
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-blue-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z' /></svg>", "label": "Harvesters Ratio", "value": "1:16.8 ha (Short 5 Hrv)" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-green-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z' /></svg>", "label": "P&D Status", "value": "Controlled (Rats/Oryctes)" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-yellow-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M13 10V3L4 14h7v7l9-11h-7z' /></svg>", "label": "OER % (YTD)", "value": "19.08% (Budget 19.03%)" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-blue-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z' /></svg>", "label": "Labour Ratio", "value": "Deficit (Short 5 Hrv)" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-green-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z' /></svg>", "label": "P&D Status", "value": "Controlled (Monitoring Rats/VOPs)" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-yellow-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M13 10V3L4 14h7v7l9-11h-7z' /></svg>", "label": "OER % (YTD Sep 2025)", "value": "19.08% (Budget 19.03%)" },
                     { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-red-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z' /></svg>", "label": "Harvester Prod.", "value": "3.21 - 3.27 MT/md" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-purple-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z' /></svg>", "label": "Harvest Interval", "value": "15 days (Acceptable)" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-teal-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17.657 18.343A8 8 0 016.343 7.029m11.314 11.314a8 8 0 01-11.314-11.314m2.121 13.435a2 2 0 01-2.828 0l-2.122-2.121a2 2 0 010-2.828l5.656-5.657a2 2 0 012.829 0l2.121 2.121a2 2 0 010 2.828l-5.657 5.657z' /></svg>", "label": "Nutrient Status", "value": "On Schedule" }
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-purple-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z' /></svg>", "label": "Harvest Interval", "value": "14-18 days (Acceptable)" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-teal-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17.657 18.343A8 8 0 016.343 7.029m11.314 11.314a8 8 0 01-11.314-11.314m2.121 13.435a2 2 0 01-2.828 0l-2.122-2.121a2 2 0 010-2.828l5.656-5.657a2 2 0 012.829 0l2.121 2.121a2 2 0 010 2.828l-5.657 5.657z' /></svg>", "label": "Nutrient Status", "value": "2025 Manuring 100% Done" }
                 ],
                 "chartData": {
                     "production": {
-                        "labels": ["Jan-25", "Feb-25", "Mar-25", "Apr-25", "May-25", "Jun-25", "Jul-25", "Aug-25", "Sep-25"],
-                        "ffb": [370, 370, 370, 370, 370, 370, 370, 370, 370], // Average calculated from YTD 3331.12 / 9
-                        "rainfall": [151.0, 43.0, 138.0, 339.0, 206.0, 171.0, 0.0, 135.0, 116.5],
-                        "note": "*Rainfall actuals for 2025. FFB data shows YTD average (Monthly breakdown not provided in PAR 2/2025)."
+                        "labels": ["Jan-25", "Feb-25", "Mar-25", "Apr-25", "May-25", "Jun-25", "Jul-25", "Aug-25", "Sep-25", "Oct-25", "Nov-25", "Dec-25"],
+                        "ffb": [307.34, 209.34, 295.70, 314.46, 268.97, 366.24, 524.60, 554.84, 491.14, 486.12, 454.60, 379.94],
+                        "rainfall": [151.0, 43.0, 138.0, 339.0, 206.0, 171.0, 0.0, 135.0, 116.5, 174.0, 265.0, 351.0],
+                        "note": "*Actual FFB production and rainfall for the 2025 calendar year. (AR 1/2026, Appx 2 & 3)"
                     },
                     "ageProfile": {
-                        "labels": ["Mature (P18 - 2018)", "Immature (P22 - 2022)", "Immature (P23 - 2023)"],
-                        "data": [37, 23, 40], // Approx percentages based on hectares (167, 104, 179)
-                        "title": "Ladang Cempaka - Palm Age Distribution (2025)",
-                        "note": "*Source: PAR 2/2025, Pg. 10 Area Statement."
+                        "labels": ["Mature (P18C)", "Young Mature (P22B, P22D)", "Immature (P23A)"],
+                        "data": [34, 30, 36], 
+                        "title": "Ladang Cempaka - Palm Age Distribution (2026)",
+                        "note": "*Source: AR 1/2026, Pg. 8 Area Statement."
                     }
                 },
                 "observations": [
-                    "<b>Positive Yield Performance:</b> Yield per hectare as of September is 19.87 tons, which is 29% higher than the budget (15.39 tons) and significantly better than the previous year. <span class='observation-ref'>(PAR 2/2025, Pg. 6, 27)</span>",
-                    "<b>Labour Shortage:</b> There is a deficit of 3 workers total, specifically 5 harvesters. This is critical as scout harvesting is in progress in P22B. <span class='observation-ref'>(PAR 2/2025, Pg. 12)</span>",
-                    "<b>Poor Immature Weeding:</b> Weeding in P23A and P22B is not satisfactory. Overgrown VOPs (Volunteers Oil Palms) and noxious weeds are prevalent. Dominance of weeds in palm circles was noted. <span class='observation-ref'>(PAR 2/2025, Pg. 36-39, 43)</span>",
-                    "<b>Widespread Over-Pruning:</b> Excessive removal of functional fronds was found all over the fields (mature and immature). This practice must stop immediately to avoid stress to palms. <span class='observation-ref'>(PAR 2/2025, Pg. 19, 22, 43)</span>",
-                    "<b>Rat & Pest Damage:</b> Symptoms of rat damage found all over. 1.5 rounds of baiting completed. Oryctes damage found in P23A (fresh damage). <span class='observation-ref'>(PAR 2/2025, Pg. 22, 40)</span>",
-                    "<b>Road Maintenance:</b> 88% of road grading is complete, but surfacing with crusher run is urgently needed for slippery/soggy stretches before the monsoon. <span class='observation-ref'>(PAR 2/2025, Pg. 20-21, 44)</span>"
+                    "<b>Positive Mature Yield:</b> Mature field P18C achieved an excellent yield of 27.75 MT/ha in 2025, which is a significant 34% increase from 2024. <span class='observation-ref'>(AR 1/2026, Pg. 36; PAR 2/2025, Pg. 27)</span>",
+                    "<b>Underperforming Young Mature Yield:</b> Early yields in P22D are significantly below expectations (1.74 MT/ha vs 3.64 MT/ha est.) due to historical crop recovery and accessibility issues. The construction of additional roads has now improved access for light transport. <span class='observation-ref'>(AR 1/2026, Pg. 23-24, 37; PAR 2/2025, Pg. 30-31)</span>",
+                    "<b>Weeding & VOP Issues:</b> Volunteer Oil Palms (VOPs) are still prevalent across P22 and P23. While 50-60% of spraying is complete, inter-rows in P23A are exhibiting infestations of Momordica charantia and Asystasia gangitica. Weed management must be intensified. <span class='observation-ref'>(AR 1/2026, Pg. 25, 32; PAR 2/2025, Pg. 36-39)</span>",
+                    "<b>Inconsistent Pruning Standards:</b> Inconsistent pruning was observed directly in P22B blocks, corroborating earlier reports of widespread over-pruning of functional fronds across the estate. Strict supervision is required immediately. <span class='observation-ref'>(AR 1/2026, Pg. 23; PAR 2/2025, Pg. 19, 43)</span>",
+                    "<b>Rat Infestation Monitoring:</b> Fresh rat damage is visible on bunches. Baiting censuses were incomplete for 2025 (Q2 and Q4 missed). Quarterly monitoring must resume properly, with a threshold of 10% triggering baiting. <span class='observation-ref'>(AR 1/2026, Pg. 18-19, 27; PAR 2/2025, Pg. 22)</span>",
+                    "<b>Labour Shortage:</b> A critical deficit of 5 harvesters persists against the requirement. This poses risks for sustained crop recovery, particularly as scout harvesting has commenced in immature blocks like P23A. <span class='observation-ref'>(PAR 2/2025, Pg. 12; AR 1/2026, Pg. 14)</span>"
                 ],
                 "reports": {
                     "plantation": {
-                        "Executive Summary": "Performance is mixed. FFB production (19.87 MT/ha) and Costs (RM 254.87/MT) are excellent, beating budget. However, field upkeep standards (weeding/pruning) are mediocre and labour is short. (Source: PAR 2/2025, Pg. 43-44)",
-                        "Area Statement": "Total planted area 451.00 ha. Mature: 167.64 ha (37%). Immature: 283.36 ha (63%). No changes since last visit. (Source: PAR 2/2025, Pg. 10)",
-                        "Labour Statement": "Total workforce is 27 (11 Checkroll, 16 Contract). Requirement is 30. Shortage of 5 harvesters is a concern for upcoming peak crop and scout harvesting. (Source: PAR 2/2025, Pg. 12)",
-                        "Staff Establishment": "Staffing is satisfactory. Manager also oversees Ladang Dawn. (Source: PAR 2/2025, Pg. 14)",
-                        "General Charges": "Expenditure is RM 1,213.05/ha (lower than budget of RM 1,406.10). Overspending noted in MSPO fees (213%) and Security (20%). (Source: PAR 2/2025, Pg. 15-16)",
-                        "Upkeep and Cultivation": "Total cost RM 1,837.07/ha (Budget RM 2,180.89). Weeding is delayed. Manuring completed as per schedule. Pruning cost is satisfactory but quality (over-pruning) is poor. (Source: PAR 2/2025, Pg. 17-19)",
-                        "Harvesting and Collection": "Cost is RM 101.38/tonne (Budget RM 119.14). Interval is 15 days. Loose fruit collection needs improvement. (Source: PAR 2/2025, Pg. 25-26)",
-                        "Crop Production": "YTD FFB is 3,331.12 MT (Budget 2,580 MT). Yield/ha is 19.87 MT. OER is 19.08%. (Source: PAR 2/2025, Pg. 27)",
-                        "Cost of Production": "Total Ex-Estate Cost is RM 254.87/MT, significantly lower than budget (RM 352.20/MT). (Source: PAR 2/2025, Pg. 29)",
-                        "Immature P22B": "104.08 ha. Scout harvesting started Feb 2025. Weeding is poor; palm circles dominated by weeds. 2 rounds of circle spraying done (Program 3). (Source: PAR 2/2025, Pg. 30-31)",
-                        "Immature P23A": "179.28 ha. Weeding unsatisfactory; overgrown VOPs prevalent. Oryctes damage found (5 rounds Cypermethrine done). (Source: PAR 2/2025, Pg. 35-40)"
+                        "1. Executive Summary": "Performance is mixed. FFB production (19.87 MT/ha YTD Sep) and Costs (RM 254.87/MT) are excellent, beating budget. However, field upkeep standards (weeding/pruning) are mediocre and labour is short. (Source: PAR 2/2025, Pg. 43-44)",
+                        "2. Area Statement": "Total planted area 451.00 ha. Mature: 167.64 ha (37%). Immature: 283.36 ha (63%). No changes since last visit. (Source: PAR 2/2025, Pg. 10)",
+                        "3. Labour Statement": "Total workforce is 27 (11 Checkroll, 16 Contract). Requirement is 30. Shortage of 5 harvesters is a concern for upcoming peak crop and scout harvesting. (Source: PAR 2/2025, Pg. 12)",
+                        "4. Staff Establishment": "Staffing is satisfactory. Manager also oversees Ladang Dawn. (Source: PAR 2/2025, Pg. 14)",
+                        "5. General Charges": "Expenditure is RM 1,213.05/ha (lower than budget of RM 1,406.10). Overspending noted in MSPO fees (213%) and Security (20%). (Source: PAR 2/2025, Pg. 15-16)",
+                        "6. Upkeep and Cultivation": "Total cost RM 1,837.07/ha (Budget RM 2,180.89). Weeding is delayed. Manuring completed as per schedule. Pruning cost is satisfactory but quality (over-pruning) is poor. (Source: PAR 2/2025, Pg. 17-19)",
+                        "7. Harvesting and Collection": "Cost is RM 101.38/tonne (Budget RM 119.14). Interval is 15 days. Loose fruit collection needs improvement. (Source: PAR 2/2025, Pg. 25-26)",
+                        "8. Crop Production & Cost": "YTD FFB is 3,331.12 MT (Yield 19.87 MT/ha). Total Ex-Estate Cost is RM 254.87/MT, significantly lower than budget (RM 352.20/MT). (Source: PAR 2/2025, Pg. 27-29)",
+                        "9. Immature P22B": "104.08 ha. Scout harvesting started Feb 2025. Weeding is poor; palm circles dominated by weeds. 2 rounds of circle spraying done (Program 3). (Source: PAR 2/2025, Pg. 30-31)",
+                        "10. Immature P23A": "179.28 ha. Weeding unsatisfactory; overgrown VOPs prevalent. Oryctes damage found (5 rounds Cypermethrine done). (Source: PAR 2/2025, Pg. 35-40)"
                     },
                     "agronomy": {
-                        "Executive Summary": "Focus is required on weeding standards, VOP eradication, and resolving labour shortages for immature harvesting. Rat infestation has been reduced but requires monitoring. Manuring progress has improved after initial delays. (Source: AR, Pg. 5, 45)",
-                        "Nutrient Inputs/Progress of Manuring": "First-half manuring is 41% complete for mature areas and 52% for immature. Delivery issues for Mixture B have been resolved, and the next consignment is expected in August. (Source: AR, Pg. 11-12)",
-                        "Agronomic Observation": "P18C (Mature): Yield has increased by 35.9%. Weeding and pruning are slightly delayed. Rat attacks reduced from 15% to 4%. P22 (Immature): Yield is low in P22D due to accessibility issues and labour shortage. Over-pruning was observed. VOPs need eradication. P23 (Immature): Palm vigour is improving. Rat and Oryctes are under control, but Apogonia requires treatment. (Source: AR, Pg. 13-41)",
-                        "Yield Performance": "P18C yield increased by 35.9% compared to last year. P22B immature yield is 8.7% above estimate, but P22D is 54.4% below due to labour and access issues. Harvesting rounds for immature fields are behind schedule. (Source: AR, Pg. 43-44)",
-                        "Fertilizer Recommendation": "The 2026 fertilizer program has been formulated, recommending Mixture B, RP, and Kieserite for mature palms, and compound fertilizers for immature areas. (Source: AR, Pg. 46-47)"
+                        "1. Executive Summary": "Field conditions in mature P18C are satisfactory with encouraging yield improvements (27.75 MT/ha). Early yields for P22D are lower than expected due to historical access and recovery issues. Key issues: Inconsistent pruning, unsatisfactory weeding (VOPs), and missed rat censuses. (Source: AR 1/2026, Pg. 4-5)",
+                        "2. Nutrient Inputs & Manuring": "<b>Progress:</b> 2025 manuring for mature and immature plantings 100% completed without delays.<br><b>Storage:</b> Store is currently empty pending 2026 fertilizer deliveries.<br><b>Observation:</b> Application quality and timing must be maintained for new stock. (Source: AR 1/2026, Pg. 12-13)",
+                        "3. Harvesting & Crop Recovery": "<b>Interval:</b> 14-18 days (Satisfactory).<br><b>Issues:</b> Severe underperformance in P22D (1.74 MT/ha) due to crop recovery challenges and limited field accessibility. New roads built to improve access. (Source: AR 1/2026, Pg. 14, 23-24, 37)",
+                        "4. Pruning & Canopy Management": "<b>Status:</b> Satisfactory in P18C. Inconsistent regime observed in young mature P22B/D.<br><b>Issues:</b> Basal pruning needed in P22; earlier reports noted widespread over-pruning. (Source: AR 1/2026, Pg. 15, 23)",
+                        "5. Weeding & Ground Vegetation": "<b>Status:</b> Improving but incomplete due to rainfall disruptions.<br><b>Categories:</b> VOP infestations still prevalent in P22 (50-60% sprayed). Inter-rows in P23A invaded by Momordica charantia and Asystasia gangitica.<br><b>Action:</b> Intensify weed management and complete spraying. (Source: AR 1/2026, Pg. 15-17, 24-26, 31-33)",
+                        "6. Pest & Disease Control": "<b>Rats:</b> Fresh damage observed on bunches. Censuses for Q2 & Q4 were missed.<br><b>Barn Owls:</b> Box occupancy is excellent (100%), but some boxes in P18C need proper GPS tagging.<br><b>Oryctes:</b> Minimal symptoms; palms recovering well. (Source: AR 1/2026, Pg. 18-20, 27, 34-35)",
+                        "7. Yield Performance": "<b>Mature (P18C):</b> 27.75 MT/ha (+33.9% vs 2024). Excellent recovery.<br><b>Young Mature:</b> P22 averaged 3.00 MT/ha. (Source: AR 1/2026, Pg. 36-37)",
+                        "8. Fertilizer Recommendation (2026)": "<b>Status:</b> No amendments made to the 2026 program.<br><b>Action:</b> Strict adherence to the provided mixture and compound schedules is advised. (Source: AR 1/2026, Pg. 39-40)"
                     },
                     "pinfosys": "Not Available"
                 },
-                "policy": " <div class='policy-item'><p class='font-semibold'>Immature Upkeep</p><p class='text-sm text-gray-600'><b>Policy Ref: UPKEEP-IM-01:</b> EFB mulching must be completed within 3 months of planting. Palm supplying must be completed within 6 months.</p><p class='text-sm text-gray-600'><b>Policy Ref: WEED-IM-03:</b> Weeding rounds in immature areas must be strictly followed as per schedule to prevent competition and establish ground cover.</p></div> <div class='policy-item'><p class='font-semibold'>Pruning Standards</p><p class='text-sm text-gray-600'><b>Policy Ref: PRUNE-STD-01:</b> Over-pruning is strictly prohibited. Field supervisors must conduct pre- and post-pruning checks to ensure compliance.</p></div> <div class='policy-item'><p class='font-semibold'>Labour Management</p><p class='text-sm text-gray-600'><b>Policy Ref: HR-MANPOWER-01:</b> Estate managers must maintain the budgeted worker-to-land ratio. Any shortage exceeding 10% must be reported with a recruitment plan.</p></div>"
+                "policy": " <div class='policy-item'><p class='font-semibold'>Immature Upkeep</p><p class='text-sm text-gray-600'><b>Policy Ref: UPKEEP-IM-01:</b> EFB mulching must be completed within 3 months of planting. Palm supplying must be completed within 6 months.</p><p class='text-sm text-gray-600'><b>Policy Ref: WEED-IM-03:</b> Weeding rounds in immature areas must be strictly followed as per schedule to prevent competition and establish ground cover.</p></div> <div class='policy-item'><p class='font-semibold'>Pruning Standards</p><p class='text-sm text-gray-600'><b>Policy Ref: PRUNE-STD-01:</b> Over-pruning is strictly prohibited. Field supervisors must conduct pre- and post-pruning checks to ensure compliance.</p><p class='text-sm text-gray-600'><b>Policy Ref: HARV-FROND-04:</b> In palms younger than 8 years, a minimum of 2 subtending fronds must be retained below the lowest bunch to prevent over-pruning.</p></div> <div class='policy-item'><p class='font-semibold'>Rat Infestation</p><p class='text-sm text-gray-600'><b>Policy Ref: P&D-Rat-02b:</b> Quarterly rat censuses are mandatory. If post-baiting census or initial census indicates damage >10%, a round of baiting must be conducted within 30 days.</p></div> <div class='policy-item'><p class='font-semibold'>Labour Management</p><p class='text-sm text-gray-600'><b>Policy Ref: HR-MANPOWER-01:</b> Estate managers must maintain the budgeted worker-to-land ratio. Any shortage exceeding 10% must be reported with an active recruitment plan.</p></div>"
             };
-
 
             // --- GLOBAL VARIABLES ---
             let chartInstances = {};
@@ -229,7 +230,7 @@
                         data: {
                             labels: estateData.chartData.production.labels,
                             datasets: [
-                                { label: 'FFB Production (MT - Avg)', data: estateData.chartData.production.ffb, type: 'line', borderColor: '#ca8a04', backgroundColor: 'transparent', yAxisID: 'y-ffb', tension: 0.4, borderDash: [5, 5] },
+                                { label: 'FFB Production (MT)', data: estateData.chartData.production.ffb, type: 'line', borderColor: '#ca8a04', backgroundColor: 'transparent', yAxisID: 'y-ffb', tension: 0.4 },
                                 { label: 'Rainfall (mm)', data: estateData.chartData.production.rainfall, backgroundColor: '#3b82f6', yAxisID: 'y-rainfall' }
                             ]
                         },
@@ -256,13 +257,19 @@
                 const pinfosysDiv = document.getElementById(`${estateData.id}-pinfosys`);
                 
                 if (agronomyDiv && estateData.reports.agronomy) {
-                    agronomyDiv.innerHTML = Object.entries(estateData.reports.agronomy).map(([section, content]) => `<h4 class="font-semibold mt-2 text-gray-800">${section.replace(/([A-Z])/g, ' $1').trim()}:</h4><p class="text-sm text-gray-600">${content}</p>`).join('');
+                    agronomyDiv.innerHTML = Object.entries(estateData.reports.agronomy).map(([section, content]) => `<div class="mb-4"><h4 class="font-semibold text-gray-800">${section}</h4><p class="text-sm text-gray-600 mt-1 leading-relaxed">${content}</p></div>`).join('');
+                } else if (agronomyDiv) {
+                    agronomyDiv.innerHTML = `<p class="text-sm text-gray-600">Not Available</p>`;
                 }
+
                 if (plantationDiv && estateData.reports.plantation) {
-                    plantationDiv.innerHTML = Object.entries(estateData.reports.plantation).map(([section, content]) => `<h4 class="font-semibold mt-2 text-gray-800">${section.replace(/([A-Z])/g, ' $1').trim()}:</h4><p class="text-sm text-gray-600">${content}</p>`).join('');
+                    plantationDiv.innerHTML = Object.entries(estateData.reports.plantation).map(([section, content]) => `<div class="mb-4"><h4 class="font-semibold text-gray-800">${section}</h4><p class="text-sm text-gray-600 mt-1 leading-relaxed">${content}</p></div>`).join('');
+                } else if (plantationDiv) {
+                    plantationDiv.innerHTML = `<p class="text-sm text-gray-600">Not Available</p>`;
                 }
-                 if (pinfosysDiv) {
-                    pinfosysDiv.innerHTML = `<p class="text-sm text-gray-600">${estateData.reports.pinfosys}</p>`;
+
+                if (pinfosysDiv && estateData.reports.pinfosys === "Not Available") {
+                    pinfosysDiv.innerHTML = `<p class="text-sm text-gray-600">Not Available</p>`;
                 }
             }
 
@@ -284,7 +291,7 @@
         function openPolicyModal() {
             const modalTitle = document.getElementById('modalTitle');
             const modalContent = document.getElementById('modalContent');
-            const policyData = ` <div class='policy-item'><p class='font-semibold'>Immature Upkeep</p><p class='text-sm text-gray-600'><b>Policy Ref: UPKEEP-IM-01:</b> EFB mulching must be completed within 3 months of planting. Palm supplying must be completed within 6 months.</p><p class='text-sm text-gray-600'><b>Policy Ref: WEED-IM-03:</b> Weeding rounds in immature areas must be strictly followed as per schedule to prevent competition and establish ground cover.</p></div> <div class='policy-item'><p class='font-semibold'>Pruning Standards</p><p class='text-sm text-gray-600'><b>Policy Ref: PRUNE-STD-01:</b> Over-pruning is strictly prohibited. Field supervisors must conduct pre- and post-pruning checks to ensure compliance.</p></div> <div class='policy-item'><p class='font-semibold'>Labour Management</p><p class='text-sm text-gray-600'><b>Policy Ref: HR-MANPOWER-01:</b> Estate managers must maintain the budgeted worker-to-land ratio. Any shortage exceeding 10% must be reported with a recruitment plan.</p></div>`;
+            const policyData = ` <div class='policy-item'><p class='font-semibold'>Immature Upkeep</p><p class='text-sm text-gray-600'><b>Policy Ref: UPKEEP-IM-01:</b> EFB mulching must be completed within 3 months of planting. Palm supplying must be completed within 6 months.</p><p class='text-sm text-gray-600'><b>Policy Ref: WEED-IM-03:</b> Weeding rounds in immature areas must be strictly followed as per schedule to prevent competition and establish ground cover.</p></div> <div class='policy-item'><p class='font-semibold'>Pruning Standards</p><p class='text-sm text-gray-600'><b>Policy Ref: PRUNE-STD-01:</b> Over-pruning is strictly prohibited. Field supervisors must conduct pre- and post-pruning checks to ensure compliance.</p><p class='text-sm text-gray-600'><b>Policy Ref: HARV-FROND-04:</b> In palms younger than 8 years, a minimum of 2 subtending fronds must be retained below the lowest bunch to prevent over-pruning.</p></div> <div class='policy-item'><p class='font-semibold'>Rat Infestation</p><p class='text-sm text-gray-600'><b>Policy Ref: P&D-Rat-02b:</b> Quarterly rat censuses are mandatory. If post-baiting census or initial census indicates damage >10%, a round of baiting must be conducted within 30 days.</p></div> <div class='policy-item'><p class='font-semibold'>Labour Management</p><p class='text-sm text-gray-600'><b>Policy Ref: HR-MANPOWER-01:</b> Estate managers must maintain the budgeted worker-to-land ratio. Any shortage exceeding 10% must be reported with an active recruitment plan.</p></div>`;
             modalTitle.innerText = 'Agricultural Policy Cross-Reference: Ladang Cempaka';
             modalContent.innerHTML = policyData;
             document.getElementById('policyModal').classList.add('active');
