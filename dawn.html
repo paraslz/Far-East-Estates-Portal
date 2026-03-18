@@ -65,7 +65,8 @@
             const estateData = {
                 "id": "dawn",
                 "name": "Ladang Dawn",
-                "reportInfo": "Data based on PA Report (Feb 2026) & Agronomy Report (Oct 2025).",
+                "reportInfo": "Based on PA Report (Feb 2026) & Agronomy Report (Feb 2026).",
+                "visitDate": "11th Feb 2026 (PA) & 25th Feb 2026 (Agronomy)",
                 "summaryMetrics": {
                     "area": {
                         "title": "Estate Area",
@@ -73,13 +74,13 @@
                             "Total Planted: 1,762.32 ha",
                             "Mature: 1,739.32 ha",
                             "Immature: 23.00 ha",
-                            "Nursery: 25.50 ha"
+                            "Prime-Age: 53% (AR Pg. 10)"
                         ]
                     },
                     "yield": {
                         "title": "Yield/Ha (Actual vs Budget)",
                         "value": "28.04 / 21.85 MT",
-                        "note": "Full Year 2025 (PAR Pg. 27)"
+                        "note": "Full Year 2025 (PAR Pg. 27; AR Pg. 52)"
                     },
                     "cost": {
                         "title": "FFB Cost/Tonne (Actual vs Budget)",
@@ -88,22 +89,22 @@
                     },
                     "pruning": {
                         "title": "Pruning Status",
-                        "value": "Backlog (99 Ha)",
-                        "note": "Critical in P00A, P00B, P03C (PAR Pg. 24)"
+                        "value": "99ha Backlog",
+                        "note": "Unsatisfactory in Tall Palms (AR Pg. 36)"
                     },
                      "pests": {
-                        "title": "Pest Status",
-                        "value": "Severe Rodents",
-                        "note": "Damage census >10%; Campaign recommended (PAR Pg. 6)"
+                        "title": "Rat Infestation",
+                        "value": "Damage > 10%",
+                        "note": "Exceeded threshold in Oct (AR Pg. 47)"
                     }
                 },
                 "keyMetrics": [
                     { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-blue-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z' /></svg>", "label": "Labour Ratio", "value": "1:12 ha (Adequate)" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-red-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z' /></svg>", "label": "P&D Status", "value": "High (Rats >10%)" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-red-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z' /></svg>", "label": "P&D Status", "value": "Rats High (>10%)" },
                     { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-yellow-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M13 10V3L4 14h7v7l9-11h-7z' /></svg>", "label": "OER % (CPO)", "value": "19.09%" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-green-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z' /></svg>", "label": "Harvester Prod.", "value": "2.64-2.98 MT/md" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-purple-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z' /></svg>", "label": "Harvest Interval", "value": "15 days (Target Met)" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-teal-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17.657 18.343A8 8 0 016.343 7.029m11.314 11.314a8 8 0 01-11.314-11.314m2.121 13.435a2 2 0 01-2.828 0l-2.122-2.121a2 2 0 010-2.828l5.656-5.657a2 2 0 012.829 0l2.121 2.121a2 2 0 010 2.828l-5.657 5.657z' /></svg>", "label": "Nutrient Status", "value": "100% 2025 Applied" }
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-green-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z' /></svg>", "label": "Stand Density", "value": "140 SPH (AR Pg. 11)" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-purple-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z' /></svg>", "label": "Harvest Interval", "value": "10-20 days (AR Pg. 25)" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-teal-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17.657 18.343A8 8 0 016.343 7.029m11.314 11.314a8 8 0 01-11.314-11.314m2.121 13.435a2 2 0 01-2.828 0l-2.122-2.121a2 2 0 010-2.828l5.656-5.657a2 2 0 012.829 0l2.121 2.121a2 2 0 010 2.828l-5.657 5.657z' /></svg>", "label": "Bungor Series", "value": "42.45% (AR Pg. 19)" }
                 ],
                 "chartData": {
                     "production": {
@@ -114,19 +115,19 @@
                     },
                     "ageProfile": {
                         "labels": ["0-3 Years", "4-7 Years", "8-19 Years", "20-25 Years", ">26 Years"],
-                        "data": [1.3, 12.7, 52.2, 33.8, 0.0],
-                        "title": "Ladang Dawn - Palm Age Distribution (2025)",
-                        "note": "*Source: PAR Pg. 10."
+                        "data": [0.0, 13.0, 53.0, 34.0, 0.0],
+                        "title": "Ladang Dawn - Palm Age Distribution (2026)",
+                        "note": "*Source: Agronomy Report 1/2026 Pg. 10."
                     }
                 },
                 "observations": [
-                    "<b>Severe Rodent Damage:</b> Rat damage census continues to exceed 10% threshold. Severe damage observed during PA visit; a comprehensive rat campaign is urged. <span class='observation-ref'>(PAR Pg. 6, AR Pg. 41)</span>",
-                    "<b>Pruning Backlog in Tall Palms:</b> 99 hectares of normal pruning backlog remains in fields P00A, P00B, and P03C. This under-pruned condition impacts harvesting efficiency and crop recovery. <span class='observation-ref'>(PAR Pg. 8, 24)</span>",
-                    "<b>Ganoderma Management:</b> Deboling of infested palms is in progress in P03C. Mounding is recommended for palms under 20 years to extend productive lifespan. <span class='observation-ref'>(PAR Pg. 6, 20)</span>",
-                    "<b>Fertilizer Application Quality:</b> While the 2025 program is 100% complete, previous observations noted 'lumpy' application in P15D1. Circle spraying must be confined to a 2m radius to prevent overspraying. <span class='observation-ref'>(PAR Pg. 4, 40; AR Pg. 16)</span>",
-                    "<b>Harvesting Standards:</b> Satisfactory with 24 rounds achieved in 2025. Crop recovery in tall palms is expected to improve once pruning backlogs are cleared. <span class='observation-ref'>(PAR Pg. 6, 25)</span>",
-                    "<b>Infrastructure & Drainage:</b> Road grading is in progress (7,895 chains covered), but lateriting for soggy/slippery sections was untouched in 2025. Drains require routine upkeep. <span class='observation-ref'>(PAR Pg. 21-22)</span>",
-                    "<b>Nursery Status:</b> Pre-nursery and Main Nursery (Phases 6 & 7) are in good order. Seedling collection by sister estates is in progress. Phase 7 ready Feb 2026. <span class='observation-ref'>(PAR Pg. 35-38, 41)</span>"
+                    "<b>Critical Rat Infestation & Baiting Needs:</b> October 2025 census revealed damage levels >10% in most blocks. Post-baiting in Jan 2026 shows improvement (reduced to ~8-10%), but systematic baiting repetition is needed in blocks still above threshold. <span class='observation-ref'>(AR Pg. 47, PAR Pg. 6)</span>",
+                    "<b>Supply Planting & Stand Density Deficit:</b> Blocks P21L, P20K, and P19J exhibit a stand density deficit of 13-14 palms/ha (135 vs 148 SPH). No supply planting was executed in 2025; urgent supply is recommended to safeguard future yield potential. <span class='observation-ref'>(AR Pg. 10-11)</span>",
+                    "<b>Pruning Backlogs vs Roadside Over-pruning:</b> A 99ha backlog exists in old plantings (P00A, P00B, P03C), primarily due to harvesters prioritizing high crops. However, roadside palms in P16F2 and P12H3 show signs of over-pruning which must be avoided to preserve canopy health. <span class='observation-ref'>(AR Pg. 5, 36-37, PAR Pg. 8, 24)</span>",
+                    "<b>Fertilizer Application Quality:</b> While the 2025 program is 100% complete, slight lumping conditions were observed in P15D2. Correct broadcasting on frond heaps is vital, especially on Bungor soils (42% of estate) which are prone to leaching. <span class='observation-ref'>(AR Pg. 19, 59)</span>",
+                    "<b>Harvesting Standards & Supervision:</b> Harvesting intervals are inconsistent (10-20 days). Overripe bunch incidences (up to 12%) and overnight bunch heaps in P03C5 indicate a need for tighter supervision and evacuation logistics. <span class='observation-ref'>(AR Pg. 25-29)</span>",
+                    "<b>EFB Mulching & Ganoderma Risks:</b> High heaping of EFB in P03C3 was noted. Thick piles can foster excess moisture and slow decomposition, potentially creating environments favorable for Ganoderma boninense. <span class='observation-ref'>(AR Pg. 4, 23)</span>",
+                    "<b>Flood Mitigation & Infrastructure:</b> Low-lying areas (6.75% of area) are prone to flooding. In 2025, 1,449 chains of desilting were completed, but road lateriting for soggy sections remains untouched. <span class='observation-ref'>(AR Pg. 55, PAR Pg. 21)</span>"
                 ],
                 "reports": {
                     "plantation": {
@@ -144,15 +145,15 @@
                         "Immature": "23.00 ha (Field G - Ladang Kg Aur) to be declared mature Jan 2026. (PAR Report, Pg. 42)"
                     },
                     "agronomy": {
-                        "Executive Summary": "The visit on 27th Oct 2025 highlighted satisfactory yield performance (26.9 MT/Ha in 2024), but raised concerns over rat damage exceeding 10%, pruning backlogs in tall palms, and lumpy fertilizer application. (Source: AR Pg. 2-7)",
-                        "Nutrient Inputs/Progress of Manuring": "2025 program 92% complete as of Sept. Inspections revealed uneven broadcasting in P15D1. Store conditions untidy with spillage. (Source: AR Pg. 16-19)",
-                        "Agronomic Observation": "<b>Harvesting:</b> 12-20 day intervals. Overripe bunches found in P16F2 and P03C4. <br><b>Pests:</b> Barn owl occupancy high (97%). Rat baiting scheduled Nov 2025. (Source: AR Pg. 23, 41)",
-                        "Yield Performance": "Yield increasing trend: 20.68 (2023) to 26.9 (2024). Flood-prone areas affect ~6.75% of estate. (Source: AR Pg. 45-47)",
-                        "Fertilizer Recommendation": "2026 program issued. Focus on applying to frond heaps in sandy areas to maximize CEC. (Source: AR Pg. 50)"
+                        "Executive Summary": "The agronomic visit on 25th Feb 2026 assessed performance as satisfactory with yields reaching 28.04 MT/ha (28% above budget). However, yield-limiting factors include 99ha of pruning backlog in tall palms and significant rat infestations (>10%). Stand density in blocks P21L, P20K, and P19J (135-138 SPH) requires urgent supply planting as no work was carried out in 2025. (AR Pg. 4, 7, 10, 52)",
+                        "Nutrient Inputs/Progress of Manuring": "The 2025 program was completed with delays ranging from 0-3 months (Mix B) to 1-3 months (Compound). Fertilizer application quality shows improvement but localized 'slight lumping' persists in P15D2. Store conditions are tidy, although investigation is needed for a wet floor condition. EFB application in 2025 covered 246.74 ha (14,804.56 MT), providing vital organic matter to Bungor soils. (AR Pg. 18-21)",
+                        "Agronomic Observation": "<b>Harvesting:</b> Intervals were inconsistent (10-20 days). Overripe bunches (up to 12%) found in P11E3 and P16F3. Overnight bunch heaps noted in P03C5. <br><b>Pests:</b> Rat baiting was executed in Nov/Dec 2025; post-baiting census in Jan 2026 shows reduction (~8-10%) but systematic baiting should continue. Barn owl occupancy is excellent (98%). <br><b>Thinning:</b> 88 runt palms thinned in 2025 (P12D, P20K). <br><b>Pruning:</b> Roadside palms are over-pruned; hanging dry fronds localized in P11E4 and P12M. (AR Pg. 25-48)",
+                        "Yield Performance": "Yield performance shows a strong upward trend from 20.68 (2023) to 28.04 (2025). 53% of the estate area is in the peak productive phase (8-19 years). 118.29 ha (6.75% of area) is flood-prone; desilting work covered 1,449.51 chains in 2025 to improve drainage. (AR Pg. 52-55)",
+                        "Fertilizer Recommendation": "The 2026 program prioritizes Mix B and NK2 applications. Due to the high percentage of Bungor series soils (42.45%), frond-stacking and application near frond heaps are critical strategies to minimize nutrient leaching and surface runoff. (AR Pg. 59-63)"
                     },
                     "pinfosys": "Not Available"
                 },
-                "policy": " <div class='policy-item'><p class='font-semibold'>Pruning & Canopy Management</p><p class='text-sm text-gray-600'><b>Policy Ref: PRUNE-OLD-01:</b> Pruning backlogs in old mature areas must be cleared to improve harvesting efficiency and prevent crop loss.</p><p class='text-sm text-gray-600'><b>Policy Ref: PRUNE-STD-01:</b> Over-pruning of roadside palms must be avoided. Radius must be 2m.</p></div> <div class='policy-item'><p class='font-semibold'>Pest Control (Rats)</p><p class='text-sm text-gray-600'><b>Policy Ref: P&D-Rat-02a:</b> Strategic baiting program must be implemented when damage exceeds 5%.</p></div> <div class='policy-item'><p class='font-semibold'>Fertilizer Application</p><p class='text-sm text-gray-600'><b>Policy Ref: FERT-APP-01:</b> Ensure even broadcasting. Lumpy applications are unacceptable.</p></div>"
+                "policy": " <div class='policy-item'><p class='font-semibold'>Pruning & Canopy Management</p><p class='text-sm text-gray-600'><b>Policy Ref: PRUNE-OLD-01:</b> Pruning backlogs in tall mature areas must be cleared to improve harvesting efficiency. Avoid over-pruning roadside palms.</p></div> <div class='policy-item'><p class='font-semibold'>Pest Control (Rats)</p><p class='text-sm text-gray-600'><b>Policy Ref: P&D-Rat-02a:</b> Systematic 100% baiting program must be implemented when damage exceeds 10%. (AR Pg. 47)</p></div> <div class='policy-item'><p class='font-semibold'>Fertilizer Application</p><p class='text-sm text-gray-600'><b>Policy Ref: FERT-APP-01:</b> Ensure even broadcasting. Apply on frond heaps in Bungor soils to improve retention. (AR Pg. 59)</p></div>"
             };
 
             let chartInstances = {};
@@ -161,9 +162,9 @@
             function renderEstate() {
                 container.innerHTML = createEstateHTML(estateData);
                 setTimeout(() => {
-                    initializeChartsForEstate(estateData);
-                    populateInternalDropdowns(estateData);
-                    attachEventListeners(estateData);
+                    initializeChartsForEstate();
+                    populateInternalDropdowns();
+                    attachEventListeners();
                 }, 0);
             }
 
@@ -190,7 +191,7 @@
                 return `
                     <div class="bg-white p-6 rounded-lg shadow-lg animate-fade-in">
                         <h2 class="text-3xl font-bold mb-2 text-gray-900">${estate.name}</h2>
-                        <p class="text-sm text-gray-600 mb-6 italic border-l-4 border-green-800 pl-3">Visit Date: 11th February 2026 &bull; ${estate.reportInfo}</p>
+                        <p class="text-sm text-gray-600 mb-6 italic border-l-4 border-green-800 pl-3">Visit Date: ${estate.visitDate} &bull; ${estate.reportInfo}</p>
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 mb-8">${summaryMetricsHTML}</div>
                         <div class="mb-8"><h3 class="text-xl font-semibold mb-4 border-b pb-2 text-green-900">Key Metrics & Agronomic Status</h3><div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4">${keyMetricsHTML}</div></div>
                         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
@@ -247,10 +248,10 @@
                 const pinfosysDiv = document.getElementById(`${estateData.id}-pinfosys`);
                 
                 if (agronomyDiv && estateData.reports.agronomy) {
-                    agronomyDiv.innerHTML = Object.entries(estateData.reports.agronomy).map(([section, content]) => `<div class="mb-4"><h4 class="font-bold text-gray-900 border-b pb-1 mb-2">${section.replace(/([A-Z])/g, ' $1').trim()}:</h4><div class="text-sm text-gray-600 leading-relaxed">${content}</div></div>`).join('');
+                    agronomyDiv.innerHTML = Object.entries(estateData.reports.agronomy).map(([section, content]) => `<div class="mb-4"><h4 class="font-bold text-gray-900 border-b pb-1 mb-2">${section}:</h4><div class="text-sm text-gray-600 leading-relaxed">${content}</div></div>`).join('');
                 }
                 if (plantationDiv && estateData.reports.plantation) {
-                    plantationDiv.innerHTML = Object.entries(estateData.reports.plantation).map(([section, content]) => `<div class="mb-4"><h4 class="font-bold text-gray-900 border-b pb-1 mb-2">${section.replace(/([A-Z])/g, ' $1').trim()}:</h4><div class="text-sm text-gray-600 leading-relaxed">${content}</div></div>`).join('');
+                    plantationDiv.innerHTML = Object.entries(estateData.reports.plantation).map(([section, content]) => `<div class="mb-4"><h4 class="font-bold text-gray-900 border-b pb-1 mb-2">${section}:</h4><div class="text-sm text-gray-600 leading-relaxed">${content}</div></div>`).join('');
                 }
                 if (pinfosysDiv) {
                     pinfosysDiv.innerHTML = `<p class="text-sm text-gray-600 italic">Financial data from Pinfosys not available for this period.</p>`;
@@ -272,7 +273,7 @@
             function openPolicyModal() {
                 const modalTitle = document.getElementById('modalTitle');
                 const modalContent = document.getElementById('modalContent');
-                modalTitle.innerText = 'Agricultural Policy Cross-Reference: Ladang Dawn';
+                modalTitle.innerText = `Agricultural Policy Cross-Reference: ${estateData.name}`;
                 modalContent.innerHTML = estateData.policy;
                 document.getElementById('policyModal').classList.add('active');
             }
