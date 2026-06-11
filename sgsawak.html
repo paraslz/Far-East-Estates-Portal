@@ -193,4 +193,103 @@
                             <div><h3 class="text-xl font-semibold mb-2">Palm Age Profile</h3><div class="pie-chart-container"><canvas id="ageChart-${estate.id}"></canvas></div><p class="text-xs text-center text-gray-500 mt-2">${estate.chartData.ageProfile.note}</p></div>
                         </div>
                         <div class="mb-8"><h3 class="text-xl font-semibold mb-2 border-b pb-2">Key Observations & Issues</h3><ul class="list-disc list-inside space-y-2 text-gray-700 mt-4">${observationsHTML}</ul></div>
-                        <div class="mb-8 text-center"><button class="policy-modal-btn bg-green-800 text-white px-6 py-3 rounded-lg hover:bg-green-900 transition shadow-md">View Agricultural Policy
+                        <div class="mb-8 text-center"><button class="policy-modal-btn bg-green-800 text-white px-6 py-3 rounded-lg hover:bg-green-900 transition shadow-md">View Agricultural Policy Cross-Reference</button></div>
+                        <div class="space-y-2">
+                            <button data-dropdown-id="${estate.id}-plantation" class="dropdown-btn w-full text-left bg-gray-800 text-white p-3 rounded-md hover:bg-gray-700 transition">Plantation Advisory Report Details</button>
+                            <div id="${estate.id}-plantation" class="details-content bg-gray-50 p-4 rounded-md border border-gray-200"></div>
+                            <button data-dropdown-id="${estate.id}-agronomy" class="dropdown-btn w-full text-left bg-gray-800 text-white p-3 rounded-md hover:bg-gray-700 transition">Agronomy Report Details</button>
+                            <div id="${estate.id}-agronomy" class="details-content bg-gray-50 p-4 rounded-md border border-gray-200"></div>
+                            <button data-dropdown-id="${estate.id}-pinfosys" class="dropdown-btn w-full text-left bg-gray-800 text-white p-3 rounded-md hover:bg-gray-700 transition">Pinfosys Report Details</button>
+                            <div id="${estate.id}-pinfosys" class="details-content bg-gray-50 p-4 rounded-md border border-gray-200"></div>
+                        </div>
+                    </div>`;
+            }
+
+            function initializeChartsForEstate() {
+                const prodCanvasId = `prodChart-${estateData.id}`;
+                const ageCanvasId = `ageChart-${estateData.id}`;
+                if (chartInstances[prodCanvasId]) chartInstances[prodCanvasId].destroy();
+                if (chartInstances[ageCanvasId]) chartInstances[ageCanvasId].destroy();
+
+                const prodCtx = document.getElementById(prodCanvasId)?.getContext('2d');
+                if(prodCtx) {
+                    chartInstances[prodCanvasId] = new Chart(prodCtx, {
+                        type: 'bar',
+                        data: {
+                            labels: estateData.chartData.production.labels,
+                            datasets: [
+                                { label: 'FFB Production (MT)', data: estateData.chartData.production.ffb, type: 'line', borderColor: '#ca8a04', backgroundColor: 'transparent', yAxisID: 'y-ffb', tension: 0.4 },
+                                { label: 'Rainfall (mm)', data: estateData.chartData.production.rainfall, backgroundColor: '#3b82f6', yAxisID: 'y-rainfall' }
+                            ]
+                        },
+                        options: { responsive: true, maintainAspectRatio: false, scales: { x: { grid: { display: false } }, 'y-ffb': { type: 'linear', position: 'left', title: { display: true, text: 'FFB Production (MT)' } }, 'y-rainfall': { type: 'linear', position: 'right', title: { display: true, text: 'Rainfall (mm)' }, grid: { drawOnChartArea: false } } } }
+                    });
+                }
+
+                const ageCtx = document.getElementById(ageCanvasId)?.getContext('2d');
+                if(ageCtx) {
+                    chartInstances[ageCanvasId] = new Chart(ageCtx, {
+                        type: 'pie',
+                        data: {
+                            labels: estateData.chartData.ageProfile.labels,
+                            datasets: [{ data: estateData.chartData.ageProfile.data, backgroundColor: ['#fde047', '#facc15', '#eab308', '#ca8a04', '#78350f'], hoverOffset: 4 }]
+                        },
+                        options: { responsive: true, maintainAspectRatio: false, plugins: { title: { display: true, text: estateData.chartData.ageProfile.title, font: { size: 16 } }, legend: { position: 'right' } } }
+                    });
+                }
+            }
+            
+            // Format details adhering strictly to the provided template screenshot structure
+            function formatReportDetails(reportData) {
+                if (!reportData || reportData === "Not Available") {
+                    return `<p class="text-sm text-gray-600 font-medium">Not Available</p>`;
+                }
+                return `<div class="space-y-4">` + 
+                    Object.entries(reportData).map(([section, content]) => `
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-sm md:text-base mb-1">${section}:</h4>
+                            <div class="text-sm text-gray-700 leading-relaxed">${content}</div>
+                        </div>
+                    `).join('') + `</div>`;
+            }
+
+            function populateInternalDropdowns() {
+                const agronomyDiv = document.getElementById(`${estateData.id}-agronomy`);
+                const plantationDiv = document.getElementById(`${estateData.id}-plantation`);
+                const pinfosysDiv = document.getElementById(`${estateData.id}-pinfosys`);
+                
+                if (agronomyDiv) agronomyDiv.innerHTML = formatReportDetails(estateData.reports.agronomy);
+                if (plantationDiv) plantationDiv.innerHTML = formatReportDetails(estateData.reports.plantation);
+                if (pinfosysDiv) pinfosysDiv.innerHTML = formatReportDetails(estateData.reports.pinfosys);
+            }
+
+            function attachEventListeners() {
+                container.querySelectorAll('.dropdown-btn').forEach(button => {
+                    button.addEventListener('click', (event) => {
+                        const id = event.currentTarget.dataset.dropdownId;
+                        const content = document.getElementById(id);
+                        content.classList.toggle('active');
+                        event.currentTarget.classList.toggle('active');
+                    });
+                });
+                container.querySelector('.policy-modal-btn')?.addEventListener('click', openPolicyModal);
+            }
+
+            renderEstate();
+        });
+        
+        function openPolicyModal() {
+            const modalTitle = document.getElementById('modalTitle');
+            const modalContent = document.getElementById('modalContent');
+            const policyData = ` <div class='policy-item'><p class='font-semibold'>Ganoderma Control</p><p class='text-sm text-gray-600'><b>Policy Ref: P&D-Gano-01:</b> For areas with >15% infection, implement sanitation by de-boling and creating a 1.5m x 1.5m x 1.5m pit. Allow 2-3 months of sun exposure before refilling.</p><p class='text-sm text-gray-600'><b>Policy Ref: SOIL-GML-03:</b> On alternate years in high-risk Ganoderma blocks, apply GML to raise soil pH above 6.0.</p></div> <div class='policy-item'><p class='font-semibold'>Rat Infestation</p><p class='text-sm text-gray-600'><b>Policy Ref: P&D-Rat-02b:</b> If post-baiting census still indicates damage >10%, a second round of baiting must be conducted within 30 days.</p></div> <div class='policy-item'><p class='font-semibold'>Manuring & Fertilizing</p><p class='text-sm text-gray-600'><b>Policy Ref: FERT-APP-05:</b> All fertilizer applications must be completed according to the schedule. Any delays beyond 15 days must be reported with a mitigation plan.</p><p class='text-sm text-gray-600'><b>Policy Ref: FERT-EFB-01:</b> EFB mulching should be prioritized in areas with low organic matter or high Ganoderma incidence as per budget.</p></div> <div class='policy-item'><p class='font-semibold'>Harvesting Standards</p><p class='text-sm text-gray-600'><b>Policy Ref: HARV-FROND-04:</b> In palms younger than 8 years, a minimum of 2 subtending fronds must be retained below the lowest bunch to prevent over-pruning.</p></div>`;
+            modalTitle.innerText = 'Agricultural Policy Cross-Reference: Ladang Sungai Sawak';
+            modalContent.innerHTML = policyData;
+            document.getElementById('policyModal').classList.add('active');
+        }
+
+        function closePolicyModal() {
+            document.getElementById('policyModal').classList.remove('active');
+        }
+    </script>
+</body>
+</html>
