@@ -8,6 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
         body { font-family: 'Inter', sans-serif; }
         .details-content { display: none; }
@@ -68,32 +69,32 @@
             const estateData = {
                 "id": "sggayung",
                 "name": "Ladang Sungai Gayung",
-                "reportInfo": "Data based on Plantation Advisory Report 2/2025 (Visit: 13th Nov 2025) & Agronomy Report 1/2026 (Visit: 16th April 2026).",
+                "reportInfo": "Data based on Plantation Advisory Report 1/2026 (Visit: 13th May 2026) & Agronomy Report 1/2026 (Visit: 16th April 2026).",
                 "summaryMetrics": {
                     "area": {
                         "title": "Estate Area",
                         "lines": [
                             "Total Planted: 2,314.30 ha",
-                            "Mature (>4yrs): 1,086.10 ha",
-                            "Young Mature (4-7yr): 457.70 ha",
-                            "Immature (0-3yr): 770.50 ha"
+                            "Mature (>4yrs): 1,410.50 ha",
+                            "Immature (0-3yr): 762.50 ha",
+                            "Replanting: 141.30 ha"
                         ],
-                        "note": "(AR 1/2026 Pg. 8, 12)"
+                        "note": "(PAR 1/2026 Pg. 10)"
                     },
                     "yield": {
-                        "title": "Yield/Ha (YTD Mar 2026)",
-                        "value": "3.25 MT/Ha",
-                        "note": "-4% decline vs corresponding period 2025 (AR 1/2026 Pg. 39)"
+                        "title": "Yield/Ha (Actual vs Budget)",
+                        "value": "4.65 / 5.29 MT",
+                        "note": "YTD April 2026 (PAR 1/2026 Pg. 38)"
                     },
                     "cost": {
                         "title": "FFB Cost/Tonne (Actual vs Budget)",
-                         "value": "RM 250.16 / RM 298.45",
-                        "note": "16% lower than budget (PAR 2/2025 Pg. 30)"
+                         "value": "RM 406.99 / RM 405.70",
+                        "note": "In line with budget (PAR 1/2026 Pg. 41)"
                     },
                     "pests": {
                         "title": "Pest Concern",
-                        "value": "Rat Damage (10%)",
-                        "note": "Threshold reached in P20A/B; baiting required (AR 1/2026 Pg. 31)"
+                        "value": "Rats (P20A/B)",
+                        "note": "Baiting carried out in 324.4 ha (PAR 1/2026 Pg. 25)"
                     },
                      "ganoderma": {
                         "title": "Ganoderma Census",
@@ -103,48 +104,48 @@
                 },
                 "keyMetrics": [
                     { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-blue-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z' /></svg>", "label": "Labour Ratio", "value": "1 : 14 ha" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-red-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z' /></svg>", "label": "Rat Damage", "value": "10% (P20 Blocks)" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-yellow-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M13 10V3L4 14h7v7l9-11h-7z' /></svg>", "label": "Harvest Interval", "value": "12-20 days (Variable)" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-red-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z' /></svg>", "label": "Rat Damage", "value": "Active Baiting (P20 Blocks)" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-yellow-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M13 10V3L4 14h7v7l9-11h-7z' /></svg>", "label": "Harvest Interval", "value": "15 days" },
                     { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-red-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m-1 4h1m6-4h1m-1-4h1m-1 4h1' /></svg>", "label": "Ganoderma", "value": "Census Active" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-purple-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z' /></svg>", "label": "Barn Owl Occupancy", "value": "83% (IPM Priority)" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-teal-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z' /></svg>", "label": "Manuring", "value": "Acceptable (Delayed)" }
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-purple-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z' /></svg>", "label": "Barn Owl Occupancy", "value": "98% (156/160 nests)" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-teal-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z' /></svg>", "label": "Manuring", "value": "On Schedule (309 MT)" }
                 ],
                 "chartData": {
                     "production": {
                         "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
                         "rainfall2025": [240, 37, 193, 316, 157, 83, 64, 92, 265, 265, 269, 611],
-                        "rainfall2026": [79, 49, 39, null, null, null, null, null, null, null, null, null],
-                        "note": "*Comparison of 2025 Full Year vs 2026 YTD Rainfall (AR 1/2026 Appx 2)."
+                        "rainfall2026": [79.50, 149.50, 39.50, 141.50, null, null, null, null, null, null, null, null],
+                        "note": "*Comparison of 2025 Full Year vs 2026 YTD Rainfall (PAR 1/2026 Appx 1)."
                     },
                     "ageProfile": {
                         "labels": ["0-3 Years (Immature)", "4-7 Years (Young Mature)", "8-19 Years (Prime)", "20-25 Years (Old Mature)", ">26 Years (Old Mature)"],
                         "data": [33.3, 19.8, 0.0, 0.3, 46.6],
-                        "title": "Sg Gayung - Palm Age Profile (March 2026)",
+                        "title": "Sg Gayung - Palm Age Profile (2026)",
                         "note": "*Source: Agronomy Report 1/2026, Pg. 12 Chart."
                     }
                 },
                 "observations": [
-                    "<b>Ganoderma & Pest Control:</b> A full Ganoderma census is currently in progress for the old mature areas. Of concern is the rat infestation in young mature blocks P20A/B, where damage has reached 10% (threshold); baiting intervention is critical as soon as rodenticide stock arrives. <span class='observation-ref'>(AR 1/2026 Pg. 4, 31)</span>",
-                    "<b>Yield & Age Distribution:</b> The estate is in a transitional phase with 47% palms over 26 years old and 33% immature. Total yield declined by 4% YTD March 2026 compared to 2025, driven by a 50% drop in old plantings scheduled for replanting (P93B). <span class='observation-ref'>(AR 1/2026 Pg. 12, 39)</span>",
-                    "<b>Manuring Program:</b> Progress is generally acceptable but currently hampered by late fertilizer deliveries. Applications for Mixture B in blocks P20 and P22 are pending. Storage conditions at the fertilizer store need attention as wet floors were noted due to rain exposure. <span class='observation-ref'>(AR 1/2026 Pg. 13-14)</span>",
-                    "<b>Harvesting Standards:</b> Intervals have been inconsistent (ranging 12-20 days in Q1). While overall crop recovery is deemed under control, long stalk bunches and uncollected loose fruits were noted in isolated patches of P93A. <span class='observation-ref'>(AR 1/2026 Pg. 16-17; PAR 2/2025 Pg. 26-29)</span>",
-                    "<b>Pruning & Canopy Management:</b> Progressive pruning is 94% complete. While older areas show improved stacking standards, young mature areas (P20A/B) exhibit messy stacking and slight over-pruning, which must be addressed to support production. <span class='observation-ref'>(AR 1/2026 Pg. 20-28; PAR 2/2025 Pg. 23)</span>",
-                    "<b>Replanting & Ground Upkeep:</b> Replanting for P25F/FTR (235.2 ha) is 87% complete with Mucuna well-established despite low rainfall. Weeding in young mature areas is slightly behind schedule (87-89% completion). <span class='observation-ref'>(AR 1/2026 Pg. 29, 36)</span>"
+                    "<b>Ganoderma & Pest Control:</b> A full Ganoderma census is currently in progress for the old mature areas. Rat infestation in young mature blocks (P20A/B) remains a concern; a round of rat baiting has been carried out over 324.40 ha to mitigate damage. Encouragingly, barn owl occupancy is excellent at 98%. <span class='observation-ref'>(AR 1/2026 Pg. 4, 31; PAR 1/2026 Pg. 25-26)</span>",
+                    "<b>Yield & Production:</b> FFB production for YTD April 2026 stood at 6,558.60 MT (20% below estimate), yielding 4.65 MT/ha. The estate is in a transitional phase with older palms scheduled for replanting. Field P20B recorded a notably low yield of 2.88 MT/ha and requires special attention to optimize productive palm density. <span class='observation-ref'>(PAR 1/2026 Pg. 38-39; AR 1/2026 Pg. 12, 39)</span>",
+                    "<b>Manuring & Weeding:</b> Manuring progress is on schedule with 309.05 MT applied. The use of a semi-mechanised application has boosted worker productivity (30-35 bags/day). Weeding is slightly behind schedule, though noxious weeds have been effectively eradicated via selective spraying. <span class='observation-ref'>(PAR 1/2026 Pg. 19-24; AR 1/2026 Pg. 13-14)</span>",
+                    "<b>Harvesting Standards:</b> Harvesting intervals are consistently maintained at 15 days across the estate. Overall crop recovery is satisfactory with >95% ripe bunches observed, though Harvester productivity (1.44 MT/day) is still below its full potential and requires monitoring. <span class='observation-ref'>(PAR 1/2026 Pg. 35-37; AR 1/2026 Pg. 16-17)</span>",
+                    "<b>Pruning & Canopy Management:</b> Progressive pruning has been successfully carried out across all mature fields. Caution is required to prevent excessive frond removal (over-pruning) in young mature and tall palm fields, especially those vulnerable to Ganoderma. <span class='observation-ref'>(PAR 1/2026 Pg. 33-34; AR 1/2026 Pg. 20-28)</span>",
+                    "<b>Replanting & Immature Management:</b> Replanting for P26G (141.3 ha) is progressing well ahead of schedule, with planting expected to finish by June 2026. Immature areas (P22C, P23D, P24E) show satisfactory growth. Scout harvesting has commenced in P22C and P23D. <span class='observation-ref'>(PAR 1/2026 Pg. 42-51; AR 1/2026 Pg. 29, 36)</span>"
                 ],
                 "reports": {
                     "plantation": {
-                        "Executive Summary": "Performance is satisfactory. FFB production (25,174.87 MT YTD Oct 2025) exceeds budget by 10%. Costs are well managed (16% below budget). Key focus areas are improving progressive pruning standards, ensuring immature area upkeep, and managing Ganoderma threat. <span class='observation-ref'>(PAR 2/2025 Pg. 40-43)</span>",
-                        "Area Statement": "Total planted area is 2,314.30 ha. Mature: 1,551.80 ha (65.08%), Immature: 502.20 ha (21.06%), Swamp Supply Area P20B: 25.10 ha (1.05%), Replanting P25F: 223.60 ha (9.38%). <span class='observation-ref'>(PAR 2/2025 Pg. 10-11)</span>",
-                        "Labour Statement": "Total workforce 168 (Ratio 1:14 ha). Harvester strength is 75 (1:21 ha). Watermelon grower workers support estate maintenance. Shortage of 3 workers noted. <span class='observation-ref'>(PAR 2/2025 Pg. 13-14)</span>",
-                        "Staff Establishment": "Estate complement includes 1 Manager, 1 Assistant Manager, and 1 Executive. Cadet Asst En Wafidi left in July 2025. <span class='observation-ref'>(PAR 2/2025 Pg. 12)</span>",
-                        "General Charges": "Actual RM 974.29/ha vs Budget RM 1,291.01/ha (25% lower). Overspent on Leave Pay, SOCSO, and Medical VMO. <span class='observation-ref'>(PAR 2/2025 Pg. 15-16)</span>",
-                        "Upkeep and Cultivation": "Weeding: 19% below budget; circle weeding behind schedule (4,478 ha vs 5,302 target). Manuring: 29% below budget; 85% of annual budget applied. Pest control: Barn owl occupancy at 86%. <span class='observation-ref'>(PAR 2/2025 Pg. 17-21)</span>",
-                        "Harvesting and Collection": "Cost: RM 107.91/MT. Interval 15 days. Mechanization ratio 1:6 (12 Mini Tractors, 8 Timacs). Harvester productivity 2.25 MT/day. <span class='observation-ref'>(PAR 2/2025 Pg. 26-29)</span>",
-                        "Crop Production": "YTD Oct 2025: 25,174.87 MT vs Budget 22,949.70 MT (+10%). Yield 14.98 MT/ha. P06H highest at 24.24 MT/ha. <span class='observation-ref'>(PAR 2/2025 Pg. 28)</span>",
-                        "Production Cost": "Total Ex-Estate Cost: RM 250.16/MT vs Budget RM 319.51/MT. <span class='observation-ref'>(PAR 2/2025 Pg. 30)</span>",
-                        "Vehicles Running Cost": "Hilux, John Deere, and Timac costs below budget. Electric Ginga running cost RM 4.56/hr (Budget RM 2.31/hr) needs monitoring. <span class='observation-ref'>(PAR 2/2025 Pg. 39)</span>",
-                        "Capital Expenditure": "Water treatment plant (RM 118,955) and school van (RM 160,000) purchased. <span class='observation-ref'>(PAR 2/2025 Pg. 38)</span>",
-                        "Immature": "P22C (34 mths): Scout harvesting started. P23D (20 mths): Ablation complete. P24E (10 mths): Watermelon interplanting. <span class='observation-ref'>(PAR 2/2025 Pg. 31-35)</span>"
+                        "Executive Summary": "Estate performance is satisfactory. FFB production (6,558.60 MT YTD April 2026) is 20% below estimate. Overall ex-estate cost (RM 406.99/MT) is in line with the budget. Key focus areas are managing rat infestations, monitoring immature growth, and accelerating replanting efforts. <span class='observation-ref'>(PAR 1/2026 Pg. 41, 54-56)</span>",
+                        "Area Statement": "As of April 2026, the total planted area is <b>2,314.30 ha</b>. This comprises:<br>&bull; <b>Mature:</b> 1,410.50 ha (60.95%).<br>&bull; <b>Immature:</b> 762.50 ha (32.95%).<br>&bull; <b>Replanting:</b> 141.30 ha (6.11% in P26G). <span class='observation-ref'>(PAR 1/2026 Pg. 10-11)</span>",
+                        "Labour Statement": "Current workforce is 167 workers vs requirement (Ratio 1:14 ha).<br>&bull; <b>Harvesters:</b> 68 (Ratio 1:21 ha for mature areas). Shortage of 7 harvesters noted.<br>&bull; <b>Contractors:</b> 5 contractors with 137 workers engaged for field maintenance and harvesting. <span class='observation-ref'>(PAR 1/2026 Pg. 15-16)</span>",
+                        "Staff Establishment": "The staff establishment is satisfactory with 12 personnel, including 1 Manager, 2 Assistant Managers/Executives, 7 Field Supervisors, and 2 Clerks. <span class='observation-ref'>(PAR 1/2026 Pg. 13-14)</span>",
+                        "General Charges": "Total General Charges are <b>RM 391.09/ha</b>, which is 30% below the budget of RM 559.17/ha.<br>&bull; <b>Overspending:</b> 'Bonus and Gratuity' (+17%), 'Upkeep Labour Quarters' (+35% for new worker mattresses), and 'ISCC' (+55% for risk assessments).<br>&bull; <b>Savings:</b> Offset by overall lower management and operational expenses. <span class='observation-ref'>(PAR 1/2026 Pg. 17-18)</span>",
+                        "Upkeep and Cultivation": "&bull; <b>Weeding:</b> Cost is RM 90.89/ha (12% lower). Circle weeding completed over 1,656 ha (behind schedule).<br>&bull; <b>Manuring:</b> Cost is RM 254.77/ha (5% lower). 309.05 MT applied on schedule using semi-mechanised application.<br>&bull; <b>Pest & Disease:</b> Cost is RM 9.76/ha. Rat baiting done in 324.4 ha (P20A/B). Barn Owl occupancy high at 98%. <span class='observation-ref'>(PAR 1/2026 Pg. 19-27)</span>",
+                        "Harvesting and Collection": "YTD Cost is <b>RM 113.22/MT</b>, in line with the budget.<br>&bull; <b>Infield Loading:</b> Mechanical Assisted In-Field Collection covers 1,011.50 ha with 10 machines.<br>&bull; <b>Interval:</b> Maintained at 15 days (8 rounds).<br>&bull; <b>Productivity:</b> Average harvester productivity is 1.44 MT/day. Machine productivity is <10 MT/day. <span class='observation-ref'>(PAR 1/2026 Pg. 35-37, 40)</span>",
+                        "Crop Production": "YTD (4 Months) FFB Production is <b>6,558.60 MT</b>, which is 20% below the estimate of 8,203.00 MT.<br>&bull; <b>Yield/Ha:</b> 4.65 MT/ha. P98G highest at 6.79 MT/ha.<br>&bull; <b>Low Yield:</b> Field P20B recorded 2.88 MT/ha, requiring special attention. <span class='observation-ref'>(PAR 1/2026 Pg. 38)</span>",
+                        "Production Cost": "YTD Cost of Production is <b>RM 406.99/MT</b>, closely aligning with the budget of RM 405.70/MT.<br>&bull; <b>General Charges:</b> RM 164.61/MT.<br>&bull; <b>Upkeep:</b> RM 129.16/MT (Overspent due to raising bunds/supplying in P20B).<br>&bull; <b>Harvesting:</b> RM 113.22/MT. <span class='observation-ref'>(PAR 1/2026 Pg. 41)</span>",
+                        "Vehicles Running Cost": "Vehicle costs are generally under control. Toyota Hilux, Timac, and Hiace are below budget. John Deere (RM 11.25/hr) and Electric Ginga (RM 3.42/hr) running costs were higher than budget due to underutilization. <span class='observation-ref'>(PAR 1/2026 Pg. 53)</span>",
+                        "Capital Expenditure": "Expenditure includes a computer purchase (RM 5,235). Pending quotations for an additional record-keeping room (RM 80k) and an 8-ton trailer (RM 20k). <span class='observation-ref'>(PAR 1/2026 Pg. 52)</span>",
+                        "Immature": "Total 762.50 ha.<br>&bull; <b>P22C (108.2 ha):</b> Scout harvesting ongoing. Maturity extended to Jan 2027.<br>&bull; <b>P23D (181.4 ha):</b> Scout harvesting started Jan 2026. Rat & Oryctes attacks monitored.<br>&bull; <b>P24E (212.6 ha):</b> 16 mths old. Ablation scheduled Jun 2026.<br>&bull; <b>P25F (235.2 ha):</b> Planted 30,380 seedlings. Mucuna well established. <span class='observation-ref'>(PAR 1/2026 Pg. 42-49)</span>"
                     },
                     "agronomy": {
                         "Executive Summary": "Transitional age profile with >50% over-aged and immature palms. Yield YTD March 2026 declined 4% vs 2025. Main concerns are high rat infestation in P20 blocks (10%) and ongoing Ganoderma census. Manuring progress is acceptable but delivery-dependent. <span class='observation-ref'>(AR 1/2026 Pg. 4-6)</span>",
