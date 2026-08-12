@@ -30,7 +30,6 @@
 </head>
 <body class="bg-gray-100 text-gray-800">
 
-    <!-- Header -->
     <header class="bg-white shadow-md">
         <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
             <div class="text-xl font-bold text-gray-900">
@@ -70,45 +69,45 @@
             const estateData = {
                 "id": "chengal",
                 "name": "Ladang Chengal",
-                "reportInfo": "Data based on Plantation Advisory Report 2/2025 (Visit: 11th Dec 2025) & Agronomy Report 1/2026 (Visit: 11th Feb 2026).",
+                "reportInfo": "Data based on Plantation Advisory Report 1/2026 (Visit: 30th Jun 2026) & Agronomy Report 1/2026 (Visit: 11th Feb 2026).",
                 "summaryMetrics": {
                     "area": {
                         "title": "Estate Area",
                         "lines": [
                             "Total Planted: 1,814.20 ha",
-                            "Mature: 1,814.20 ha",
-                            "Immature: 0 ha",
+                            "Mature: 1,794.00 ha",
+                            "Replanting: 20.20 ha",
                             "Vacant/Unplantable: 385.80 ha"
                         ]
                     },
                     "yield": {
-                        "title": "Yield/Ha (2025 vs 2024)",
-                        "value": "22.00 / 21.07 MT",
-                        "note": "+4% vs 2024 (Full Year 2025)"
+                        "title": "Yield/Ha (YTD May vs Budget)",
+                        "value": "5.82 / 7.72 MT",
+                        "note": "-25% vs Budget (5 Months)"
                     },
                     "cost": {
-                        "title": "FFB Cost/Tonne (YTD Nov vs Budget)",
-                        "value": "RM 271.49 / RM 269.97",
-                        "note": "In line with budget"
+                        "title": "FFB Cost/Tonne (YTD May vs Budget)",
+                        "value": "RM 355.21 / RM 338.36",
+                        "note": "+5% vs Budget (Ex-Estate)"
                     },
                     "manuring": {
                         "title": "Manuring Progress (2026)",
-                        "value": "38% Completed",
-                        "note": "Delayed (Jan 2026); 2025 100% completed."
+                        "value": "68% Completed",
+                        "note": "Delayed (May 2026)"
                     },
                      "pests": {
                         "title": "Key Pests & Issues",
                         "value": "Rats & Bagworms",
-                        "note": "Rat damage >10% in P08D & P10F"
+                        "note": "Rat damage >10% (722.5 ha)"
                     }
                 },
                 "keyMetrics": [
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-blue-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z' /></svg>", "label": "Labour Ratio", "value": "1:10 ha (Surplus)" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-red-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z' /></svg>", "label": "P&D Status", "value": "Rat damage >10% (2 Blocks)" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-yellow-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M13 10V3L4 14h7v7l9-11h-7z' /></svg>", "label": "OER % (YTD Nov)", "value": "19.40%" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-indigo-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z' /></svg>", "label": "Harvester Prod.", "value": "2.04 MT/day (Crawler)" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-green-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z' /></svg>", "label": "Harvest Interval", "value": "15-17 days (Improved)" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-teal-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17.657 18.343A8 8 0 016.343 7.029m11.314 11.314a8 8 0 01-11.314-11.314m2.121 13.435a2 2 0 01-2.828 0l-2.122-2.121a2 2 0 010-2.828l5.656-5.657a2 2 0 012.829 0l2.121 2.121a2 2 0 010 2.828l-5.657 5.657z' /></svg>", "label": "Nutrient Status", "value": "2026 App Delayed" }
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-blue-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z' /></svg>", "label": "Labour Ratio", "value": "1:12 ha (Surplus)" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-red-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z' /></svg>", "label": "P&D Status", "value": "Rat damage >10% (722.5 ha)" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-yellow-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M13 10V3L4 14h7v7l9-11h-7z' /></svg>", "label": "OER % (YTD May)", "value": "19.70%" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-indigo-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z' /></svg>", "label": "Harvester Prod.", "value": "1.27 MT/day (Low)" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-green-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z' /></svg>", "label": "Harvest Interval", "value": "15 days (10 rds)" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-teal-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17.657 18.343A8 8 0 016.343 7.029m11.314 11.314a8 8 0 01-11.314-11.314m2.121 13.435a2 2 0 01-2.828 0l-2.122-2.121a2 2 0 010-2.828l5.656-5.657a2 2 0 012.829 0l2.121 2.121a2 2 0 010 2.828l-5.657 5.657z' /></svg>", "label": "Nutrient Status", "value": "May 2026 App Delayed" }
                 ],
                 "chartData": {
                     "production": {
@@ -125,27 +124,27 @@
                     }
                 },
                 "observations": [
-                    "<b>Yield Performance:</b> 2025 Full Year yield improved to 22.00 MT/ha (+4% vs 2024). Jan 2026 yield is 1.31 MT/ha (+22% vs Jan 2025). Costs are well in line with budget (RM 271.49/MT). <span class='observation-ref'>(AR Pg. 41; PAR Pg. 38)</span>",
-                    "<b>Nutrient & Manuring:</b> The 2025 manuring program was 100% completed. The 2026 program is slightly behind schedule (38% completed by Jan) due to sub-soil application delays. <span class='observation-ref'>(AR Pg. 11-12)</span>",
-                    "<b>Harvesting Standards:</b> Harvesting intervals have improved to 15-17 days in early 2026, though P10G was extended to 20 days due to hilly terrain/road reconstruction. Loose fruit collection is acceptable, but oxidized fruits need circle raking. <span class='observation-ref'>(AR Pg. 17-20)</span>",
-                    "<b>Pest Management:</b> Rat damage exceeded the 10% threshold in P08D and P10F in Dec 2025, requiring immediate baiting. Bagworm fogging was carried out as a preventive measure, but BT fogging is only advised when early-stage larvae are detected. <span class='observation-ref'>(AR Pg. 36, 38)</span>",
-                    "<b>Labour Details:</b> The estate has a significant labour surplus (177 workers, 1:10 ha), necessitating management to redistribute excess labour. <span class='observation-ref'>(PAR 2/2025 Pg. 13)</span>",
-                    "<b>Field Vegetation & Pruning:</b> Inter-row spraying is on track (96% completed for Jan 2026), but circle spraying is just starting. Progressive and corrective pruning were completed successfully. <span class='observation-ref'>(AR Pg. 24, 30)</span>"
+                    "<b>Yield & Cost Performance:</b> 2026 YTD May yield is heavily below expectation at 5.82 MT/ha (-25% vs budget), driving the Ex-Estate production cost up to RM 355.21/MT (+5% vs budget). Previous 2025 Full Year yield was 22.00 MT/ha. <span class='observation-ref'>(PA Report 1/2026 Pg. 36, 39; AR 1/2026 Pg. 41)</span>",
+                    "<b>Harvesting Standards & Labour:</b> Harvesting intervals are maintained at 15 days, but average harvester productivity is very low (1.27 MT/manday), causing earnings to fall below the minimum wage. The estate has a significant labour surplus (154 workers, 1:12 ha; 108 harvesters vs 82 required) which needs revision and redistribution. <span class='observation-ref'>(PA Report 1/2026 Pg. 13, 33-35; AR 1/2026 Pg. 17-20)</span>",
+                    "<b>Nutrient & Manuring:</b> The 2026 manuring program is 68% complete by May, having faced slight delays due to late fertilizer delivery. It is crucial to adhere to the Agronomist's placement and timing recommendations to optimize uptake. <span class='observation-ref'>(PA Report 1/2026 Pg. 21; AR 1/2026 Pg. 11-12)</span>",
+                    "<b>Replanting & Rehabilitation:</b> Replanting of 20.20 ha in low-lying, flood-prone ex-fields P08E & P10G (now P26H) is in progress with cambered bunds constructed and planting targeted for July 2026 completion. <span class='observation-ref'>(PA Report 1/2026 Pg. 31; AR 1/2026 Pg. 43)</span>",
+                    "<b>Pest Management:</b> Rat damage remains an issue (>10%) requiring baiting over 722.5 ha. Localized bagworm treatment is ongoing over 40 ha. Integrated Pest Management is active with barn owl box occupancy at 83%. <span class='observation-ref'>(PA Report 1/2026 Pg. 23-24; AR 1/2026 Pg. 36, 38)</span>",
+                    "<b>Field Vegetation & Upkeep:</b> Spraying works (circle and selective) are slightly behind schedule. Premixing of herbicide solutions under supervision is advised to ensure consistent dosage against sporadic tough woodies. <span class='observation-ref'>(PA Report 1/2026 Pg. 17-19; AR 1/2026 Pg. 24, 30)</span>"
                 ],
                 "reports": {
                     "plantation": {
-                        "Executive Summary": "The estate's performance is satisfactory. YTD November FFB production is 36,392.65 MT (20.06 MT/ha), exceeding the budget, and the cost of production (RM 271.49/MT) is aligned with budget. Management is advised to redistribute excess labour. (PA Report 2/2025, Pg. 2)",
-                        "Area Statement": "As of Nov 2025, the total planted area is 1,814.20 ha. This comprises:<br><ul class='list-disc pl-5 mt-1'><li><b>Mature:</b> 1,814.20 ha (100%).</li><li><b>Immature:</b> 0 ha.</li><li><b>Replanting:</b> Chambering carried out in P10G to reclaim 20 ha for planting.</li></ul>(PA Report 2/2025, Pg. 9)",
-                        "Labour Statement": "Current workforce is 177 workers vs. requirement of 130 (Ratio 1:10 ha), creating a surplus of 47 workers.<br><ul class='list-disc pl-5 mt-1'><li><b>Harvesters:</b> Adequate for normal cropping.</li><li><b>Recruitment:</b> Active (80 new workers joined).</li><li><b>Abscondment:</b> Remains a minor issue (41 workers left).</li></ul>(PA Report 2/2025, Pg. 13)",
-                        "Staff Establishment": "The staff establishment is adequate with no recent changes. En. Mohd Zaeh Bin Mat Zin remains the Manager. (PA Report 2/2025, Pg. 12)",
-                        "General Charges": "Total General Charges are <b>RM 1,502.52/ha</b>, which is 24% below the budget of RM 1,710.31/ha.<br><ul class='list-disc pl-5 mt-1'><li><b>Overspending:</b> 'Recruitment' (+33% due to high intake), 'Group Personal Insurance' (+32%), and 'Staff Medical' (+10%).</li><li><b>Savings:</b> Offset by strong savings in other administrative headers.</li></ul>(PA Report 2/2025, Pg. 14)",
-                        "Upkeep and Cultivation": "<ul class='list-disc pl-5 mt-1'><li><b>Weeding:</b> Cost is RM 257.26/ha. Progress is satisfactory (4th round circle/selective).</li><li><b>Manuring:</b> Cost is RM 1,556.68/ha (21% over budget due to price/quantity variance). Program is 100% completed.</li><li><b>Pest & Disease:</b> Cost RM 97.56/ha. Rat damage generally <10%. Barn owl box occupancy 87%.</li></ul>(PA Report 2/2025, Pg. 16-19)",
-                        "Harvesting and Collection": "YTD Cost is <b>RM 78.50/MT</b>.<br><ul class='list-disc pl-5 mt-1'><li><b>Interval:</b> Stable at 15 days (21.46 rounds).</li><li><b>Mechanization:</b> 14 Crawlers, 2 Timac units. Crawler productivity at 2.04 tons/man-day (8.88 tons/machine).</li></ul>(PA Report 2/2025, Pg. 28-32)",
-                        "Crop Production": "YTD (11 Months) FFB Production is <b>36,392.65 MT</b>, which is above the budget.<br><ul class='list-disc pl-5 mt-1'><li><b>Yield/Ha:</b> 20.06 MT/ha (11 months).</li><li><b>Extraction:</b> OER at 19.40%.</li></ul>(PA Report 2/2025, Pg. 30)",
-                        "Production Cost": "YTD Cost of Production is <b>RM 271.49/MT</b>, perfectly in line with the budget of RM 269.97/MT.<br><ul class='list-disc pl-5 mt-1'><li><b>General Charges:</b> RM 74.90/MT</li><li><b>Upkeep:</b> RM 118.10/MT</li><li><b>Harvesting:</b> RM 78.50/MT</li></ul>(PA Report 2/2025, Pg. 34)",
-                        "Vehicles Running Cost": "John Deere tractor costs are high (RM 22.40/hr) due to low usage. Toyota Hilux (RM 0.47/km), Van (RM 0.68/km). (PA Report 2/2025, Pg. 36)",
-                        "Capital Expenditure": "Actual expenditure of RM 49,096 incurred for IT equipment, a back pusher, and a mounted grader. (PA Report 2/2025, Pg. 37)",
-                        "Immature": "N/A (100% Mature Estate). (PA Report 2/2025, Pg. 9)"
+                        "Executive Summary": "The estate's performance over 5 months was below expectation, with FFB production (10,564.78 MT) being 25% lower than the budget and production cost (RM 355.21/MT) 5% higher. Management is advised to revise harvester numbers to improve productivity and earnings, and continue expanding the mechanized system. (PA Report 1/2026, Pg. 42-44)",
+                        "Area Statement": "As of May 2026, the total planted area is 1,814.20 ha. This comprises:<br><ul class='list-disc pl-5 mt-1'><li><b>Mature:</b> 1,794.00 ha (98.9%).</li><li><b>Immature:</b> 0 ha.</li><li><b>Replanting:</b> 20.20 ha (Field P26H, cambered bunds completed, planting in progress).</li></ul>(PA Report 1/2026, Pg. 10)",
+                        "Labour Statement": "Current workforce is 154 workers vs. requirement of 130 (Ratio 1:12 ha), creating a surplus of 24 workers.<br><ul class='list-disc pl-5 mt-1'><li><b>Harvesters:</b> 108 workers (Requirement: 82). The surplus affects earnings and production costs.</li><li><b>General Workers:</b> 10 workers (Requirement: 6).</li></ul>(PA Report 1/2026, Pg. 13)",
+                        "Staff Establishment": "The staff establishment is adequate. A recent reshuffle brought in 1 Assistant Manager (En. Husin Bin Rosin, joined Jan 2026), 2 Clerks, and 1 Supervisor. (PA Report 1/2026, Pg. 12)",
+                        "General Charges": "Total General Charges are <b>RM 608.51/ha</b>, which is 24% below the budget of RM 803.72/ha.<br><ul class='list-disc pl-5 mt-1'><li><b>Overspending:</b> 'Recruitment' (+100%), 'Visiting/HO Charges' (+45%), 'Manager Bungalow' (+32%), and 'Non-Exec Travelling' (+120%).</li><li><b>Savings:</b> Offset by strong savings in management & supervision and other expenditure headers.</li></ul>(PA Report 1/2026, Pg. 14-15)",
+                        "Upkeep and Cultivation": "<ul class='list-disc pl-5 mt-1'><li><b>Weeding:</b> Cost is RM 124.71/ha. 2nd round of selective spraying is in progress.</li><li><b>Manuring:</b> Cost is RM 543.80/ha (25% below budget due to delivery delays). Program is 68% completed.</li><li><b>Pest & Disease:</b> Cost RM 44.42/ha. Rat baiting in progress over 722.5 ha. Barn owl box occupancy 83%.</li></ul>(PA Report 1/2026, Pg. 16-25)",
+                        "Harvesting and Collection": "YTD Cost is <b>RM 80.82/MT</b> (14% below budget).<br><ul class='list-disc pl-5 mt-1'><li><b>Interval:</b> Maintained at 15 days (10.00 rounds).</li><li><b>Mechanization:</b> 12 Crawlers, 2 Timac units. Crawler harvester productivity is 1.59 MT/manday; however, overall harvester productivity is very low at 1.27 MT/manday, resulting in earnings below minimum wage.</li></ul>(PA Report 1/2026, Pg. 33-35)",
+                        "Crop Production": "YTD (5 Months) FFB Production is <b>10,564.78 MT</b>, which is 25% below the budget of 14,000 MT.<br><ul class='list-disc pl-5 mt-1'><li><b>Yield/Ha:</b> 5.82 MT/ha (5 months).</li><li><b>Extraction:</b> OER at 19.70%.</li></ul>(PA Report 1/2026, Pg. 36)",
+                        "Production Cost": "YTD Cost of Production is <b>RM 355.21/MT</b>, which is 5% higher compared to the budget of RM 338.36/MT.<br><ul class='list-disc pl-5 mt-1'><li><b>General Charges:</b> RM 104.49/MT</li><li><b>Upkeep:</b> RM 169.89/MT</li><li><b>Harvesting:</b> RM 80.83/MT</li></ul>(PA Report 1/2026, Pg. 39)",
+                        "Vehicles Running Cost": "Higer Ace Van running cost was very high (RM 2.83/km vs budget RM 0.57/km) due to frequent breakdowns and was replaced in June 2026. Toyota Hilux cost increased due to higher diesel prices. (PA Report 1/2026, Pg. 41)",
+                        "Capital Expenditure": "Actual expenditure of RM 237,000.40 incurred, heavily driven by the unbudgeted purchase of a Toyota Hiace Van (RM 160,586) for school children transport, approved by HQ. (PA Report 1/2026, Pg. 40)",
+                        "Immature": "Field P26H (20.20 ha) cambered bund construction completed and planting of Yangambi 3 Way seedlings in progress, targeted for July 2026 completion. (PA Report 1/2026, Pg. 31)"
                     },
                     "agronomy": {
                         "Executive Summary": "Yield performance for 2025 was acceptable at 22.00 MT/ha. Harvesting intervals have stabilized to 15-17 days, though crop recovery requires continuous focus. The 2025 manuring program was fully completed; however, the 2026 program is currently experiencing delays and requires close monitoring to catch up. (AR 1/2026, Pg. 4, 41)",
