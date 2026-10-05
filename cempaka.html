@@ -7,6 +7,7 @@
     <title>Ladang Cempaka - Plantation and Agronomy Report</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
@@ -34,11 +35,11 @@
     <header class="bg-white shadow-md">
         <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
             <div class="text-xl font-bold text-gray-900">
-                <a href="index.html" class="flex items-center">
+                <a href="../index.html" class="flex items-center">
                     Ladang Cempaka Report
                 </a>
             </div>
-            <a href="estates.html" class="text-green-800 hover:text-green-900 transition duration-300">&larr; Back to Estates List</a>
+            <a href="../estates.html" class="text-green-800 hover:text-green-900 transition duration-300">&larr; Back to Estates List</a>
         </nav>
     </header>
 
@@ -61,6 +62,9 @@
     </div>
 
     <script>
+        // Register Chart.js DataLabels plugin
+        Chart.register(ChartDataLabels);
+
         // Global variable to store chart instances to allow destruction/re-initialization
         let chartInstances = {};
 
@@ -68,12 +72,12 @@
             const estateData = {
                 "id": "cempaka",
                 "name": "Ladang Cempaka",
-                "reportInfo": "Data based on PA Report 1/2026 (Visit: 18th Feb 2026) & Agronomy Report 2/2026 (Visit: 2nd Sep 2026).",
+                "reportInfo": "Data based on PA Report 2/2026 (Visit: 27th August 2026) & Agronomy Report 2/2026 (Visit: 2nd September 2026).",
                 "summaryMetrics": {
                     "area": {
                         "title": "Estate Area",
                         "lines": [
-                            "Total Area: 494.33 ha",
+                            "Total Planted: 494.33 ha",
                             "Mature (P18C): 167.64 ha",
                             "New Mature (P22B/D): 147.41 ha",
                             "Immature (P23A): 179.28 ha"
@@ -81,67 +85,76 @@
                     },
                     "yield": {
                         "title": "Yield/Ha (MT)",
-                        "isChart": true,
+                        "type": "chart",
+                        "canvasId": "miniYieldChart",
                         "chartData": {
                             "labels": ["2024", "2025", "2026"],
-                            "actual": [22.71, 24.97, 9.36],
-                            "budget": [null, null, 10.50] 
+                            "actual": [22.71, 24.97, 7.21],
+                            "budget": [null, null, 9.53]
                         },
-                        "note": "*2026 represents Jan-Jul only (AR Pg. 42)."
+                        "note": "*Jan-Jul 2026 only"
                     },
                     "cost": {
-                        "title": "FFB Cost/Tonne (Ex-Estate)",
-                        "value": "RM 245.49 / RM 315.89",
-                        "note": "Full Year 2025 (PA 1/2026)"
+                        "title": "FFB Cost/Tonne (Actual vs Budget)",
+                        "value": "RM 397.07 / RM 426.11",
+                        "note": "Ex-Estate, Jan-Jul 2026 (PA 2/2026, Pg. 34)"
                     },
                     "upkeep": {
                         "title": "Upkeep Status",
                         "value": "Behind Schedule",
-                        "note": "Manuring delayed; VOPs require eradication"
+                        "note": "Manuring delayed; circle overspraying & VOPs"
                     },
-                     "labour": {
-                        "title": "Labour Deficit",
-                        "value": "9 Workers",
-                        "note": "Short 5 Harvesters (PA 1/2026)"
+                    "labour": {
+                        "title": "Labour Status",
+                        "value": "1:16 ha (31/32)",
+                        "note": "Short 1 Driver & 1 Weeder (PA 2/2026, Pg. 13)"
                     }
                 },
                 "keyMetrics": [
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-blue-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z' /></svg>", "label": "Labour Ratio", "value": "1:18 ha (Deficit)" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-blue-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z' /></svg>", "label": "Labour Ratio", "value": "1:16 ha (Slightly Low)" },
                     { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-red-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z' /></svg>", "label": "P&D Status", "value": "Rat Resurgence (>10%)" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-yellow-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M13 10V3L4 14h7v7l9-11h-7z' /></svg>", "label": "OER % (2025 Actual)", "value": "19.22% (Budget 19.00%)" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-green-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z' /></svg>", "label": "Harvester Prod.", "value": ">2.0 MT/day" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-yellow-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M13 10V3L4 14h7v7l9-11h-7z' /></svg>", "label": "OER % (YTD Jul 2026)", "value": "18.83% (Budget 18.80%)" },
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-green-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z' /></svg>", "label": "Harvester Prod.", "value": "1.38 MT/md (P18C: 1.80)" },
                     { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-purple-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z' /></svg>", "label": "Harvest Interval", "value": "14-17 Days (Acceptable)" },
-                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-orange-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z' /></svg>", "label": "Nutrient Status", "value": "Delays (Stock Issues)" }
+                    { "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6 text-orange-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z' /></svg>", "label": "Nutrient Status", "value": "Delays (64-76% Complete)" }
                 ],
                 "chartData": {
                     "production": {
                         "labels": ["Jan-26", "Feb-26", "Mar-26", "Apr-26", "May-26", "Jun-26", "Jul-26"],
                         "ffb": [289.96, 252.50, 219.24, 175.20, 207.30, 305.44, 508.52],
                         "rainfall": [41.50, 200.00, 54.00, 134.00, 300.50, 108.00, 98.00],
-                        "note": "*Actual FFB production and rainfall YTD July 2026. (AR 2/2026, Appx 3 & 4)"
+                        "note": "*Actual FFB production and rainfall YTD July 2026. (AR 2/2026, Appx 3 & 4; PA 2/2026, Appx 1)"
                     },
                     "ageProfile": {
-                        "labels": ["Mature (P18C)", "New Mature (P22B)", "New Mature (P22D)", "Immature (P23A)"],
-                        "data": [34, 21, 9, 36], 
+                        "labels": ["Mature P18C (33.80%)", "New Mature P22B (20.99%)", "New Mature P22D (8.74%)", "Immature P23A (36.15%)"],
+                        "data": [33.80, 20.99, 8.74, 36.15], 
                         "title": "Ladang Cempaka - Palm Age Distribution (2026)",
-                        "note": "*Source: AR 2/2026, Pg. 7 Area Statement. Values in % of 494.33 ha."
+                        "note": "*Source: PA Report 2/2026, Pg. 10 & AR 2/2026, Pg. 7 Area Statement. Values in % of total area."
                     }
                 },
                 "observations": [
-                    "<b>Yield Drop in P18C:</b> Mature yield in P18C dropped 37% YTD (8.59 MT/ha), though bunch formation looks promising for H2. Conversely, P22B and P22D saw >110% yield increases compared to 2025. <span class='observation-ref'>(AR 2/2026, Pg. 34)</span>",
-                    "<b>Rat Infestation Resurgence:</b> The August census showed fresh damage exceeding the 10% threshold across all monitored blocks. An immediate baiting campaign is required, despite a 96% barn owl box occupancy rate. <span class='observation-ref'>(AR 2/2026, Pg. 24-27)</span>",
-                    "<b>Manuring Delays:</b> Stock and delivery issues caused delays in RP and Mixture B applications. Immature field P23A is currently at 0% completion for both Mix B and RP as of July. <span class='observation-ref'>(AR 2/2026, Pg. 9)</span>",
-                    "<b>Over-Pruning & VOPs:</b> Over-pruning persists in P18C3 and immature P23A. Weed control is behind schedule with Volunteer Oil Palms (VOPs) and <i>Clidemia hirta</i> patches requiring immediate eradication. <span class='observation-ref'>(AR 2/2026, Pg. 16, 18, 28)</span>",
-                    "<b>Critical Labour Deficit:</b> A workforce shortage of 9 personnel persists (25 actual vs 34 required). This includes a shortage of 5 harvesters, posing a risk to crop recovery. <span class='observation-ref'>(PA 1/2026, Pg. 4, 13)</span>",
-                    "<b>Suspected Ganoderma Infestation:</b> An incidence of fallen palms suspected of Ganoderma infestation was previously reported in Field 18C. <span class='observation-ref'>(PA 1/2026, Pg. 21-22)</span>"
+                    "<b>Crop Production & Yield Variance:</b> YTD July 2026 FFB production (excluding Tapping Right P22D) reached 1,958.06 MT (7.21 MT/ha), 24% below budget (9.53 MT/ha) and 47% lower than the same period last year. Mature yield in P18C dropped 37% YTD (8.59 MT/ha) though bunch formation looks promising for H2, while P22B (4.09 MT/ha) and P22D (2.11 MT/ha) saw >110% yield increases over 2025. Lower yield in P22D is attributed to lower stands (122 SPH) and unproductive supplying palms. <span class='observation-ref'>(PA 2/2026, Pg. 31-32, 39; AR 2/2026, Pg. 34)</span>",
+                    "<b>Manuring Program Delays:</b> Overall mature manuring is 64% to 76% complete as of July 2026 (258.65 MT applied out of 406.70 MT required), with delays in Mixture B and Rock Phosphate (RP) due to stock and supplier delivery issues. Crucially, immature field P23A has experienced delays in RP (2.00 kg/palm) and Mix B applications. Management must follow up closely with suppliers to expedite deliveries. <span class='observation-ref'>(PA 2/2026, Pg. 5, 20, 38; AR 2/2026, Pg. 9, 37)</span>",
+                    "<b>Rat Infestation Resurgence:</b> Following 1 round of Storm baiting up to July, the August agronomic census revealed fresh rat damage resurging above the 10% threshold across all monitored blocks. Immediate baiting is required despite a high barn owl box occupancy rate of 95%-96%. <span class='observation-ref'>(PA 2/2026, Pg. 21-22; AR 2/2026, Pg. 24-27)</span>",
+                    "<b>Weeding, Overspraying & VOPs:</b> While palm circles are generally clean, overspraying extending into harvester paths was observed in P18C, creating bare ground. Circle spraying must be restricted to a 2m radius to encourage soft grasses and <i>Nephrolepis</i>. Inter-row weeding is behind schedule with Volunteer Oil Palms (VOPs) and <i>Clidemia hirta</i> patches requiring targeted spot spraying. Mist blowers must be avoided in immature P23A to prevent spray drift phytotoxicity on inflorescences. <span class='observation-ref'>(PA 2/2026, Pg. 18-19, 37, 40; AR 2/2026, Pg. 16, 18, 28)</span>",
+                    "<b>Pruning Standards & Frond Stacking:</b> Although progressive pruning is implemented across mature fields, localized over-pruning persists in P18C3 and immature P23A (where a minimum of 3 supporting fronds below the lowest bunch must be retained). Cut fronds also require proper restacking to prevent encroachment onto palm circles, paths, roads, and drains. <span class='observation-ref'>(PA 2/2026, Pg. 27, 40; AR 2/2026, Pg. 16, 28-31)</span>",
+                    "<b>Labour Force & Harvester Productivity:</b> Workforce has improved to 31 workers vs a requirement of 32 (1:16 ha ratio). Harvester strength is now sufficient at 18 workers (1:18 ha), but the estate remains slightly short of field maintenance workers (-1 weeding, -1 driver/loader). Average harvester productivity is 1.38 MT/man-day (1.80 MT/md in P18C; 0.76-0.91 MT/md in first-year fields P22B/P22D), requiring continued mechanisation expansion (Timac averaging 11.77 MT/day). <span class='observation-ref'>(PA 2/2026, Pg. 4, 13, 30, 33, 39)</span>",
+                    "<b>Suspected Ganoderma & Unproductive Palms:</b> Fallen palms suspected of <i>Ganoderma</i> infection in P18C require prompt de-bolling and preventive sanitation measures. Ongoing thinning of sterile/runt palms and supplying in P22D and P23A must be expedited using PARAS GIS census data. <span class='observation-ref'>(PA 2/2026, Pg. 5, 23-24, 37, 40)</span>"
                 ],
                 "reports": {
                     "plantation": {
-                        "Executive Summary": "The estate's performance for 2025 was satisfactory with FFB production 22% above budget and cost 22% below budget. Management is urged to recruit 5 additional harvesters as immature harvesting scales up in P23A. (PAR 1/2026, Pg. 8, 38)",
-                        "Area Statement": "As of Jan 2026, total planted area is ~495 ha. Topography is predominantly flat to undulating. (PAR 1/2026, Pg. 10)",
-                        "Labour Statement": "Current workforce is 25 workers vs requirement of 34 (Shortage: 9). Ratio: 1 worker per 18 ha. Additional workers are required to manage crop recovery and field maintenance. (PAR 1/2026, Pg. 4)",
-                        "Production Cost": "2025 Ex-Estate cost: RM 245.49/MT (22% below budget of RM 315.89). Low production cost supported by high FFB volume. (PAR 1/2026, Pg. 29-30)",
-                        "Immature Fields": "Field P23A (179.28 ha): Scout harvesting began Jan 2026. Density: 139/ha. (PAR 1/2026, Pg. 34-37)"
+                        "Executive Summary": "The estate's performance as of July 2026 was acceptable. YTD FFB production is 1,958.06 MT (7.21 MT/ha), which is 24% lower than the budget and 47% lower than the same period last year. Ex-estate production cost is RM 397.07/MT (7% below the budget of RM 426.11/MT). Priority is needed to catch up on delayed manuring schedules, recruit additional upkeep workers, avoid circle overspraying, and expand mechanised in-field collection as harvesting areas grow. (PA Report 2/2026, Pg. 8, 31, 34, 39-41)",
+                        "Area Statement": "As of July 2026, total estate area is 495.93 ha, with 494.33 ha planted (99.68%) and 1.60 ha of line site (0.32%).<br>• <b>Mature (315.05 ha / 63.53%):</b> Field P18C (167.64 ha, 140 SPH, Felda Yangambi), Field P22B (104.08 ha, 148 SPH, Chemara DxP, declared mature Jan 2026), and Field P22D Tapping Right (43.33 ha, 122 SPH, Chemara DxP, matured Jan 2026).<br>• <b>Immature (179.28 ha / 36.15%):</b> Field P23A (179.28 ha, 148 SPH). (PA Report 2/2026, Pg. 8, 10)",
+                        "Labour Statement": "Current workforce is 31 workers (10 checkroll, 21 contract) vs requirement of 32 (Variance: -1; Ratio 1:16 ha), which is slightly low to support full field maintenance.<br>• <b>Harvesters:</b> 18 workers (2 checkroll, 16 contract) vs requirement of 18 (Ratio 1:18 ha). Sufficient for mature areas.<br>• <b>Upkeep & General:</b> Manuring: 5 (Req: 4, +1), Weeding: 3 contract (Req: 4, -1), Driver/Loader: 1 contract (Req: 2, -1), Mandor: 2 (Req: 2), General Worker: 2 (Req: 2).<br>• <b>Contractors:</b> Ayden Smart (20 workers for harvesting & weeding across 315.05 ha) and Alam Shag (1 worker for FFB transport).<br>• <b>Turnover (YTD):</b> 4 recruited, 7 returned, 1 transferred in; 2 repatriated, 3 on long leave, 1 transferred out. (PA Report 2/2026, Pg. 13-14)",
+                        "Staff Establishment": "The staff establishment is adequate and unchanged since the last visit, comprising 4 personnel: En. Muhammad Uzairi Bin Abdul Rahim (Manager, Grade 2, joined estate Mar 2025), En. Muhammad Amir Asyraaf Bin Azman (Assistant Manager, joined Jan 2026), En. Maizaitol Akmal Bin Azahar (Field Conductor, Grade 1, joined Jan 2024), and En. Aminuddin Bin Arip (Account Clerk, Grade 2, joined Feb 2026). (PA Report 2/2026, Pg. 12)",
+                        "General Charges": "Total General Charges YTD July 2026 are RM 374,905.27 or RM 831.28/ha, which is 14% below the budget of RM 1,196.47/ha (RM 539,609.00).<br>• <b>Breakdown:</b> Supervision RM 226.05/ha (Budget RM 346.23/ha), Labour & Amenities RM 283.02/ha (Budget RM 430.83/ha), Others RM 322.21/ha (Budget RM 419.41/ha).<br>• <b>Overspending (>5%):</b> 'SOCSO - Management' (+22% at RM 2.64/ha due to unbudgeted HRDF levy), 'Medical/VMO - Labour' (+416% at RM 3.93/ha due to higher Ordinary Rate of Pay for Sick Pay), 'MSPO' (+15% at RM 8.10/ha for surveillance audit), and 'ISCC' (+8% at RM 7.62/ha for assessment/documentation). (PA Report 2/2026, Pg. 15-16, 43-44)",
+                        "Upkeep and Cultivation": "Total Upkeep & Cultivation expenditure YTD is RM 346,852.00 or RM 1,276.51/ha, which is 21% below the budget of RM 1,613.46/ha (RM 438,410.00).<br>• <b>Weeding:</b> RM 129.46/ha (28% below budget). Circle spraying: 426.46 ha done vs 777.51 ha budget (55%). Selective spraying: 462.46 ha done vs 630.10 ha budget (73%). Sprayer productivity is satisfactory at 5.00 ha/md (CDA, RM 80/day) and 4.50 ha/md (Mist blower, RM 72/day). Overspraying in P18C caused bare ground; circle spraying must be limited to a 2m radius. Spot-spray wild oil palm seedlings with sodium chlorate.<br>• <b>Manuring:</b> RM 979.91/ha (2% below budget of RM 996.54/ha). 64% completed (258.65 MT applied out of 406.70 MT annual program; 276.45 MT delivered). June RP is 58% complete; July Mix B (36.15 MT) delayed. Worker productivity is satisfactory at 24-30 bags/md (RM 72/day).<br>• <b>Pest & Disease:</b> RM 25.78/ha (79% below budget of RM 120.82/ha). 1 round of rat baiting (Storm Flocoumafen 0.005%, 1 pc/palm) completed across 315.05 ha. 42 Barn Owl boxes installed (1 box:11 ha) with 95% occupancy (39/42 boxes occupied). Fallen palms suspected of <i>Ganoderma</i> require de-bolling.<br>• <b>Census & Thinning:</b> RM 3.15/ha (51% below budget). PARAS GIS census completed; removal of sterile/runt palms in progress in P18C.<br>• <b>Drains:</b> RM 61.64/ha (in line with budget of RM 60.57/ha). 359.93 chains desilted out of 650.00 chains budgeted (55%) in P18C and P22B.<br>• <b>Roads & Bridges:</b> RM 29.86/ha (83% below budget of RM 174.69/ha). Grading conducted over 2,386 chains and 783 MT of crusher run applied.<br>• <b>Supplying & Boundaries:</b> Supplying cost RM 0.24/ha (expedite supplying in P22D). Boundaries & Survey cost RM 4.62/ha (73% below budget); regular patrols active along Felda Bera and Southern Keratong borders.<br>• <b>Pruning:</b> RM 41.86/ha (28% below budget of RM 58.35/ha). Progressive pruning satisfactory (retaining min 2 fronds below last bunch), but cut frond stacking needs improvement. (PA Report 2/2026, Pg. 17-28, 39-40)",
+                        "Harvesting and Collection": "YTD Cost is RM 104.57/MT (RM 204,762.00), which is 20% below the budget of RM 131.32/MT (RM 340,116.00).<br>• <b>Breakdown:</b> Harvesting cost RM 75.11/MT (Budget RM 96.45/MT); Internal Transport RM 29.46/MT (Budget RM 34.86/MT).<br>• <b>Interval & Ripeness:</b> Average interval maintained at 15 days (14 rounds in 7 months). Enforce minimum ripeness standard of at least 1 detached loose fruit on the ground.<br>• <b>Harvester Productivity & Earnings:</b> Overall average is 1.38 MT/man-day across 1,487 man-days. By field: P18C at 1.80 MT/md (RM 97.20/day), P22B at 0.91 MT/md (RM 83.72/day), and P22D at 0.76 MT/md (RM 69.92/day).<br>• <b>Mechanisation:</b> 1 unit of Timac covering 7 harvesters achieved 11.77 MT/machine-day (1.74 MT/harvester-day). An additional Timac unit is recommended as harvesting areas expand. (PA Report 2/2026, Pg. 29-30, 33, 41)",
+                        "Crop Production": "YTD (7 Months) FFB Production (excluding Tapping Right P22D) is 1,958.06 MT, which is 24% below the budget of 2,590.00 MT and 14% lower than last year's same period (2,285.14 MT). Including P22D (91.64 MT), total estate FFB harvested is 2,049.70 MT.<br>• <b>Yield/Ha:</b> 7.21 MT/ha excl. P22D (vs budget 9.53 MT/ha and 2025 YTD 13.63 MT/ha). Including P22D, overall mature yield is 6.50 MT/ha.<br>• <b>Field Breakdown:</b> P18C: 1,439.48 MT (8.59 MT/ha, ABW 11.23 kg, 5.46 bunches/palm); P22B: 518.58 MT (4.09 MT/ha, ABW 3.61 kg, 9.32 bunches/palm); P22D: 91.64 MT (2.11 MT/ha, ABW 3.71 kg, 4.67 bunches/palm).<br>• <b>Extraction Rate:</b> OER at 18.83% (Budget 18.80%, 368.76 MT CPO) and KER at 4.61% (Budget 5.02%, 90.23 MT PK). (PA Report 2/2026, Pg. 31-32)",
+                        "Production Cost": "YTD Ex-Estate Cost of Production is RM 397.07/MT (RM 777,494.00), which is 7% favorable compared to the budget of RM 426.11/MT (RM 1,103,613.00).<br>• <b>General Charges:</b> RM 115.36/MT (-8% vs budget RM 125.52/MT).<br>• <b>Upkeep & Cultivation:</b> RM 177.14/MT (+5% vs budget RM 169.27/MT).<br>• <b>Harvesting & Collection:</b> RM 104.57/MT (-20% vs budget RM 131.32/MT). (PA Report 2/2026, Pg. 34)",
+                        "Vehicles Running Cost": "Cummins Genset running costs were slightly higher than budget due to diesel price fluctuations, operating 16 hours/day for office and quarters.<br>• <b>Cummins Genset 82:</b> RM 14.40/hr actual vs RM 15.37/hr budget (1,750 hrs actual; RM 25,200.00 expenditure).<br>• <b>Cummins Genset 83:</b> RM 14.63/hr actual vs RM 14.40/hr budget (1,696 hrs actual; RM 24,812.36 expenditure).<br>• <b>Crawler LS360 (GC7203):</b> RM 2.86/hr (3,120 hrs, RM 8,934.00 expenditure), observed by the harvesting contractor. (PA Report 2/2026, Pg. 7, 35)",
+                        "Capital Expenditure": "Total CAPEX YTD is RM 3,082,965.05.<br>• <b>Biological Asset (Bearer Plant):</b> RM 3,077,545.05.<br>• <b>Computer Equipment:</b> RM 5,420.00 for 1 unit HP Pro Computer purchased in June 2026 for office use (Unbudgeted). (PA Report 2/2026, Pg. 36)",
+                        "Immature": "<b>Field P23A (179.28 ha):</b><br>• <b>Status & Stand:</b> Reached 30 months old in June 2026. Census density is 139 SPH (vs 148 SPH planted); 80 palms supplied YTD. Scout harvesting commenced in Jan 2026, yielding 166.20 MT FFB in 7 months.<br>• <b>Upkeep & Manuring:</b> 2 rounds of circle spraying and 3 rounds of selective spraying completed; avoid mist blowers to prevent spray drift onto inflorescences. 2 rounds of Comp 44 (1.50 kg/palm) completed, while RP application (2.00 kg/palm) is delayed.<br>• <b>P&D, Drains & Costs:</b> 1 round of <i>Oryctes</i> control completed using Carbosulfan 5% (15g/palm). 150 chains of main/collection drains desilted. Cost to maturity (excluding General Charges) is satisfactory at RM 10,955.19/ha. (PA Report 2/2026, Pg. 37-38)"
                     },
                     "agronomy": {
                         "Executive Summary": "Yield in mature block P18C dropped 37% YTD but shows promising bunch formation for H2. Fields P22B and P22D yields improved significantly. Key agronomic issues include delayed manuring due to stock issues, rat infestation resurgence (>10% damage), and persistent over-pruning in specific blocks. (AR 2/2026)",
@@ -153,7 +166,7 @@
                     },
                     "pinfosys": "Not Available"
                 },
-                "policy": " <div class='policy-item'><p class='font-semibold'>Pruning Standards</p><p class='text-sm text-gray-600'><b>Policy Ref: PRUNE-STD-01:</b> Over-pruning is strictly prohibited. Retain at least 2 subtending fronds below the lowest bunch in young mature palms, and 3 fronds in immature palms, to prevent physiological stress.</p></div> <div class='policy-item'><p class='font-semibold'>Labour Management</p><p class='text-sm text-gray-600'><b>Policy Ref: HR-MANPOWER-01:</b> Estate managers must maintain the budgeted worker-to-land ratio. Shortages exceeding 10% must be reported with an active recruitment plan.</p></div> <div class='policy-item'><p class='font-semibold'>Rat Infestation</p><p class='text-sm text-gray-600'><b>Policy Ref: P&D-Rat-02b:</b> Quarterly rat censuses are mandatory. If damage >10%, baiting must be initiated within 30 days using approved rodenticides.</p></div>"
+                "policy": " <div class='policy-item'><p class='font-semibold'>Pruning Standards</p><p class='text-sm text-gray-600'><b>Policy Ref: PRUNE-STD-01:</b> Over-pruning is strictly prohibited. Retain at least 2 subtending fronds below the lowest bunch in young mature palms, and 3 fronds in immature palms, to prevent physiological stress.</p></div> <div class='policy-item'><p class='font-semibold'>Weeding & Spraying</p><p class='text-sm text-gray-600'><b>Policy Ref: WEED-CIRC-02:</b> Circle spraying must be restricted to a 2-meter radius from the palm base. Mist blowers are prohibited in immature and young mature areas to prevent herbicide drift and inflorescence phytotoxicity.</p></div> <div class='policy-item'><p class='font-semibold'>Labour Management</p><p class='text-sm text-gray-600'><b>Policy Ref: HR-MANPOWER-01:</b> Estate managers must maintain the budgeted worker-to-land ratio. Shortages exceeding 10% must be reported with an active recruitment plan.</p></div> <div class='policy-item'><p class='font-semibold'>Rat Infestation & Ganoderma</p><p class='text-sm text-gray-600'><b>Policy Ref: P&D-Rat-02b:</b> Quarterly rat censuses are mandatory. If damage >10%, baiting must be initiated within 30 days using approved rodenticides.</p><p class='text-sm text-gray-600'><b>Policy Ref: P&D-Gano-01:</b> Fallen palms suspected of Ganoderma infection must be promptly de-bolled and sanitized to prevent spread to neighbouring healthy palms.</p></div>"
             };
 
             const container = document.getElementById('selected-estate-container');
@@ -174,44 +187,18 @@
                                        metric.title.includes('Cost') ? 'bg-orange-50 text-orange-800' :
                                        metric.title.includes('Upkeep') ? 'bg-red-50 text-red-800' : 'bg-yellow-50 text-yellow-800';
                     
-                    if (metric.isChart) {
+                    if (metric.type === 'chart') {
                         return `
-                        <div class="p-4 rounded-xl ${colorClass} flex flex-col justify-between h-full min-h-[220px]">
-                            <h3 class="font-bold text-lg mb-4">${metric.title}</h3>
-                            <div class="flex-grow flex items-end justify-around space-x-2 px-2 relative pb-8 mt-2">
-                                <!-- 2024 -->
-                                <div class="flex flex-col items-center w-1/3">
-                                    <span class="text-sm font-bold text-slate-700 mb-1">${metric.chartData.actual[0]}</span>
-                                    <div class="w-8 bg-green-600 rounded-t-sm transition-all duration-500 ease-in-out" style="height: ${(metric.chartData.actual[0]/25)*100}px"></div>
-                                    <span class="text-xs text-slate-500 mt-2 absolute bottom-2">2024</span>
-                                </div>
-                                <!-- 2025 -->
-                                <div class="flex flex-col items-center w-1/3">
-                                    <span class="text-sm font-bold text-slate-700 mb-1">${metric.chartData.actual[1]}</span>
-                                    <div class="w-8 bg-green-600 rounded-t-sm transition-all duration-500 ease-in-out" style="height: ${(metric.chartData.actual[1]/25)*100}px"></div>
-                                    <span class="text-xs text-slate-500 mt-2 absolute bottom-2">2025</span>
-                                </div>
-                                <!-- 2026 -->
-                                <div class="flex flex-col items-center w-1/3 relative">
-                                    <div class="flex space-x-1 items-end justify-center w-full">
-                                         <div class="flex flex-col items-center">
-                                            <span class="text-sm font-bold text-slate-700 mb-1">${metric.chartData.actual[2]}</span>
-                                            <div class="w-6 bg-green-600 rounded-t-sm transition-all duration-500 ease-in-out" style="height: ${(metric.chartData.actual[2]/25)*100}px"></div>
-                                         </div>
-                                         <div class="flex flex-col items-center">
-                                            <span class="text-sm font-bold text-slate-700 mb-1">${metric.chartData.budget[2].toFixed(2)}</span>
-                                            <div class="w-6 bg-slate-400 rounded-t-sm transition-all duration-500 ease-in-out" style="height: ${(metric.chartData.budget[2]/25)*100}px"></div>
-                                         </div>
-                                    </div>
-                                    <span class="text-xs text-slate-500 mt-2 absolute bottom-2">2026</span>
-                                </div>
+                        <div class="p-4 rounded-xl border border-green-100 ${colorClass} flex flex-col justify-between h-full min-h-[220px]">
+                            <h3 class="font-bold text-lg text-green-900 mb-1">${metric.title}</h3>
+                            <div class="relative w-full flex-grow flex items-center justify-center" style="height: 135px;">
+                                <canvas id="${metric.canvasId}"></canvas>
                             </div>
-                            
-                            <div class="flex justify-center items-center space-x-4 text-xs text-slate-600 mt-2">
-                                <div class="flex items-center"><div class="w-3 h-3 rounded-full bg-green-600 mr-1"></div> Actual</div>
-                                <div class="flex items-center"><div class="w-3 h-3 rounded-full bg-slate-400 mr-1"></div> Budget</div>
+                            <div class="flex justify-center items-center space-x-4 text-xs text-gray-600 mt-1">
+                                <div class="flex items-center"><span class="w-3 h-3 bg-[#16a34a] inline-block mr-1.5 rounded-sm"></span>Actual</div>
+                                <div class="flex items-center"><span class="w-3 h-3 bg-[#9ca3af] inline-block mr-1.5 rounded-sm"></span>Budget</div>
                             </div>
-                            <p class="text-xs text-slate-500 italic text-center mt-3">${metric.note}</p>
+                            <p class="text-xs text-green-800 italic text-center mt-2">${metric.note}</p>
                         </div>`;
                     }
 
@@ -242,10 +229,10 @@
                         <div class="mb-8"><h3 class="text-xl font-semibold mb-2 border-b pb-2">Key Observations & Issues</h3><ul class="list-disc list-inside space-y-2 text-gray-700 mt-4">${observationsHTML}</ul></div>
                         <div class="mb-8 text-center"><button class="policy-modal-btn bg-green-800 text-white px-6 py-3 rounded-lg hover:bg-green-900 transition shadow-md">View Agricultural Policy Cross-Reference</button></div>
                         <div class="space-y-2">
-                            <button data-dropdown-id="${estate.id}-agronomy" class="dropdown-btn w-full text-left bg-gray-800 text-white p-3 rounded-md hover:bg-gray-700 transition">Agronomy Report 2/2026 Details</button>
-                            <div id="${estate.id}-agronomy" class="details-content bg-gray-50 p-4 rounded-md border border-gray-200"></div>
-                            <button data-dropdown-id="${estate.id}-plantation" class="dropdown-btn w-full text-left bg-gray-800 text-white p-3 rounded-md hover:bg-gray-700 transition">Plantation Advisory Report 1/2026 Details</button>
+                            <button data-dropdown-id="${estate.id}-plantation" class="dropdown-btn w-full text-left bg-gray-800 text-white p-3 rounded-md hover:bg-gray-700 transition">Plantation Advisory Report Details</button>
                             <div id="${estate.id}-plantation" class="details-content bg-gray-50 p-4 rounded-md border border-gray-200"></div>
+                            <button data-dropdown-id="${estate.id}-agronomy" class="dropdown-btn w-full text-left bg-gray-800 text-white p-3 rounded-md hover:bg-gray-700 transition">Agronomy Report Details</button>
+                            <div id="${estate.id}-agronomy" class="details-content bg-gray-50 p-4 rounded-md border border-gray-200"></div>
                             <button data-dropdown-id="${estate.id}-pinfosys" class="dropdown-btn w-full text-left bg-gray-800 text-white p-3 rounded-md hover:bg-gray-700 transition">Pinfosys Report Details</button>
                             <div id="${estate.id}-pinfosys" class="details-content bg-gray-50 p-4 rounded-md border border-gray-200"></div>
                         </div>
@@ -253,15 +240,80 @@
             }
 
             function initializeChartsForEstate() {
+                const miniYieldCanvasId = estateData.summaryMetrics.yield.canvasId;
                 const prodCanvasId = `prodChart-${estateData.id}`;
                 const ageCanvasId = `ageChart-${estateData.id}`;
                 
                 // Cleanup existing charts if they exist
+                if (chartInstances[miniYieldCanvasId]) {
+                    chartInstances[miniYieldCanvasId].destroy();
+                }
                 if (chartInstances[prodCanvasId]) {
                     chartInstances[prodCanvasId].destroy();
                 }
                 if (chartInstances[ageCanvasId]) {
                     chartInstances[ageCanvasId].destroy();
+                }
+
+                // Mini Yield Bar Chart with ChartDataLabels
+                const miniYieldCtx = document.getElementById(miniYieldCanvasId)?.getContext('2d');
+                if (miniYieldCtx) {
+                    const yData = estateData.summaryMetrics.yield.chartData;
+                    chartInstances[miniYieldCanvasId] = new Chart(miniYieldCtx, {
+                        type: 'bar',
+                        data: {
+                            labels: yData.labels,
+                            datasets: [
+                                {
+                                    label: 'Actual',
+                                    data: yData.actual,
+                                    backgroundColor: '#16a34a',
+                                    borderRadius: 4,
+                                    barPercentage: 0.75,
+                                    categoryPercentage: 0.75
+                                },
+                                {
+                                    label: 'Budget',
+                                    data: yData.budget,
+                                    backgroundColor: '#9ca3af',
+                                    borderRadius: 4,
+                                    barPercentage: 0.75,
+                                    categoryPercentage: 0.75
+                                }
+                            ]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            layout: {
+                                padding: { top: 22, bottom: 0, left: 4, right: 4 }
+                            },
+                            plugins: {
+                                legend: { display: false },
+                                tooltip: { enabled: true },
+                                datalabels: {
+                                    anchor: 'end',
+                                    align: 'top',
+                                    offset: 2,
+                                    color: '#374151',
+                                    font: { weight: 'bold', size: 11 },
+                                    formatter: (value) => value !== null ? value.toFixed(2) : ''
+                                }
+                            },
+                            scales: {
+                                x: {
+                                    grid: { display: false },
+                                    border: { display: true, color: '#d1d5db' },
+                                    ticks: { color: '#4b5563', font: { size: 11 } }
+                                },
+                                y: {
+                                    display: false,
+                                    beginAtZero: true,
+                                    suggestedMax: 32
+                                }
+                            }
+                        }
+                    });
                 }
 
                 const prodCtx = document.getElementById(prodCanvasId)?.getContext('2d');
@@ -275,7 +327,18 @@
                                 { label: 'Rainfall (mm)', data: estateData.chartData.production.rainfall, backgroundColor: '#3b82f6', yAxisID: 'y-rainfall' }
                             ]
                         },
-                        options: { responsive: true, maintainAspectRatio: false, scales: { x: { grid: { display: false } }, 'y-ffb': { type: 'linear', position: 'left', title: { display: true, text: 'FFB Production (MT)' } }, 'y-rainfall': { type: 'linear', position: 'right', title: { display: true, text: 'Rainfall (mm)' }, grid: { drawOnChartArea: false } } } }
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                datalabels: { display: false }
+                            },
+                            scales: {
+                                x: { grid: { display: false } },
+                                'y-ffb': { type: 'linear', position: 'left', title: { display: true, text: 'FFB Production (MT)' } },
+                                'y-rainfall': { type: 'linear', position: 'right', title: { display: true, text: 'Rainfall (mm)' }, grid: { drawOnChartArea: false } }
+                            }
+                        }
                     });
                 }
 
@@ -287,7 +350,15 @@
                             labels: estateData.chartData.ageProfile.labels,
                             datasets: [{ data: estateData.chartData.ageProfile.data, backgroundColor: ['#ca8a04', '#fde047', '#facc15', '#fef08a'], hoverOffset: 4 }]
                         },
-                        options: { responsive: true, maintainAspectRatio: false, plugins: { title: { display: true, text: estateData.chartData.ageProfile.title, font: { size: 16 } }, legend: { position: 'right' } } }
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                datalabels: { display: false },
+                                title: { display: true, text: estateData.chartData.ageProfile.title, font: { size: 16 } },
+                                legend: { position: 'right' }
+                            }
+                        }
                     });
                 }
             }
@@ -298,13 +369,13 @@
                 const pinfosysDiv = document.getElementById(`${estateData.id}-pinfosys`);
                 
                 if (agronomyDiv && estateData.reports.agronomy) {
-                    agronomyDiv.innerHTML = Object.entries(estateData.reports.agronomy).map(([section, content]) => `<div class="mb-4"><h4 class="font-semibold text-gray-800">${section}</h4><p class="text-sm text-gray-600 mt-1 leading-relaxed">${content}</p></div>`).join('');
+                    agronomyDiv.innerHTML = Object.entries(estateData.reports.agronomy).map(([section, content]) => `<div class="mb-4"><h4 class="font-semibold text-gray-800">${section}:</h4><p class="text-sm text-gray-600 mt-1 leading-relaxed">${content}</p></div>`).join('');
                 } else if (agronomyDiv) {
                     agronomyDiv.innerHTML = `<p class="text-sm text-gray-600">Not Available</p>`;
                 }
 
                 if (plantationDiv && estateData.reports.plantation) {
-                    plantationDiv.innerHTML = Object.entries(estateData.reports.plantation).map(([section, content]) => `<div class="mb-4"><h4 class="font-semibold text-gray-800">${section}</h4><p class="text-sm text-gray-600 mt-1 leading-relaxed">${content}</p></div>`).join('');
+                    plantationDiv.innerHTML = Object.entries(estateData.reports.plantation).map(([section, content]) => `<div class="mb-4"><h4 class="font-semibold text-gray-800">${section}:</h4><p class="text-sm text-gray-600 mt-1 leading-relaxed">${content}</p></div>`).join('');
                 } else if (plantationDiv) {
                     plantationDiv.innerHTML = `<p class="text-sm text-gray-600">Not Available</p>`;
                 }
@@ -323,18 +394,17 @@
                         event.currentTarget.classList.toggle('active');
                     });
                 });
-                container.querySelector('.policy-modal-btn')?.addEventListener('click', openPolicyModal);
+                container.querySelector('.policy-modal-btn')?.addEventListener('click', () => openPolicyModal(estateData));
             }
 
             renderEstate();
         });
         
-        function openPolicyModal() {
+        function openPolicyModal(estate) {
             const modalTitle = document.getElementById('modalTitle');
             const modalContent = document.getElementById('modalContent');
-            const policyData = ` <div class='policy-item'><p class='font-semibold'>Pruning Standards</p><p class='text-sm text-gray-600'><b>Policy Ref: PRUNE-STD-01:</b> Over-pruning is strictly prohibited. Retain at least 2 subtending fronds below the lowest bunch in young mature palms, and 3 fronds in immature palms, to prevent physiological stress.</p></div> <div class='policy-item'><p class='font-semibold'>Labour Management</p><p class='text-sm text-gray-600'><b>Policy Ref: HR-MANPOWER-01:</b> Estate managers must maintain the budgeted worker-to-land ratio. Shortages exceeding 10% must be reported with an active recruitment plan.</p></div> <div class='policy-item'><p class='font-semibold'>Rat Infestation</p><p class='text-sm text-gray-600'><b>Policy Ref: P&D-Rat-02b:</b> Quarterly rat censuses are mandatory. If damage >10%, baiting must be initiated within 30 days using approved rodenticides.</p></div>`;
-            modalTitle.innerText = 'Agricultural Policy Cross-Reference: Ladang Cempaka';
-            modalContent.innerHTML = policyData;
+            modalTitle.innerText = `Agricultural Policy Cross-Reference: ${estate.name}`;
+            modalContent.innerHTML = estate.policy;
             document.getElementById('policyModal').classList.add('active');
         }
 
